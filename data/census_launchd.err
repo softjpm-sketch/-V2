@@ -1,0 +1,2 @@
+/Users/parkjungma/병원마케팅V2/census/nightly.sh: line 23: 19403 Terminated: 15          "$PY" -m census.batch collect "$CAP" >> "$LOG" 2>&1
+/Users/parkjungma/병원마케팅V2/census/nightly.sh: line 23: 35180 Terminated: 15          "$PY" -m census.batch collect "$CAP" >> "$LOG" 2>&1

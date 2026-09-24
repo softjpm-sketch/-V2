@@ -1,0 +1,82 @@
+{
+  "slug": "demo_shine",
+  "clinic_name": "24시샤인동물메디컬센터",
+  "clinic": {
+    "name": "24시샤인동물메디컬센터",
+    "address": "서울 송파구 오금로 147"
+  },
+  "known_urls": {
+    "naverplace": "https://pcmap.place.naver.com/pet/1791532637/home",
+    "instagram": "https://www.instagram.com/shineamc.official",
+    "blog": "https://blog.naver.com/shineamc",
+    "homepage": "https://shineamc.com",
+    "map": "http://place.map.kakao.com/1941364028"
+  },
+  "subscription": {
+    "active": true,
+    "since": "2026-09-18 11:12:45"
+  },
+  "baseline": null,
+  "code": {
+    "generated_at": "2026-09-18 11:12:50",
+    "content_hash": "0a2ccf2ee3b8",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": [
+        "VeterinaryCare",
+        "LocalBusiness"
+      ],
+      "name": "24시샤인동물메디컬센터",
+      "url": "https://shineamc.com",
+      "telephone": "02-2088-7775",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "서울 송파구 오금로 147 샤인동물메디컬센터",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5108296264117,
+        "longitude": 127.111562496081
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "sameAs": [
+        "https://pcmap.place.naver.com/pet/1791532637/home",
+        "https://blog.naver.com/shineamc",
+        "https://www.instagram.com/shineamc.official",
+        "https://www.youtube.com/@shineamc",
+        "http://place.map.kakao.com/1941364028"
+      ]
+    },
+    "script": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": [\n    \"VeterinaryCare\",\n    \"LocalBusiness\"\n  ],\n  \"name\": \"24시샤인동물메디컬센터\",\n  \"url\": \"https://shineamc.com\",\n  \"telephone\": \"02-2088-7775\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"서울 송파구 오금로 147 샤인동물메디컬센터\",\n    \"addressCountry\": \"KR\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": 37.5108296264117,\n    \"longitude\": 127.111562496081\n  },\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\",\n        \"Saturday\",\n        \"Sunday\"\n      ],\n      \"opens\": \"00:00\",\n      \"closes\": \"23:59\"\n    }\n  ],\n  \"sameAs\": [\n    \"https://pcmap.place.naver.com/pet/1791532637/home\",\n    \"https://blog.naver.com/shineamc\",\n    \"https://www.instagram.com/shineamc.official\",\n    \"https://www.youtube.com/@shineamc\",\n    \"http://place.map.kakao.com/1941364028\"\n  ]\n}\n</script>",
+    "sources": [
+      "naver_place",
+      "kakao"
+    ],
+    "missing": [
+      "knowsAbout"
+    ]
+  },
+  "install": {
+    "status": "pending",
+    "installed_at": null,
+    "installed_hash": null
+  },
+  "post_verify": null,
+  "updated_at": "2026-09-18 11:12:50"
+}
