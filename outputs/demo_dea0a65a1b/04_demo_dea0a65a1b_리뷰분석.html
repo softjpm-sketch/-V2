@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수원 스카이동물메디컬센터 리뷰분석</title>
+<style>
+:root{
+  --navy:#152B54;--navy2:#20406f;--blue:#2C6FB5;--sky:#e8f0f9;
+  --ink:#1c2430;--muted:#5b6675;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;
+  --good:#2E8B6B;--warn:#C58A22;--bad:#C0453B;
+  --goodbg:#e7f4ee;--warnbg:#fbf1de;--badbg:#fbe9e7;
+  --shadow:0 1px 3px rgba(20,40,80,.06),0 8px 24px rgba(20,40,80,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header.hero{color:#fff;padding:54px 0 46px}
+.kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0e8;font-weight:700}
+header.hero h1{font-size:29px;margin:.35em 0 .2em;font-weight:800}
+header.hero .sub{font-size:15px;color:#d8e5f5;margin:0 0 14px;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:4px 11px;border-radius:999px;font-size:12.5px;color:#eaf2fc}
+main.wrap{padding-top:8px;padding-bottom:10px}
+section{margin:30px 0}
+.sechead{display:flex;align-items:center;gap:11px;margin:0 0 14px}
+.sechead .num{background:var(--navy);color:#fff;font-weight:800;font-size:13px;
+  width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.sechead h2{font-size:19px;margin:0;font-weight:800}
+.sechead h2 .subt{font-weight:600;font-size:13px;color:var(--muted);margin-left:9px}
+.secdiv{margin:40px 0 8px;padding:14px 18px;border-radius:12px;background:repeating-linear-gradient(135deg,#f2f6fb,#f2f6fb 12px,#eaf1f9 12px,#eaf1f9 24px);border:1px dashed var(--blue)}
+.secdiv .lab{font-weight:800;font-size:15px;color:var(--blue)}
+.secdiv p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.card+.card{margin-top:14px}
+p.lead{font-size:14.5px;color:#374050;margin:0 0 6px}
+/* 스냅샷 4칸 */
+.snap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.snap .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;box-shadow:var(--shadow)}
+.snap .k b{display:block;font-size:22px;color:var(--navy);font-weight:800;line-height:1.2}
+.snap .k span{font-size:12px;color:var(--muted)}
+/* 점수 막대 */
+.scoregrid{display:grid;gap:11px}
+.score{display:grid;grid-template-columns:150px 1fr 46px;align-items:center;gap:10px;font-size:13.5px}
+.score .lab{color:#39424f;font-weight:600}
+.score .track{background:#eef2f7;border-radius:7px;height:11px;overflow:hidden}
+.score .bar{height:100%;border-radius:7px}
+.bar.s-hi{background:var(--good)}.bar.s-mid{background:var(--warn)}.bar.s-lo{background:var(--bad)}
+.score .val{text-align:right;font-weight:700;color:var(--navy);font-size:13px}
+.score .note{grid-column:1/-1;font-size:12px;color:var(--muted);margin:-4px 0 2px}
+/* 채널 섹션 소제목 */
+.sub-h{font-size:15px;font-weight:800;margin:20px 0 9px;color:var(--navy);display:flex;align-items:center;gap:8px}
+/* 채널 이동 목차(클릭 카드) */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:4px 0 18px}
+.toc a{display:block;background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  font-weight:700;font-size:14px;transition:.15s}
+.toc a:hover{border-color:var(--blue);transform:translateY(-1px)}
+.toc a span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}
+/* 채널 헤더(번호 배지 + 제목 + URL) */
+.chan-head{display:flex;align-items:center;gap:14px;margin:28px 0 8px}
+.chan-idx{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:11px;background:var(--navy);color:#fff;font-weight:800;font-size:16px;flex:none}
+.chan-head h2{margin:0;font-size:22px}
+.chan-url{font-size:12.5px;margin-top:2px}
+.chan-url a{color:var(--blue);text-decoration:none;word-break:break-all}
+.chan-url a:hover{text-decoration:underline}
+/* 세부 진단 카드(진행바형) */
+.mcgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 4px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+.mc .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.mc .lab b{font-size:15px}.mc .lab .v{font-size:15px;font-weight:800}
+.mc-bar{height:9px;border-radius:6px;background:#eef1f6;overflow:hidden}
+.mc-bar>i{display:block;height:100%;border-radius:6px}
+.mc-bar.s-hi>i{background:var(--good)}.mc-bar.s-mid>i{background:var(--warn)}.mc-bar.s-lo>i{background:var(--bad)}
+.mc small{color:var(--muted);font-size:12.5px;display:block;margin-top:8px}
+@media(max-width:640px){.mcgrid{grid-template-columns:1fr}}
+/* 발견 블록 */
+.finding{border-left:4px solid var(--good);padding:2px 0 2px 16px;margin:16px 0}
+.finding.w{border-color:var(--warn)}.finding.b{border-color:var(--bad)}
+.finding h4{margin:0 0 5px;font-size:15px;font-weight:800}
+.finding p{margin:0;font-size:14px;color:#374050}
+.finding .src{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--blue);
+  background:#eef4fb;border:1px solid #d6e6f7;border-radius:6px;padding:1px 8px}
+/* 콜아웃 */
+.callout{background:var(--sky);border:1px solid #cfe0f2;border-radius:12px;padding:15px 18px;font-size:14px;color:var(--navy)}
+.callout.g{background:var(--goodbg);border-color:#bfe3d1;color:#1f5f47}
+.callout b{font-weight:800}
+/* 태그 */
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:6px}
+.t-good{background:var(--goodbg);color:var(--good)}.t-warn{background:var(--warnbg);color:var(--warn)}.t-bad{background:var(--badbg);color:var(--bad)}
+.t-blue{background:#e6f0fa;color:var(--blue)}
+.win{background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px}
+/* 표 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--navy);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+/* 로드맵 바로/중기/장기 */
+.road{display:grid;gap:11px}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 16px;box-shadow:var(--shadow)}
+.badge{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;margin-top:1px}
+.b-now{background:var(--goodbg);color:var(--good)}.b-mid{background:#eaf1fb;color:var(--blue)}.b-long{background:#f0edf9;color:#5b3aa6}
+.step h4{margin:0 0 3px;font-size:14px;font-weight:800}.step p{margin:0;font-size:13px;color:#4a5462}
+.step .rdul{margin:5px 0 0;padding-left:17px}.step .rdul li{font-size:13px;color:#4a5462;margin:3px 0;line-height:1.5}
+.step .fx{font-size:11.5px;color:var(--muted);margin-top:3px}
+/* 강점 축 카드 */
+.pillar{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pillar.cols3{grid-template-columns:repeat(3,1fr)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow);border-top:3px solid var(--good)}
+.pcard .n{font-size:11.5px;color:var(--good);font-weight:800;letter-spacing:.04em}
+.pcard h4{margin:4px 0 5px;font-size:15px;font-weight:800}
+.pcard p{margin:0;font-size:13px;color:#4a5462}
+/* 인용 */
+.quote{border-left:3px solid var(--blue);background:#f7fafd;padding:10px 15px;border-radius:0 10px 10px 0;margin:10px 0;font-size:13.5px;color:#33404f}
+.quote .s{display:block;margin-top:5px;font-size:11.5px;color:var(--muted)}
+/* 감성 막대(리뷰) */
+.senti{display:flex;height:16px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.senti .pos{background:var(--good)}.senti .neu{background:#c9d2de}.senti .neg{background:var(--bad)}
+.kwrow{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
+.kw{font-size:12.5px;padding:4px 11px;border-radius:999px;background:#eef4fb;border:1px solid #d6e6f7;color:#2b445f}
+.kw.neg{background:var(--badbg);border-color:#f0cfca;color:var(--bad)}
+/* 연간 타임라인 */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tl{border-radius:12px;padding:13px 14px;color:#fff}
+.tl.q1{background:#2C6FB5}.tl.q2{background:#5b3aa6}.tl.q3{background:#2E8B6B}.tl.q4{background:#C58A22}
+.tl .qn{font-size:11.5px;font-weight:800;opacity:.9}.tl h4{margin:3px 0 4px;font-size:14.5px}
+.tl p{margin:0;font-size:12px;opacity:.95}
+/* 분기 상세 */
+.quarter{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow);background:var(--card)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qhead .dot{width:12px;height:12px;border-radius:3px}
+.qhead.q1 .dot{background:#2C6FB5}.qhead.q2 .dot{background:#5b3aa6}.qhead.q3 .dot{background:#2E8B6B}.qhead.q4 .dot{background:#C58A22}
+.qhead h3{margin:0;font-size:16px;font-weight:800}.qhead .theme{font-size:12.5px;color:var(--muted)}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mbox{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fbfcfe}
+.mbox .mh{font-weight:800;font-size:13px;color:var(--navy);margin-bottom:5px}
+.season{display:inline-block;font-size:10.5px;font-weight:700;background:#fff3d9;color:#8a6414;border-radius:5px;padding:1px 7px;margin-left:6px}
+.mbox ul{margin:6px 0 0;padding-left:16px}.mbox li{font-size:12.5px;color:#414b58;margin:2px 0}
+.focusrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.focusrow .f{font-size:12px;background:var(--sky);border:1px solid #cfe0f2;color:var(--navy);border-radius:8px;padding:5px 11px;font-weight:600}
+/* 채널×분기 강도 매트릭스 */
+.d{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle}
+.d-hi{background:var(--good)}.d-mid{background:var(--warn)}.d-lo{background:#d3dbe4}
+/* 예산 배분 */
+.budget{display:grid;gap:10px}
+.bcard{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:10px;font-size:13.5px}
+.bcard .blab{font-weight:700;color:#39424f}
+.btrack{background:#eef2f7;border-radius:7px;height:13px;overflow:hidden}
+.bbar{height:100%;background:linear-gradient(90deg,var(--blue),var(--navy2));border-radius:7px}
+.bcard .bval{text-align:right;font-weight:800;color:var(--navy)}
+/* 안내/주석 박스 */
+.note{background:#fff8ec;border:1px solid #f2e2c0;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#6b5320;margin:14px 0}
+.info{background:#eef4fb;border:1px solid #d6e6f7;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#274a6d;margin:12px 0}
+.info b{color:var(--navy)}
+/* 2열 리스트 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.two ul{margin:0;padding-left:17px}.two li{font-size:13px;margin:3px 0;color:#414b58}
+/* 푸터 */
+footer.wrap{padding:24px 20px 60px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px}
+footer .fn{margin:4px 0}
+/* 리포트 간 이동 네비 */
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0}
+.nav a{font-size:12px;text-decoration:none;color:var(--blue);border:1px solid #d6e6f7;background:#fff;
+  border-radius:999px;padding:4px 11px}
+.nav a.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* ── 참조 리포트 수준 컴포넌트 ───────────────────────── */
+/* 방법 카드(어떻게 분석했나) */
+.method{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.method .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.method .m b{font-size:13.5px;color:var(--navy)}.method .m p{font-size:13px;color:var(--muted);margin:4px 0 0}
+/* 개념 흐름도(1·2차) */
+.flow2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 2px}
+.flow2 .b{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:700;color:var(--navy)}
+.flow2 .b.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flow2 .a{color:var(--blue);font-weight:800;font-size:13px}
+/* 2열 그리드(채널 비교 등) */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+/* 리뷰 채널 비교 박스 */
+.chanbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.chanbox .ctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.chanbox .cbadge{font-size:12.5px;font-weight:800;color:#fff;border-radius:7px;padding:4px 10px}
+.cb-naver{background:#03C75A}.cb-google{background:#4285F4}.cb-etc{background:var(--navy)}
+.chanbox .kpi{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.chanbox .kpi:last-of-type{border-bottom:0}.chanbox .kpi b{font-weight:800}
+.sbar{height:16px;border-radius:6px;overflow:hidden;display:flex;margin:10px 0 6px}
+.sbar i{display:block;height:100%}
+.sbar .p{background:var(--good)}.sbar .u{background:#c9ced6}.sbar .g{background:var(--bad)}
+.sleg{display:flex;gap:12px;font-size:11.5px;color:var(--muted)}
+.sleg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.sleg .lp::before{background:var(--good)}.sleg .lu::before{background:#c9ced6}.sleg .lg::before{background:var(--bad)}
+/* 그라디언트 분기 블록(12개월 계획) */
+.gquarter{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:0 0 18px;background:var(--card)}
+.gqhead{padding:15px 22px;color:#fff;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.gqhead.q1{background:linear-gradient(135deg,#2C6FB5,#3f83c9)}.gqhead.q2{background:linear-gradient(135deg,#5b3aa6,#7b52c9)}
+.gqhead.q3{background:linear-gradient(135deg,#2E8B6B,#3fa682)}.gqhead.q4{background:linear-gradient(135deg,#C58A22,#d9a13f)}
+.gqhead .qlab{font-size:11.5px;font-weight:800;letter-spacing:.05em;opacity:.9}
+.gqhead h3{margin:0;font-size:18px;color:#fff;font-weight:800}.gqhead .qmon{font-size:12.5px;opacity:.9;margin-left:auto}
+.gqbody{padding:16px 22px}
+.frow{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:9px 0;border-top:1px dashed var(--line)}
+.frow .fl{font-size:11.5px;font-weight:800;color:#fff;background:var(--navy);border-radius:7px;padding:4px 10px;white-space:nowrap}
+.frow p{margin:0;font-size:13px}
+/* 체크리스트 */
+.checklist{width:100%;border-collapse:collapse;font-size:13.5px}
+.checklist th{background:var(--sky);color:var(--navy);text-align:left;padding:9px 11px;font-weight:700}
+.checklist td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}
+.checklist .box{width:16px;height:16px;border:2px solid var(--muted);border-radius:4px;display:inline-block}
+.checklist .owner{color:var(--muted);font-size:12.5px}
+/* 인쇄(PDF) 버튼 + 인쇄 스타일 */
+.printbar{position:fixed;top:14px;right:16px;z-index:50}
+.printbar button{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:9px 15px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+@media print{
+  .printbar,.nav{display:none!important}
+  header.hero{padding:24px 0 20px}
+  body{background:#fff}
+  .card,.snap .k,.step,.pcard,.chanbox,.gquarter,.method .m,.bcard{box-shadow:none}
+  section{break-inside:avoid}
+}
+@media(max-width:640px){
+  .snap{grid-template-columns:1fr 1fr}
+  .pillar,.pillar.cols3{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .months{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  .score{grid-template-columns:110px 1fr 40px}
+  .bcard{grid-template-columns:96px 1fr 40px}
+}
+
+header.hero{background:linear-gradient(135deg,#5b3aa6,#8e5bd6)}
+</style></head>
+<body>
+<div class="printbar"><button onclick="window.print()">🖨 PDF로 저장</button></div>
+<header class="hero"><div class="wrap">
+  <div class="kicker">REVIEW REPUTATION</div>
+  <h1>수원 스카이동물메디컬센터 리뷰 평판 분석</h1>
+  <p class="sub">네이버·구글 감성 분포 · 칭찬/불만 키워드 · 채널 평판 격차</p>
+  <div class="meta"><span>Petamos 병원 마케팅 진단</span><span>2026-09-23</span><span>총 896개 리뷰</span></div>
+  <div class="nav"><a class="" href="01_demo_dea0a65a1b_상권분석.html">01 상권</a><a class="" href="02_demo_dea0a65a1b_경쟁분석.html">02 경쟁</a><a class="" href="03_demo_dea0a65a1b_마케팅.html">03 마케팅</a><a class="cur" href="04_demo_dea0a65a1b_리뷰분석.html">04 리뷰</a><a class="" href="05_demo_dea0a65a1b_강점.html">05 강점</a><a class="" href="06_demo_dea0a65a1b_12개월마케팅계획.html">06 12개월</a></div>
+</div></header>
+<main class="wrap">
+<section><div class="sechead"><div class="num">1</div><h2>핵심 요약</h2></div><div class="callout"><b>한 줄:</b> 같은 병원인데 네이버 플레이스는 리뷰 856개에 긍정 85%로 최근·압도적 긍정이고, 구글은 리뷰 40개에 별점 3.8로 평점이 상대적으로 낮습니다. 공통적으로 의료진 친절·자세한 설명·세심한 케어·응급/수술 대응은 확실한 강점이며, 대기 시간과 비용 인식이 반복되는 과제입니다.</div></section><section><div class="sechead"><div class="num">2</div><h2>채널별 스냅샷 &amp; 감성 분포</h2></div><p class="lead">※ 감성 비율은 제공된 표본 기준 추정입니다. 네이버 플레이스는 9.13·8.26·8.25 등 최신 리뷰가 계속 쌓이며 긍정 85%로 최근 인상을 이끌고, 구글은 리뷰 수가 40개로 적고 별점 3.8에 머물러 두 채널 인상이 갈립니다. 구글의 최신성은 확인되지 않아, 오래된 평가가 별점에 남아 있을 가능성이 있습니다.</p><div class="cols"><div class="chanbox"><div class="ctop"><span class="cbadge cb-naver">네이버 플레이스 방문자 리뷰</span></div><div class="kpi"><span>리뷰 수</span><b>856개</b></div><div class="kpi"><span>별점</span><b>★–</b></div><div class="kpi"><span>최신성</span><b>최신 리뷰 포함(예: 9.13, 8.26, 8.25 등)</b></div><div class="sbar"><i class="p" style="width:85%"></i><i class="u" style="width:11%"></i><i class="g" style="width:4%"></i></div><div class="sleg"><span class="lp">긍정 85%</span><span class="lu">중립 11%</span><span class="lg">부정 4%</span></div></div><div class="chanbox"><div class="ctop"><span class="cbadge cb-google">구글 리뷰</span></div><div class="kpi"><span>리뷰 수</span><b>40개</b></div><div class="kpi"><span>별점</span><b>★3.8</b></div><div class="kpi"><span>최신성</span><b>확인 필요</b></div><div class="sbar"><i class="p" style="width:100%"></i><i class="u" style="width:0%"></i><i class="g" style="width:0%"></i></div><div class="sleg"><span class="lp">긍정 100%</span><span class="lu">중립 0%</span><span class="lg">부정 0%</span></div></div></div></section><section><div class="sechead"><div class="num">3</div><h2>공통 칭찬 키워드<span class="subt">(양 채널 1위)</span></h2></div><p class="lead">채널을 가로질러 반복되는 칭찬 — 이 병원의 검증된 강점입니다.</p><div class="kwrow"><span class="kw">의료진이 친절해요</span><span class="kw">충분한 설명과 진료</span><span class="kw">시설이 깔끔해요</span><span class="kw">세심한 케어</span><span class="kw">응급/수술 대응</span></div><div class="card" style="margin-top:14px"><div class="finding"><h4>의료진의 친절함과 자세한 설명</h4><p>방문자 리뷰 전반에서 가장 반복되는 강점입니다. &#x27;원장님들께서 설명을 자세히 해주셔서 감사히 이용 잘 됐어요&#x27;, &#x27;진짜 친절하시고 설명도 자세히시고 데스크에도 친절하시고 모두 좋으시네요&#x27; 같은 후기처럼 원장·선생님·데스크 응대 전반의 친절이 반복 칭찬됩니다.</p></div><div class="finding"><h4>세심한 케어와 응급·수술 대응</h4><p>&#x27;밤 이야기하기도 힘들었던&#x27; 상황에서 디테일한 수술 예약이 이루어졌다는 후기 등에서 응급·수술 대응력이 드러납니다. 반복 칭찬 키워드에도 &#x27;세심한 케어&#x27;, &#x27;응급/수술 대응&#x27;이 포함되어, 위급 상황에서 믿고 맡길 수 있다는 인식이 자산입니다.</p></div><div class="finding"><h4>깔끔한 시설과 환경</h4><p>&#x27;시설이 깔끔해요&#x27;가 반복 키워드로 나타나며, 청결한 병원 환경이 재방문·추천 요인으로 작동하고 있습니다. 진료 만족과 함께 환경에 대한 긍정 평가가 신뢰를 뒷받침합니다.</p></div><div class="quote">밤 이야기하기도 힘들었던 거 다 디테일한 수술 예약하고 되게시 작성<span class="s">네이버 플레이스 방문자 리뷰 · 자****4</span></div><div class="quote">병원에 개산 상담 분들이 친절하시고 특히 원장님들께서 설명을 자세히 해주셔서 감사히 이용 잘 됐어요<span class="s">네이버 플레이스 방문자 리뷰 · ho****</span></div><div class="quote">오늘도 심난 배고 있으로 물어가는 길에 잘랐~ㅠ<span class="s">네이버 플레이스 방문자 리뷰 · 아위19</span></div></div></section><section><div class="sechead"><div class="num">4</div><h2>리스크·불만 키워드</h2></div><p class="lead">반복되는 불만은 이탈·저평점의 원인 — 개선 우선순위의 근거가 됩니다.</p><div class="kwrow"><span class="kw neg">대기 시간</span><span class="kw neg">비용</span></div><div class="card" style="margin-top:14px"><div class="finding w"><h4>대기 시간에 대한 불만 <span class="tag t-warn">심각도 중간</span></h4><p>반복 불만 키워드에 &#x27;대기 시간&#x27;이 포함됩니다. 응급·수술 등 진료가 많은 병원 특성상 대기가 길어질 수 있어, 대기 안내를 강화하면 소수 불만을 줄일 수 있습니다.</p></div><div class="finding w"><h4>비용 인식에 대한 부담 <span class="tag t-warn">심각도 중간</span></h4><p>&#x27;비용&#x27;이 반복 불만 키워드로 나타납니다. 2차 진료·응급·수술 비중이 높은 특성상 비용 사전 설명을 강화하면 부담 인식을 완화할 수 있습니다.</p></div><div class="finding w"><h4>구글 채널의 상대적 저평점 <span class="tag t-warn">심각도 중간</span></h4><p>네이버 플레이스는 긍정 85%인 반면 구글은 별점 3.8에 머물러, 검색 시 첫인상에서 두 채널 인상이 갈립니다. 리뷰 수도 40개로 적어 소수 평가가 별점에 크게 반영됩니다.</p></div></div></section><section><div class="sechead"><div class="num">5</div><h2>운영 관점 발견</h2></div><div class="finding w"><h4>구글 프로필 관리로 첫인상 개선 여지</h4><p>네이버는 최신 리뷰가 계속 쌓이는 반면 구글은 리뷰 40개·별점 3.8로 상대적으로 방치된 인상입니다. 구글 리뷰에 답글을 달고 최근 후기를 유도하면 검색 시 노출되는 별점 인상을 개선할 수 있습니다.</p></div><div class="finding"><h4>친절·설명 미담을 자산으로 활용 부족</h4><p>&#x27;친절하고 설명이 자세하다&#x27;는 강한 긍정 미담이 네이버에 다수 쌓여 있으나, 이를 대표 후기로 노출·홍보에 활용하는 정도는 확인되지 않습니다. 검증된 강점을 채널 전반으로 확산하면 신뢰 자산이 됩니다.</p></div><div class="quote">밤 이야기하기도 힘들었던 거 다 디테일한 수술 예약하고 되게시 작성<span class="s">네이버 플레이스 방문자 리뷰 · 자****4</span></div><div class="quote">병원에 개산 상담 분들이 친절하시고 특히 원장님들께서 설명을 자세히 해주셔서 감사히 이용 잘 됐어요<span class="s">네이버 플레이스 방문자 리뷰 · ho****</span></div></section><section><div class="sechead"><div class="num">6</div><h2>개선 우선순위</h2></div><div class="road"><div class="step"><span class="badge b-now">바로</span><div><h4>진료 전 예상 대기 시간·비용 사전 안내 프로세스 도입</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>친절·설명 강점을 대표 리뷰로 노출해 첫인상 강화</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>응급·수술 후 경과 안내 및 만족 고객 리뷰 요청 절차 마련</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div></div><div class="callout"><b>정리:</b> 친절·자세한 설명·세심한 케어·응급 대응 등 핵심 만족요인은 이미 강합니다. 발목을 잡는 건 ①대기 안내 부족 ②비용 사전 설명 미흡 ③구글 채널의 낮은 별점과 방치이며, 이것만 손보면 최근 긍정 흐름이 전 채널로 확산될 수 있습니다.</div><p style="font-size:12px;color:var(--muted);margin-top:10px">본 분석은 제공해 주신 리뷰 텍스트·화면(네이버 플레이스 방문자 리뷰 · 구글 리뷰, 총 896개)를 근거로 한 표본 분석입니다. 감성 비율은 표본 기준 추정이며 전수 결과와 다를 수 있고, 개별 부정 리뷰의 사실관계는 병원 내부 확인이 필요합니다.</p></section>
+</main>
+<footer class="wrap">
+<p class="fn">· 리뷰는 작성자 고유 콘텐츠 — 인용·활용 시 동의를 권장하고 개인정보·진료정보를 최소화합니다.</p><p class="fn">· 네이버·카카오·인스타 채널은 약관·차단 이슈로 자동 수집하지 않으며, 리뷰·채널 정보는 담당자 제공 자료를 기준으로 합니다.</p><p class="fn">· 참고용 진단 리포트입니다. 사실관계는 실제 정보로 확정하세요.</p>
+</footer>
+</body></html>

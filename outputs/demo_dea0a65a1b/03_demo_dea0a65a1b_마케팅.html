@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수원 스카이동물메디컬센터 마케팅(온라인 채널 진단)</title>
+<style>
+:root{
+  --navy:#152B54;--navy2:#20406f;--blue:#2C6FB5;--sky:#e8f0f9;
+  --ink:#1c2430;--muted:#5b6675;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;
+  --good:#2E8B6B;--warn:#C58A22;--bad:#C0453B;
+  --goodbg:#e7f4ee;--warnbg:#fbf1de;--badbg:#fbe9e7;
+  --shadow:0 1px 3px rgba(20,40,80,.06),0 8px 24px rgba(20,40,80,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header.hero{color:#fff;padding:54px 0 46px}
+.kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0e8;font-weight:700}
+header.hero h1{font-size:29px;margin:.35em 0 .2em;font-weight:800}
+header.hero .sub{font-size:15px;color:#d8e5f5;margin:0 0 14px;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:4px 11px;border-radius:999px;font-size:12.5px;color:#eaf2fc}
+main.wrap{padding-top:8px;padding-bottom:10px}
+section{margin:30px 0}
+.sechead{display:flex;align-items:center;gap:11px;margin:0 0 14px}
+.sechead .num{background:var(--navy);color:#fff;font-weight:800;font-size:13px;
+  width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.sechead h2{font-size:19px;margin:0;font-weight:800}
+.sechead h2 .subt{font-weight:600;font-size:13px;color:var(--muted);margin-left:9px}
+.secdiv{margin:40px 0 8px;padding:14px 18px;border-radius:12px;background:repeating-linear-gradient(135deg,#f2f6fb,#f2f6fb 12px,#eaf1f9 12px,#eaf1f9 24px);border:1px dashed var(--blue)}
+.secdiv .lab{font-weight:800;font-size:15px;color:var(--blue)}
+.secdiv p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.card+.card{margin-top:14px}
+p.lead{font-size:14.5px;color:#374050;margin:0 0 6px}
+/* 스냅샷 4칸 */
+.snap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.snap .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;box-shadow:var(--shadow)}
+.snap .k b{display:block;font-size:22px;color:var(--navy);font-weight:800;line-height:1.2}
+.snap .k span{font-size:12px;color:var(--muted)}
+/* 점수 막대 */
+.scoregrid{display:grid;gap:11px}
+.score{display:grid;grid-template-columns:150px 1fr 46px;align-items:center;gap:10px;font-size:13.5px}
+.score .lab{color:#39424f;font-weight:600}
+.score .track{background:#eef2f7;border-radius:7px;height:11px;overflow:hidden}
+.score .bar{height:100%;border-radius:7px}
+.bar.s-hi{background:var(--good)}.bar.s-mid{background:var(--warn)}.bar.s-lo{background:var(--bad)}
+.score .val{text-align:right;font-weight:700;color:var(--navy);font-size:13px}
+.score .note{grid-column:1/-1;font-size:12px;color:var(--muted);margin:-4px 0 2px}
+/* 채널 섹션 소제목 */
+.sub-h{font-size:15px;font-weight:800;margin:20px 0 9px;color:var(--navy);display:flex;align-items:center;gap:8px}
+/* 채널 이동 목차(클릭 카드) */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:4px 0 18px}
+.toc a{display:block;background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  font-weight:700;font-size:14px;transition:.15s}
+.toc a:hover{border-color:var(--blue);transform:translateY(-1px)}
+.toc a span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}
+/* 채널 헤더(번호 배지 + 제목 + URL) */
+.chan-head{display:flex;align-items:center;gap:14px;margin:28px 0 8px}
+.chan-idx{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:11px;background:var(--navy);color:#fff;font-weight:800;font-size:16px;flex:none}
+.chan-head h2{margin:0;font-size:22px}
+.chan-url{font-size:12.5px;margin-top:2px}
+.chan-url a{color:var(--blue);text-decoration:none;word-break:break-all}
+.chan-url a:hover{text-decoration:underline}
+/* 세부 진단 카드(진행바형) */
+.mcgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 4px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+.mc .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.mc .lab b{font-size:15px}.mc .lab .v{font-size:15px;font-weight:800}
+.mc-bar{height:9px;border-radius:6px;background:#eef1f6;overflow:hidden}
+.mc-bar>i{display:block;height:100%;border-radius:6px}
+.mc-bar.s-hi>i{background:var(--good)}.mc-bar.s-mid>i{background:var(--warn)}.mc-bar.s-lo>i{background:var(--bad)}
+.mc small{color:var(--muted);font-size:12.5px;display:block;margin-top:8px}
+@media(max-width:640px){.mcgrid{grid-template-columns:1fr}}
+/* 발견 블록 */
+.finding{border-left:4px solid var(--good);padding:2px 0 2px 16px;margin:16px 0}
+.finding.w{border-color:var(--warn)}.finding.b{border-color:var(--bad)}
+.finding h4{margin:0 0 5px;font-size:15px;font-weight:800}
+.finding p{margin:0;font-size:14px;color:#374050}
+.finding .src{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--blue);
+  background:#eef4fb;border:1px solid #d6e6f7;border-radius:6px;padding:1px 8px}
+/* 콜아웃 */
+.callout{background:var(--sky);border:1px solid #cfe0f2;border-radius:12px;padding:15px 18px;font-size:14px;color:var(--navy)}
+.callout.g{background:var(--goodbg);border-color:#bfe3d1;color:#1f5f47}
+.callout b{font-weight:800}
+/* 태그 */
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:6px}
+.t-good{background:var(--goodbg);color:var(--good)}.t-warn{background:var(--warnbg);color:var(--warn)}.t-bad{background:var(--badbg);color:var(--bad)}
+.t-blue{background:#e6f0fa;color:var(--blue)}
+.win{background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px}
+/* 표 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--navy);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+/* 로드맵 바로/중기/장기 */
+.road{display:grid;gap:11px}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 16px;box-shadow:var(--shadow)}
+.badge{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;margin-top:1px}
+.b-now{background:var(--goodbg);color:var(--good)}.b-mid{background:#eaf1fb;color:var(--blue)}.b-long{background:#f0edf9;color:#5b3aa6}
+.step h4{margin:0 0 3px;font-size:14px;font-weight:800}.step p{margin:0;font-size:13px;color:#4a5462}
+.step .rdul{margin:5px 0 0;padding-left:17px}.step .rdul li{font-size:13px;color:#4a5462;margin:3px 0;line-height:1.5}
+.step .fx{font-size:11.5px;color:var(--muted);margin-top:3px}
+/* 강점 축 카드 */
+.pillar{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pillar.cols3{grid-template-columns:repeat(3,1fr)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow);border-top:3px solid var(--good)}
+.pcard .n{font-size:11.5px;color:var(--good);font-weight:800;letter-spacing:.04em}
+.pcard h4{margin:4px 0 5px;font-size:15px;font-weight:800}
+.pcard p{margin:0;font-size:13px;color:#4a5462}
+/* 인용 */
+.quote{border-left:3px solid var(--blue);background:#f7fafd;padding:10px 15px;border-radius:0 10px 10px 0;margin:10px 0;font-size:13.5px;color:#33404f}
+.quote .s{display:block;margin-top:5px;font-size:11.5px;color:var(--muted)}
+/* 감성 막대(리뷰) */
+.senti{display:flex;height:16px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.senti .pos{background:var(--good)}.senti .neu{background:#c9d2de}.senti .neg{background:var(--bad)}
+.kwrow{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
+.kw{font-size:12.5px;padding:4px 11px;border-radius:999px;background:#eef4fb;border:1px solid #d6e6f7;color:#2b445f}
+.kw.neg{background:var(--badbg);border-color:#f0cfca;color:var(--bad)}
+/* 연간 타임라인 */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tl{border-radius:12px;padding:13px 14px;color:#fff}
+.tl.q1{background:#2C6FB5}.tl.q2{background:#5b3aa6}.tl.q3{background:#2E8B6B}.tl.q4{background:#C58A22}
+.tl .qn{font-size:11.5px;font-weight:800;opacity:.9}.tl h4{margin:3px 0 4px;font-size:14.5px}
+.tl p{margin:0;font-size:12px;opacity:.95}
+/* 분기 상세 */
+.quarter{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow);background:var(--card)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qhead .dot{width:12px;height:12px;border-radius:3px}
+.qhead.q1 .dot{background:#2C6FB5}.qhead.q2 .dot{background:#5b3aa6}.qhead.q3 .dot{background:#2E8B6B}.qhead.q4 .dot{background:#C58A22}
+.qhead h3{margin:0;font-size:16px;font-weight:800}.qhead .theme{font-size:12.5px;color:var(--muted)}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mbox{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fbfcfe}
+.mbox .mh{font-weight:800;font-size:13px;color:var(--navy);margin-bottom:5px}
+.season{display:inline-block;font-size:10.5px;font-weight:700;background:#fff3d9;color:#8a6414;border-radius:5px;padding:1px 7px;margin-left:6px}
+.mbox ul{margin:6px 0 0;padding-left:16px}.mbox li{font-size:12.5px;color:#414b58;margin:2px 0}
+.focusrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.focusrow .f{font-size:12px;background:var(--sky);border:1px solid #cfe0f2;color:var(--navy);border-radius:8px;padding:5px 11px;font-weight:600}
+/* 채널×분기 강도 매트릭스 */
+.d{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle}
+.d-hi{background:var(--good)}.d-mid{background:var(--warn)}.d-lo{background:#d3dbe4}
+/* 예산 배분 */
+.budget{display:grid;gap:10px}
+.bcard{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:10px;font-size:13.5px}
+.bcard .blab{font-weight:700;color:#39424f}
+.btrack{background:#eef2f7;border-radius:7px;height:13px;overflow:hidden}
+.bbar{height:100%;background:linear-gradient(90deg,var(--blue),var(--navy2));border-radius:7px}
+.bcard .bval{text-align:right;font-weight:800;color:var(--navy)}
+/* 안내/주석 박스 */
+.note{background:#fff8ec;border:1px solid #f2e2c0;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#6b5320;margin:14px 0}
+.info{background:#eef4fb;border:1px solid #d6e6f7;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#274a6d;margin:12px 0}
+.info b{color:var(--navy)}
+/* 2열 리스트 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.two ul{margin:0;padding-left:17px}.two li{font-size:13px;margin:3px 0;color:#414b58}
+/* 푸터 */
+footer.wrap{padding:24px 20px 60px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px}
+footer .fn{margin:4px 0}
+/* 리포트 간 이동 네비 */
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0}
+.nav a{font-size:12px;text-decoration:none;color:var(--blue);border:1px solid #d6e6f7;background:#fff;
+  border-radius:999px;padding:4px 11px}
+.nav a.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* ── 참조 리포트 수준 컴포넌트 ───────────────────────── */
+/* 방법 카드(어떻게 분석했나) */
+.method{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.method .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.method .m b{font-size:13.5px;color:var(--navy)}.method .m p{font-size:13px;color:var(--muted);margin:4px 0 0}
+/* 개념 흐름도(1·2차) */
+.flow2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 2px}
+.flow2 .b{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:700;color:var(--navy)}
+.flow2 .b.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flow2 .a{color:var(--blue);font-weight:800;font-size:13px}
+/* 2열 그리드(채널 비교 등) */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+/* 리뷰 채널 비교 박스 */
+.chanbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.chanbox .ctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.chanbox .cbadge{font-size:12.5px;font-weight:800;color:#fff;border-radius:7px;padding:4px 10px}
+.cb-naver{background:#03C75A}.cb-google{background:#4285F4}.cb-etc{background:var(--navy)}
+.chanbox .kpi{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.chanbox .kpi:last-of-type{border-bottom:0}.chanbox .kpi b{font-weight:800}
+.sbar{height:16px;border-radius:6px;overflow:hidden;display:flex;margin:10px 0 6px}
+.sbar i{display:block;height:100%}
+.sbar .p{background:var(--good)}.sbar .u{background:#c9ced6}.sbar .g{background:var(--bad)}
+.sleg{display:flex;gap:12px;font-size:11.5px;color:var(--muted)}
+.sleg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.sleg .lp::before{background:var(--good)}.sleg .lu::before{background:#c9ced6}.sleg .lg::before{background:var(--bad)}
+/* 그라디언트 분기 블록(12개월 계획) */
+.gquarter{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:0 0 18px;background:var(--card)}
+.gqhead{padding:15px 22px;color:#fff;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.gqhead.q1{background:linear-gradient(135deg,#2C6FB5,#3f83c9)}.gqhead.q2{background:linear-gradient(135deg,#5b3aa6,#7b52c9)}
+.gqhead.q3{background:linear-gradient(135deg,#2E8B6B,#3fa682)}.gqhead.q4{background:linear-gradient(135deg,#C58A22,#d9a13f)}
+.gqhead .qlab{font-size:11.5px;font-weight:800;letter-spacing:.05em;opacity:.9}
+.gqhead h3{margin:0;font-size:18px;color:#fff;font-weight:800}.gqhead .qmon{font-size:12.5px;opacity:.9;margin-left:auto}
+.gqbody{padding:16px 22px}
+.frow{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:9px 0;border-top:1px dashed var(--line)}
+.frow .fl{font-size:11.5px;font-weight:800;color:#fff;background:var(--navy);border-radius:7px;padding:4px 10px;white-space:nowrap}
+.frow p{margin:0;font-size:13px}
+/* 체크리스트 */
+.checklist{width:100%;border-collapse:collapse;font-size:13.5px}
+.checklist th{background:var(--sky);color:var(--navy);text-align:left;padding:9px 11px;font-weight:700}
+.checklist td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}
+.checklist .box{width:16px;height:16px;border:2px solid var(--muted);border-radius:4px;display:inline-block}
+.checklist .owner{color:var(--muted);font-size:12.5px}
+/* 인쇄(PDF) 버튼 + 인쇄 스타일 */
+.printbar{position:fixed;top:14px;right:16px;z-index:50}
+.printbar button{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:9px 15px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+@media print{
+  .printbar,.nav{display:none!important}
+  header.hero{padding:24px 0 20px}
+  body{background:#fff}
+  .card,.snap .k,.step,.pcard,.chanbox,.gquarter,.method .m,.bcard{box-shadow:none}
+  section{break-inside:avoid}
+}
+@media(max-width:640px){
+  .snap{grid-template-columns:1fr 1fr}
+  .pillar,.pillar.cols3{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .months{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  .score{grid-template-columns:110px 1fr 40px}
+  .bcard{grid-template-columns:96px 1fr 40px}
+}
+
+header.hero{background:linear-gradient(135deg,#152B54,#20406f)}
+</style></head>
+<body>
+<div class="printbar"><button onclick="window.print()">🖨 PDF로 저장</button></div>
+<header class="hero"><div class="wrap">
+  <div class="kicker">ONLINE CHANNEL AUDIT</div>
+  <h1>수원 스카이동물메디컬센터 마케팅 채널 종합 진단</h1>
+  <p class="sub">홈페이지·블로그·인스타·플레이스·카카오·지도·AEO/GEO 8축 진단</p>
+  <div class="meta"><span>Petamos 병원 마케팅 진단</span><span>2026-09-23</span><span>평균 63점</span></div>
+  <div class="nav"><a class="" href="01_demo_dea0a65a1b_상권분석.html">01 상권</a><a class="" href="02_demo_dea0a65a1b_경쟁분석.html">02 경쟁</a><a class="cur" href="03_demo_dea0a65a1b_마케팅.html">03 마케팅</a><a class="" href="04_demo_dea0a65a1b_리뷰분석.html">04 리뷰</a><a class="" href="05_demo_dea0a65a1b_강점.html">05 강점</a><a class="" href="06_demo_dea0a65a1b_12개월마케팅계획.html">06 12개월</a></div>
+</div></header>
+<main class="wrap">
+<p class="lead">아래는 각 채널을 같은 기준(관점 → 평가 → 점수 → 강점/약점 → 실행가능성)으로 진단한 결과입니다. 맨 아래 ‘실행 우선순위 매트릭스’는 모든 개선안을 효과·노력·비용으로 계산해 자동 정렬한 것입니다.</p><div class="toc"><a href="#combined">🔗 종합 진단<span>공통 강점·과제</span></a><a href="#ch1">홈페이지<span>채널 진단 1</span></a><a href="#ch2">인스타그램<span>채널 진단 2</span></a><a href="#ch3">카카오톡 채널<span>채널 진단 3</span></a><a href="#ch4">카카오맵<span>채널 진단 4</span></a><a href="#ch5">AEO·GEO (AI 검색 노출)<span>채널 진단 5</span></a><a href="#matrix">✅ 실행 우선순위<span>전체 개선안</span></a></div><section id="combined"><div class="chan-head"><span class="chan-idx">종합</span><div><h2>온라인 채널 종합 진단</h2><div class="chan-url" style="color:var(--muted)">홈페이지, 인스타그램, 카카오톡 채널, 카카오맵, AEO·GEO (AI 검색 노출)</div></div></div><div class="callout"><b>핵심 한 줄</b> — 온라인 채널 평균 <b>63점</b>으로 기본기를 다질 여지가 있습니다. <b>카카오톡 채널</b>가 가장 강하고 <b>AEO·GEO</b>가 보완 1순위입니다. 공통 과제는 채널마다 제각각인 <b>전환 동선 통일</b>, 상호·주소·전화 표기 일치, 도달 확대입니다.</div><h3 class="sub-h">공통 강점</h3><div class="card"><div class="finding"><h4>2차 병원다운 브랜드 완성도가 전 채널에 일관됩니다</h4><p>홈페이지의 딥블루 컬러와 고품질 병원 실사·영상, 통일된 타이포가 첫인상을 잡아주고, 인스타그램도 같은 블루 톤에 SUWON SKY 로고 워터마크와 굵은 제목 카피로 그리드·릴스 전반이 정돈돼 있습니다. 카카오맵과 카카오톡 채널까지 대표 사진·내부 진료 공간·외관 이미지가 풍부하게(카카오맵 126장 이상) 노출되어, 어느 채널로 들어와도 같은 병원임을 알아보는 시각적 통일감이 강점입니다.</p></div><div class="finding"><h4>전문성·신뢰 콘텐츠 자산이 두텁습니다</h4><p>홈페이지에 의료진 프로필, 대표질환 TOP10, 신부전증 해부 일러스트, 진료 이야기 영상까지 보호자 설득용 자산이 잘 정리돼 있고, 인스타그램은 &#x27;14년 노령견의 기적&#x27;, &#x27;안락사를 권유받았는데&#x27; 같은 감성 스토리와 건강검진 정보성 콘텐츠를 균형 있게 운영합니다. 카카오톡 채널에도 대표원장 소개 영상, 명절 진료 안내, 월별 의료진 스케줄 소식이 있어 전문성과 운영 신뢰를 함께 전달합니다.</p></div><div class="finding"><h4>릴스 도달력과 지도·기본정보 기반이 이미 검증돼 있습니다</h4><p>인스타그램 릴스 상단 콘텐츠가 5.7만·15.2만·18만 조회를 기록해 팔로워 128명 규모를 크게 뛰어넘는 확산력을 보여줍니다. 동시에 카카오맵은 주소·전화·24시간 영업·홈페이지 링크와 &#x27;사업자 정보가 확인된 장소&#x27; 표기, 후기 11건과 전문성·친절·주차 키워드까지 완비했고, 카카오톡 채널은 인증 배지·주차·반려동물 동반·카카오페이 정보에 친구 1,556명을 확보해 도달과 기본 신뢰 기반이 함께 갖춰져 있습니다.</p></div></div><h3 class="sub-h">공통 과제(채널을 가로지르는 우선 개선점)</h3><div class="card"><div class="finding b"><h4>전화·예약을 실제 클릭으로 잇는 전환 동선이 비어 있습니다 <span class="tag t-bad">심각도 높음</span></h4><p>홈페이지에는 대표전화 031-895-5775와 &#x27;대표전화 연결&#x27; 버튼이 화면에 보이지만 코드상 전화·예약·상담 링크가 검출되지 않아 클릭이 실제로 작동하지 않을 수 있고, AI 검색 대응에서도 전화 바로걸기 링크가 없어 모바일에서 바로 통화 연결이 어렵습니다. 인스타그램도 메시지 버튼·블로그 링크는 있으나 예약·전화 유도 요소가 명확히 드러나지 않습니다. 도달과 방문 의사가 실제 내원으로 이어지도록 모든 채널에서 전화 바로걸기·예약 버튼을 실제 작동하게 연결해야 합니다.</p></div><div class="finding b"><h4>상호명 불일치로 AI·검색이 같은 병원임을 확신하지 못합니다 <span class="tag t-bad">심각도 높음</span></h4><p>네이버 플레이스는 &#x27;수원 스카이동물메디컬센터&#x27;, 카카오맵은 &#x27;수원24시스카이동물메디컬센터&#x27;로 상호명이 달라 검색엔진과 생성형 AI가 동일 병원으로 인식하기 어렵습니다. 주소는 &#x27;경기 수원시 팔달구 인계로 91&#x27;로 일치해 기반은 있으나, 전화번호 일관성도 확인이 필요한 상태입니다. 모든 채널에서 상호·주소·전화 표기를 한 글자까지 동일하게 통일해 위치·병원 신뢰 신호를 하나로 모아야 합니다.</p></div><div class="finding b"><h4>검색엔진·AI가 읽을 검색엔진이 읽는 정보 코드가 전혀 없습니다 <span class="tag t-bad">심각도 높음</span></h4><p>홈페이지에 동물병원·지역·진료시간 등을 검색엔진이 인식할 검색엔진이 읽는 정보 코드와 자주 묻는 질문 형식 데이터가 모두 없어, 지역 검색 노출과 AI 검색 인용에서 손해를 봅니다. 메타 설명·공유 미리보기 카드·모바일 화면 대응 같은 기본 신호는 갖춰져 있으므로, 병원명·진료·위치·진료시간을 검색엔진이 읽는 정보 코드로 추가해 AI 검색이 정확히 인용하도록 보완해야 합니다.</p></div><div class="finding w"><h4>높은 도달이 팔로워·구독 자산으로 쌓이지 않습니다 <span class="tag t-warn">심각도 중간</span></h4><p>인스타그램 릴스가 최대 18만 조회를 내는데도 팔로워는 128명에 그쳐, 조회가 구독·재방문 자산으로 전환되지 않고 있습니다. 프로필 유입 후 팔로우를 유도하는 장치가 약하고, 카카오톡 채널도 친구 추가 유도 버튼은 있으나 도달을 채널 친구로 묶는 연결이 더 필요합니다. 릴스에서 프로필로, 다시 팔로우·채널 추가로 이어지는 유도 장치를 강화해야 합니다.</p></div><div class="finding w"><h4>매장 소식·발행 최신성이 채널마다 확인되지 않습니다 <span class="tag t-warn">심각도 중간</span></h4><p>카카오맵은 매장 소식 영역이 비어 있어 최근까지 관리되는 채널이라는 인상이 약하고, 카카오톡 채널은 명절 안내와 8·9월 스케줄 소식이 있으나 정기 발행 주기가 드러나지 않습니다. 인스타그램도 게시물 53개는 확인되나 최근 발행 주기가 화면에서 드러나지 않습니다. 채널마다 정기적으로 소식을 올려 &#x27;살아있는 병원&#x27;이라는 인상을 유지해야 합니다.</p></div><div class="finding w"><h4>후기 평점·응답과 상담 응대 안내가 드러나지 않습니다 <span class="tag t-warn">심각도 중간</span></h4><p>카카오맵·카카오톡 채널 모두 후기 11건은 표기되나 평균 별점이 노출되지 않아 방문자가 만족도를 가늠하기 어렵고, 병원 답글 등 관리 활동도 화면상 확인되지 않습니다. 카카오톡 채널은 채팅 버튼은 있으나 상담 가능 시간·응답 속도 같은 응대 안내가 없어 문의 전환에 불확실성이 있습니다. 후기 답글 운영과 상담 응대 시간 안내를 노출해 신뢰와 문의 전환을 높여야 합니다.</p></div></div></section><a id="ch1"></a><section class="channel"><div class="chan-head"><span class="chan-idx">1</span><div><h2>홈페이지</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 보여주는 힘과 콘텐츠 깊이는 뛰어난데 전화·예약을 실제 클릭으로 잇는 전환 동선이 비어 있다</div><div class="info"><b>내세우는 진료 특화</b> — 영상진단(MRI) · 24시 응급·중환자 진료 · 내과·만성질환(신부전 등) (콘텐츠에서 반복 노출). 특화 강점의 상세 진단·제안은 <b>05 강점 리포트</b>에서 다룹니다.</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>디자인·브랜드</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>딥블루 기반 통일된 브랜드 톤과 고품질 이미지·영상으로 완성도가 높다</small></div><div class="mc"><div class="lab"><b>콘텐츠·신뢰</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>의료진 라인업, 대표질환 TOP10, 신부전증 해부 일러스트, Shorts 영상 등 자산이 풍부하다</small></div><div class="mc"><div class="lab"><b>UX·전환</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>화면에 전화번호·지도·전화연결 버튼이 보이나 코드상 전화·예약·상담 링크가 미검출된다</small></div><div class="mc"><div class="lab"><b>기술·검색 노출</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>메타 description·공유 미리보기 이미지태그·모바일 뷰포트 있음, 다만 검색엔진이 읽는 정보 코드는 없음</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">디자인</td><td>브랜드 톤과 시각 완성도가 일관적인가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">정보구조</td><td>의료진·진료·질환 정보가 체계적으로 배치되었는가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전환 동선</td><td>전화·예약·상담으로 실제 연결되는 클릭 요소가 작동하는가</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">모바일</td><td>모바일 뷰포트 등 반응형 대응이 되어 있는가</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">검색 노출</td><td>메타 description·공유 미리보기 이미지태그가 갖춰져 있는가</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">검색엔진이 읽는 정보 코드</td><td>검색엔진이 읽는 정보 코드 등 검색엔진이 읽는 정보 코드가 적용되어 있는가</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">채널 연계</td><td>SNS 등 외부 채널로의 연결이 마련되어 있는가</td><td><span class="tag t-warn">보통</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>브랜드 완성도 높은 비주얼</h4><p>딥블루 컬러와 고품질 병원 실사·영상, 통일된 타이포로 2차 병원다운 신뢰감 있는 첫인상을 준다.</p></div><div class="finding"><h4>풍부한 진료 콘텐츠 자산</h4><p>의료진 프로필, 대표질환 TOP10, 신부전증 해부 일러스트, 진료 이야기 Shorts 등 보호자 설득에 쓸 콘텐츠가 잘 정리되어 있다.</p></div><div class="finding"><h4>검색 노출 기본 태그 확보</h4><p>코드상 메타 description과 공유 미리보기 이미지태그, 모바일 뷰포트가 있어 검색·공유 노출 기반은 갖췄다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding b"><h4>전화·예약·상담 링크 미검출 <span class="tag t-bad">심각도 높음</span></h4><p>화면에 대표전화 031-895-5775와 &#x27;대표전화 연결&#x27; 버튼이 보이지만 코드상 전화·예약·상담 링크가 검출되지 않아 클릭 전환이 실제로 작동하지 않을 수 있다.</p></div><div class="finding w"><h4>검색엔진이 읽는 정보 코드 없음 <span class="tag t-warn">심각도 중간</span></h4><p>동물병원·지역·진료시간 등을 검색엔진이 인식할 검색엔진이 읽는 정보 코드가 없어 지역 검색 노출과 AI 검색 답변 대응에서 손해를 본다.</p></div><div class="finding w"><h4>연결 SNS가 유튜브에 편중 <span class="tag t-warn">심각도 중간</span></h4><p>화면 하단에 블로그·인스타그램·카카오톡채널 아이콘이 보이나 코드상 연결이 확인되는 채널은 유튜브뿐이라 실제 링크 작동 여부 확인이 필요하다.</p></div></div></section><a id="ch2"></a><section class="channel"><div class="chan-head"><span class="chan-idx">2</span><div><h2>인스타그램</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 릴스로 터지는 도달은 이미 증명됐는데 팔로워 자산화와 예약 전환 연결이 비어 있다</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>프로필 완성도</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>소개·본원 MRI 강점·블로그 링크(외 3개)·하이라이트(의료진/후기/케이스) 구성은 갖춤</small></div><div class="mc"><div class="lab"><b>콘텐츠·브랜딩</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>통일된 블루 톤과 SUWON SKY 로고, 제목 카피가 일관돼 브랜딩이 정돈됨</small></div><div class="mc"><div class="lab"><b>릴스·숏폼</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>릴스 탭 활성, 상단 3편 5.7만·15.2만·18만 등 높은 조회수 확인</small></div><div class="mc"><div class="lab"><b>성장·도달</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>게시물 53·팔로워 128명으로 릴스 도달 대비 팔로워 축적이 매우 낮음</small></div><div class="mc"><div class="lab"><b>전환</b><span class="v" style="color:var(--warn)">보통</span></div><div class="mc-bar s-mid"><i style="width:62%"></i></div><small>메시지·링크는 있으나 예약·전화 예약·전화 유도 버튼가 화면상 명확히 드러나지 않음</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">프로필 완성도</td><td>소개·링크·하이라이트가 갖춰져 있는가</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">팔로워 규모</td><td>도달 대비 팔로워 자산이 형성되었는가</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">릴스/숏폼 활용</td><td>릴스가 활성화되고 조회수가 나오는가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">브랜딩 일관성</td><td>톤·로고·카피가 통일돼 있는가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">게시 빈도</td><td>지속적으로 발행되는가</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전환 동선</td><td>예약·전화 연결이 명확한가</td><td><span class="tag t-warn">보통</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>릴스 도달력이 확실히 검증됨</h4><p>릴스 탭 상단 콘텐츠가 5.7만·15.2만·18만 조회를 기록하고 있어 팔로워 128명 규모를 크게 뛰어넘는 확산력을 확인할 수 있다.</p></div><div class="finding"><h4>일관된 시각 브랜딩</h4><p>블루 계열 톤, SUWON SKY 로고 워터마크, 굵은 제목 카피가 그리드와 릴스 전반에 통일돼 있어 브랜드 인지에 유리하다.</p></div><div class="finding"><h4>콘텐츠 주제의 공감·전문성 균형</h4><p>&#x27;14년 노령견의 기적&#x27;, &#x27;안락사를 권유받았는데&#x27;, &#x27;수의사가 환자보다 보호자를 더 공감하는 이유&#x27; 등 감성 스토리와 건강검진 정보성 콘텐츠가 섞여 있어 흡인력과 신뢰를 함께 노린다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding b"><h4>도달 대비 팔로워 자산화 부진 <span class="tag t-bad">심각도 높음</span></h4><p>릴스 최대 18만 조회에도 팔로워가 128명에 그쳐, 조회가 구독·재방문 자산으로 전환되지 않고 있다. 프로필 유입 후 팔로우를 유도하는 장치가 약하다.</p></div><div class="finding w"><h4>예약·전환 동선 미약 <span class="tag t-warn">심각도 중간</span></h4><p>화면상 메시지 버튼과 블로그 링크는 있으나 예약·전화 등 직접 행동 유도 요소가 명확히 드러나지 않아 도달이 내원으로 이어지기 어렵다.</p></div><div class="finding w"><h4>게시 빈도·최신성 확인 불가 <span class="tag t-warn">심각도 중간</span></h4><p>게시물 53개는 확인되나 최근 발행 주기가 화면에서 드러나지 않아 지속성 판단이 어렵다(확인 필요).</p></div></div></section><a id="ch3"></a><section class="channel"><div class="chan-head"><span class="chan-idx">3</span><div><h2>카카오톡 채널</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 친구·정보·소식·쿠폰까지 골고루 갖춘 안정적 채널, 소식 발행 최신성과 상담 응대 노출만 보완하면 상위권</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>프로필·기본정보</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>인증 배지, 24시간 영업, 주소·주차·반려동물 동반 등 정보가 충실</small></div><div class="mc"><div class="lab"><b>친구·성장</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>친구 1,556명으로 준수, 채널 추가 유도 버튼도 배치</small></div><div class="mc"><div class="lab"><b>소식·콘텐츠</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>명절 진료 안내·월별 의료진 스케줄 등 실용 소식 확인</small></div><div class="mc"><div class="lab"><b>상담·전환</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>전화하기·쿠폰(1개)·소식·카카오내비 등 전환 버튼 다수 노출</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">프로필 신뢰도</td><td>인증 배지와 병원 정체성이 명확한가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">기본정보</td><td>영업시간·주소·편의정보가 충분한가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">친구 수</td><td>채널 친구 규모가 확보되어 있는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">소식 운영</td><td>소식이 최신·정기적으로 발행되는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">쿠폰·혜택</td><td>이용 가능한 쿠폰이 제공되는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">상담 응대</td><td>상담 응답 속도·운영 안내가 노출되는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">후기</td><td>후기 수와 평점이 확인되는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>충실한 기본정보와 인증</h4><p>채널명 옆 인증 배지, 24시간 영업(00:00~24:00), 주소·주차·반려동물 동반출입·카카오페이까지 표기되어 방문 전 필요한 정보가 화면에서 바로 확인된다.</p></div><div class="finding"><h4>전환 동선이 다양</h4><p>전화하기·길찾기·카카오내비·쿠폰·소식 버튼이 모두 노출되고, 사용 가능한 쿠폰 1개와 &#x27;채널 친구 추가하고 혜택 알림 받기&#x27; 배너로 전환을 유도한다.</p></div><div class="finding"><h4>신뢰형 콘텐츠 구성</h4><p>대표원장 소개 영상, 병원 외관·시설 사진과 명절 진료 안내·월별 의료진 스케줄 소식이 있어 2차 병원으로서의 전문성과 운영 신뢰가 전달된다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding w"><h4>후기 평점 미노출 <span class="tag t-warn">심각도 중간</span></h4><p>후기 11건은 표기되나 화면에서 평균 별점은 확인되지 않아 방문자가 만족도를 가늠하기 어렵다. 실제 평점은 확인 필요.</p></div><div class="finding w"><h4>상담 응대 정보 부재 <span class="tag t-warn">심각도 중간</span></h4><p>채팅 버튼은 있으나 상담 가능 시간·응답 속도 등 응대 관련 안내가 화면에서 확인되지 않아 문의 전환에 불확실성이 있다.</p></div><div class="finding w"><h4>소식 최신성 확인 필요 <span class="tag t-warn">심각도 중간</span></h4><p>명절 안내와 8·9월 스케줄 소식이 보이나 최신 발행 주기가 화면상 명확하지 않아 정기 운영 여부는 확인이 필요하다.</p></div></div></section><a id="ch4"></a><section class="channel"><div class="chan-head"><span class="chan-idx">4</span><div><h2>카카오맵</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 상호·주소·전화 표기·사진 기본기는 탄탄한데 매장 소식이 비어 있어 살아있는 채널이라는 인상이 약하다</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>정보 정확성</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>주소·전화·홈페이지·24시간 영업·사업자 정보 확인됨이 화면에 모두 노출</small></div><div class="mc"><div class="lab"><b>후기 공개</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>후기 11건 공개, 전문성·친절·주차 등 키워드 태그와 개별 후기 확인 가능</small></div><div class="mc"><div class="lab"><b>사진</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>대표·내부·외관 사진과 126장 이상 이미지가 노출되어 시각 정보 충분</small></div><div class="mc"><div class="lab"><b>소식·최신성</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>매장 소식 영역이 활성화되지 않아 최신 소식 확인 필요</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">정보 정확성</td><td>상호·주소·전화·영업시간이 정확히 노출되는가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">정보 정확성</td><td>홈페이지·사업자 정보 등 신뢰 요소가 확인되는가</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">후기 공개</td><td>후기가 공개되고 열람 가능한가</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">사진</td><td>대표·내부·외관 사진이 충분히 노출되는가</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">소식</td><td>매장 소식이 최근까지 운영되는가</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전환</td><td>문의·길찾기 등 행동 유도 요소가 있는가</td><td><span class="tag t-good">양호</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>핵심 상호·주소·전화 표기 정보 완비</h4><p>주소, 전화, 24시간 영업, 홈페이지 링크가 모두 노출되고 &#x27;사업자 정보가 확인된 장소&#x27;로 표기되어 신뢰 기반이 갖춰져 있다.</p></div><div class="finding"><h4>사진·시각 정보 풍부</h4><p>대표 사진, 내부 진료 공간, 외관 등 다양한 이미지와 126장 이상의 사진 모음이 노출되어 방문 전 정보가 충분하다.</p></div><div class="finding"><h4>후기 공개 및 키워드 태그</h4><p>후기 11건이 공개되어 있고 전문성·친절·주차 등 방문자 평가 키워드가 함께 노출되어 열람이 편리하다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding w"><h4>매장 소식 미활성 <span class="tag t-warn">심각도 중간</span></h4><p>매장 소식 영역이 비어 있어 채널이 최근까지 관리되고 있다는 인상이 약하다. 최신 소식 여부는 확인 필요.</p></div><div class="finding w"><h4>후기 수 대비 응답·관리 흔적 확인 어려움 <span class="tag t-warn">심각도 중간</span></h4><p>후기가 공개되어 있으나 화면상 병원 답글 등 관리 활동은 확인되지 않아, 운영 활성도 판단을 위한 확인이 필요하다.</p></div></div></section><a id="ch5"></a><section class="channel"><div class="chan-head"><span class="chan-idx">5</span><div><h2>AEO·GEO (AI 검색 노출)</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 기본 메타 신호는 있으나 검색엔진이 읽는 정보 코드가 비어 있고 상호명 불일치로 AI 검색이 같은 병원으로 확신하지 못한다</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>검색엔진이 읽는 정보 코드</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>검색엔진이 읽는 정보 코드·FAQPage 모두 없음 — 생성엔진이 병원 정보를 구조적으로 읽을 수 없다</small></div><div class="mc"><div class="lab"><b>엔티티·상호·주소·전화 표기 일관성</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>상호명 네이버·카카오 불일치, 전화 확인불가로 실측 50점 수준</small></div><div class="mc"><div class="lab"><b>공유·메타 신호</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>메타 설명·Open Graph·모바일 뷰포트 모두 확인됨</small></div><div class="mc"><div class="lab"><b>전환 연결 신호</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>전화 바로걸기 링크 없음 — 모바일 AI 답변에서 바로 전화 연결이 안 된다</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">검색엔진이 읽는 정보 코드</td><td>검색엔진이 읽는 정보 코드로 병원(MedicalOrganization/LocalBusiness) 정보를 제공하는가?</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">자주 묻는 질문 구조화</td><td>FAQPage 스키마로 자주 묻는 질문을 노출하는가?</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">엔티티·상호·주소·전화 표기 일관성</td><td>상호·주소·전화가 채널 간 일치하는가?</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">주소 일관성</td><td>주소가 소스 간 일치하는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전화 신호</td><td>전화 바로걸기 링크와 전화번호 일관성이 확인되는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">공유·메타</td><td>메타 설명·공유 미리보기 이미지·뷰포트 등 기본 신호를 갖췄는가?</td><td><span class="tag t-good">양호</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>기본 메타 신호 확보</h4><p>메타 설명과 Open Graph 공유 카드, 모바일 뷰포트가 모두 확인되어 검색·공유 시 기본 표시 요건은 충족한다.</p></div><div class="finding"><h4>주소 일관성 유지</h4><p>네이버 플레이스와 카카오맵의 주소가 &#x27;경기 수원시 팔달구 인계로 91&#x27;로 일치해 위치 엔티티 신뢰의 기반은 있다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding b"><h4>검색엔진이 읽는 정보 코드 전무 <span class="tag t-bad">심각도 높음</span></h4><p>검색엔진이 읽는 정보 코드와 FAQPage 스키마가 모두 없어 생성형 AI 검색이 병원명·진료·위치를 구조적으로 인식하고 답변에 인용하기 어렵다.</p></div><div class="finding b"><h4>상호명 불일치 <span class="tag t-bad">심각도 높음</span></h4><p>네이버 플레이스는 &#x27;수원 스카이동물메디컬센터&#x27;, 카카오맵은 &#x27;수원24시스카이동물메디컬센터&#x27;로 상호명이 달라 AI·검색엔진이 같은 병원으로 확신하지 못한다.</p></div><div class="finding w"><h4>전화 신호 불완전 <span class="tag t-warn">심각도 중간</span></h4><p>전화 바로걸기 링크가 없고 전화번호 일관성도 소스 부족으로 확인 필요 상태라, 모바일 AI 답변에서 바로 통화 연결과 신뢰 확인이 어렵다.</p></div></div><div class="callout">🔒 <b>AI 검색 최적화 구조화 데이터(schema.org) 코드</b>는 이 진단 리포트에 포함되지 않습니다. 병원 상호·주소·전화·<b>강점 진료</b>·공식 채널을 AI가 읽는 <b>엔티티 코드</b>로 만들어 홈페이지에 심고, 심은 뒤 <b>AI 추천에 실제로 오르는지 재검증</b>하는 것은 <b>구독(엔티티 구축)</b>에서 제공됩니다. 위 진단은 ‘무엇이 비어 있는지’까지입니다.</div></section><section><div class="sechead"><div class="num">7</div><h2>실행 우선순위 매트릭스</h2></div><a id="matrix"></a><div class="info">우선순위 점수 = <b>효과×3 − 노력 − 비용</b>. 바로(≥5 또는 노력1·효과2↑) / 중기(2~5) / 장기(&lt;2).</div><div class="road"><div class="step"><span class="badge b-now">바로</span><div><h4>[홈페이지] 대표전화·예약·상담 버튼에 실제 전화 바로걸기:/링크 연결 적용 및 클릭 검증</h4><div class="fx">효과 3 · 노력 1 · 비용 1 → 우선순위 7 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[인스타그램] 릴스 캡션·고정 댓글에 &#x27;팔로우+예약&#x27; 예약·전화 유도 버튼 삽입해 조회를 팔로워·문의로 전환</h4><div class="fx">효과 3 · 노력 1 · 비용 1 → 우선순위 7 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[AI 검색 답변·생성형 AI 검색] 모든 채널의 상호명을 &#x27;수원 스카이동물메디컬센터&#x27;로 통일</h4><div class="fx">효과 3 · 노력 1 · 비용 1 → 우선순위 7 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[인스타그램] 프로필 링크를 예약 페이지 중심으로 재정비하고 하이라이트에 &#x27;예약 안내&#x27; 추가</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[AI 검색 답변·생성형 AI 검색] MedicalOrganization/LocalBusiness 검색엔진이 읽는 정보 코드 추가(상호·주소·전화·진료 포함)</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[홈페이지] 모바일에서 상시 노출되는 전화연결 플로팅 버튼 배치</h4><div class="fx">효과 3 · 노력 2 · 비용 2 → 우선순위 5 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[카카오톡 채널] 쿠폰 혜택을 대표 진료(건강검진 등)와 연계해 전환 강화</h4><div class="fx">효과 3 · 노력 2 · 비용 2 → 우선순위 5 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[홈페이지] 하단 블로그·인스타·카카오톡 아이콘의 실제 링크 연결 및 작동 점검</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[카카오맵] 공개 후기에 병원 답글로 응대해 관리 활성도 노출</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[카카오톡 채널] 상담 가능 시간·응답 안내를 채널 소개·소식에 명시</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[AI 검색 답변·생성형 AI 검색] 전화번호 전화 바로걸기 링크 삽입 및 채널 간 번호 일치 확인</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[홈페이지] 동물병원·진료시간·위치 정보를 담은 검색엔진이 읽는 정보 코드 검색엔진이 읽는 정보 코드 추가</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[인스타그램] 보호자 후기 하이라이트를 실제 리뷰 콘텐츠로 확충해 신뢰·전환 강화</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[카카오맵] 매장 소식에 진료 안내·공지 정기 발행</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[카카오톡 채널] 후기 유도 문구·평점 안내로 신뢰 지표 강화</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[카카오톡 채널] 소식 정기 발행(주 1회 이상)로 최신성 유지</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[AI 검색 답변·생성형 AI 검색] 자주 묻는 질문을 FAQPage 검색엔진이 읽는 정보 코드로 마크업</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[인스타그램] 조회수 높은 스토리형 릴스 포맷을 주 1~2회 정례 발행해 성장 모멘텀 유지</h4><div class="fx">효과 2 · 노력 2 · 비용 2 → 우선순위 2 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-long">장기</span><div><h4>[카카오맵] 사진 최신 진료 공간·장비 이미지로 주기적 갱신</h4><div class="fx">효과 1 · 노력 2 · 비용 1 → 우선순위 0 · 실행가능성 보통</div></div></div></div></section>
+</main>
+<footer class="wrap">
+<p class="fn">· 네이버·카카오·인스타 채널은 약관·차단 이슈로 자동 수집하지 않으며, 리뷰·채널 정보는 담당자 제공 자료를 기준으로 합니다.</p><p class="fn">· 참고용 진단 리포트입니다. 사실관계는 실제 정보로 확정하세요.</p>
+</footer>
+</body></html>

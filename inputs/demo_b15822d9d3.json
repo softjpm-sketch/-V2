@@ -1,0 +1,1621 @@
+{
+  "clinic": {
+    "name": "24시샤인동물메디컬센터",
+    "slug": "demo_b15822d9d3",
+    "address": "서울 송파구 오금로 147 샤인동물메디컬센터",
+    "tier": 2,
+    "date": "2026-09-17"
+  },
+  "trade_area": {
+    "_ingest": {
+      "source": "주소 기반 자동 + SGIS 인구·가구",
+      "radius_m": 3000,
+      "coord": [
+        37.5108296264117,
+        127.111562496081
+      ],
+      "nearest_station": {
+        "m": 99,
+        "name": "송파나루역 9호선"
+      },
+      "area_scan": {
+        "apt": 28,
+        "food": 639,
+        "cafe": 146,
+        "ratio": 28.0
+      },
+      "registered_pets": 33706,
+      "sgis": {
+        "adm_cd": "11240",
+        "sido": "서울",
+        "sigungu": "송파구",
+        "households": 265857,
+        "year": 2023,
+        "population": 630744
+      },
+      "sbiz": {
+        "dongCd": "11710562",
+        "dong": "방이2동",
+        "daily_footfall": 157597,
+        "dong_sales_manwon": 18055,
+        "rep_sales": {
+          "카페": 6801,
+          "편의점": 6682,
+          "빵/도넛": 5111,
+          "한식": 4507,
+          "치킨": 3837
+        }
+      }
+    },
+    "clinics_in_region": 75,
+    "region_clinics": 75,
+    "nearest_station_m": 99,
+    "apartment_dense": true,
+    "area_type": "상업 중심",
+    "region_label": "서울 송파구",
+    "registered_pets": 33706,
+    "households": 265857,
+    "population": 630744,
+    "daily_footfall": 157597,
+    "monthly_sales_manwon": 18055
+  },
+  "competition": {
+    "clinics": [
+      {
+        "name": "24시샤인동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 0,
+        "road": "서울 송파구 오금로 147",
+        "url": "http://place.map.kakao.com/1941364028"
+      },
+      {
+        "name": "샤인캣 고양이메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 0,
+        "road": "서울 송파구 오금로 147",
+        "url": "http://place.map.kakao.com/1108972291"
+      },
+      {
+        "name": "샤인아이안과동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 8,
+        "road": "서울 송파구 오금로 147",
+        "url": "http://place.map.kakao.com/2118911649"
+      },
+      {
+        "name": "호수동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 248,
+        "road": "서울 송파구 오금로 126",
+        "url": "http://place.map.kakao.com/10979120"
+      },
+      {
+        "name": "송파마리동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 356,
+        "road": "서울 송파구 오금로 185",
+        "url": "http://place.map.kakao.com/1268211718"
+      },
+      {
+        "name": "페토피아동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 540,
+        "road": "서울 송파구 오금로 203",
+        "url": "http://place.map.kakao.com/16054794"
+      },
+      {
+        "name": "베를린동물치과센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 597,
+        "road": "서울 송파구 백제고분로 506",
+        "url": "http://place.map.kakao.com/282839306"
+      },
+      {
+        "name": "바로슬동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 601,
+        "road": "서울 송파구 백제고분로 506",
+        "url": "http://place.map.kakao.com/885938934"
+      },
+      {
+        "name": "송이종합동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 606,
+        "road": "서울 송파구 가락로 210",
+        "url": "http://place.map.kakao.com/16296580",
+        "review_count": 372,
+        "rating": 4.5
+      },
+      {
+        "name": "THE허그동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 636,
+        "road": "서울 송파구 올림픽로 366",
+        "url": "http://place.map.kakao.com/781869512"
+      },
+      {
+        "name": "라임동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 650,
+        "road": "서울 송파구 가락로 258",
+        "url": "http://place.map.kakao.com/23791114"
+      },
+      {
+        "name": "잠실동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 726,
+        "road": "서울 송파구 올림픽로 329",
+        "url": "http://place.map.kakao.com/876124146"
+      },
+      {
+        "name": "석촌동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 731,
+        "road": "서울 송파구 송파대로 441",
+        "url": "http://place.map.kakao.com/22758213"
+      },
+      {
+        "name": "라온펫동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 784,
+        "road": "서울 송파구 가락로 169",
+        "url": "http://place.map.kakao.com/1435846881"
+      },
+      {
+        "name": "한양동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 859,
+        "road": "서울 송파구 가락로 162",
+        "url": "http://place.map.kakao.com/14624048"
+      },
+      {
+        "name": "잠실종합동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 944,
+        "road": "서울 송파구 송파대로 388",
+        "url": "http://place.map.kakao.com/10745501",
+        "review_count": 158,
+        "rating": 5
+      },
+      {
+        "name": "아스펜 동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 946,
+        "road": "서울 송파구 올림픽로35길 45",
+        "url": "http://place.map.kakao.com/697469588"
+      },
+      {
+        "name": "가락동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 953,
+        "road": "서울 송파구 오금로 247",
+        "url": "http://place.map.kakao.com/11310123"
+      },
+      {
+        "name": "송파동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1027,
+        "road": "서울 송파구 송파대로 378",
+        "url": "http://place.map.kakao.com/7954350"
+      },
+      {
+        "name": "더샵동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1029,
+        "road": "서울 송파구 올림픽로35가길 9",
+        "url": "http://place.map.kakao.com/10315778",
+        "review_count": 213,
+        "rating": 3.4
+      },
+      {
+        "name": "스킨앤이어동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1049,
+        "road": "서울 송파구 위례성대로 102",
+        "url": "http://place.map.kakao.com/1283047868"
+      },
+      {
+        "name": "리오동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1058,
+        "road": "서울 송파구 올림픽로35길 10",
+        "url": "http://place.map.kakao.com/11075224"
+      },
+      {
+        "name": "석촌호수동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1215,
+        "road": "서울 송파구 송파대로49길 52",
+        "url": "http://place.map.kakao.com/112158567"
+      },
+      {
+        "name": "킴리동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1232,
+        "road": "서울 송파구 올림픽로35길 104",
+        "url": "http://place.map.kakao.com/20599624"
+      },
+      {
+        "name": "우리아이동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1281,
+        "road": "서울 송파구 올림픽로37길 130",
+        "url": "http://place.map.kakao.com/1405045723"
+      },
+      {
+        "name": "쿨펫 잠실점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1337,
+        "road": "서울 송파구 올림픽로 240",
+        "url": "http://place.map.kakao.com/15112184"
+      },
+      {
+        "name": "동물병원유피",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1370,
+        "road": "서울 송파구 가락로 69",
+        "url": "http://place.map.kakao.com/638741161"
+      },
+      {
+        "name": "유앤동물의료원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1396,
+        "road": "서울 송파구 양재대로 1148",
+        "url": "http://place.map.kakao.com/1951194614"
+      },
+      {
+        "name": "잠실베스트동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1411,
+        "road": "서울 송파구 삼학사로 88",
+        "url": "http://place.map.kakao.com/24576378"
+      },
+      {
+        "name": "닥터캣고양이병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1419,
+        "road": "서울 송파구 백제고분로 293",
+        "url": "http://place.map.kakao.com/1107263369"
+      },
+      {
+        "name": "한걸음더재활한방동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1426,
+        "road": "서울 송파구 백제고분로 294",
+        "url": "http://place.map.kakao.com/1883921012"
+      },
+      {
+        "name": "올림픽동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1475,
+        "road": "서울 송파구 양재대로 1164",
+        "url": "http://place.map.kakao.com/1881086055"
+      },
+      {
+        "name": "하트동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1509,
+        "road": "서울 송파구 삼학사로 75",
+        "url": "http://place.map.kakao.com/811483642"
+      },
+      {
+        "name": "잠실갤러리아동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1532,
+        "road": "서울 송파구 올림픽로 212",
+        "url": "http://place.map.kakao.com/1635410779"
+      },
+      {
+        "name": "잠실바른눈안과동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1547,
+        "road": "서울 송파구 삼학사로 67",
+        "url": "http://place.map.kakao.com/550652616"
+      },
+      {
+        "name": "헬리오동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1594,
+        "road": "서울 송파구 송파대로 345",
+        "url": "http://place.map.kakao.com/654101337"
+      },
+      {
+        "name": "이재풍동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1636,
+        "road": "서울 송파구 오금로35길 44",
+        "url": "http://place.map.kakao.com/14624009"
+      },
+      {
+        "name": "쿨독동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1666,
+        "road": "서울 송파구 중대로9길 48",
+        "url": "http://place.map.kakao.com/9469984"
+      },
+      {
+        "name": "행복한우리아이동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1676,
+        "road": "서울 송파구 석촌호수로 146",
+        "url": "http://place.map.kakao.com/25766834"
+      },
+      {
+        "name": "잠실 스무살의꿈동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1738,
+        "road": "서울 송파구 석촌호수로 140",
+        "url": "http://place.map.kakao.com/1838680971"
+      },
+      {
+        "name": "이룸동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1738,
+        "road": "서울 송파구 삼학사로 34",
+        "url": "http://place.map.kakao.com/1619692805"
+      },
+      {
+        "name": "준25시동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1755,
+        "road": "서울 송파구 석촌호수로 138",
+        "url": "http://place.map.kakao.com/14624054"
+      },
+      {
+        "name": "리틀버드서울 버드 앤 주 클리닉",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1821,
+        "road": "서울 송파구 오금로 332",
+        "url": "http://place.map.kakao.com/1507914057"
+      },
+      {
+        "name": "소담동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1935,
+        "road": "서울 송파구 삼전로 99",
+        "url": "http://place.map.kakao.com/1502493378"
+      },
+      {
+        "name": "엘 동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1999,
+        "road": "서울 송파구 중대로 320",
+        "url": "http://place.map.kakao.com/498161922"
+      }
+    ],
+    "_ingest": {
+      "source": "카카오 반경 경쟁 수집",
+      "total": 75,
+      "radius_m": 3000,
+      "capped": true
+    },
+    "rival_marketing": [
+      {
+        "name": "송이종합동물병원",
+        "homepage": "없음",
+        "blog": "운영",
+        "instagram": "운영",
+        "place_review": 372,
+        "instagram_url": "https://www.instagram.com/song_e_amc",
+        "blog_url": "https://blog.naver.com/songeanimalclinic",
+        "specialty": [
+          "24시·응급",
+          "신경",
+          "심장·순환기",
+          "영상(CT·MRI)",
+          "정형·재활",
+          "종양",
+          "초음파",
+          "치과",
+          "혈액검사"
+        ]
+      },
+      {
+        "name": "잠실종합동물병원",
+        "homepage": "없음",
+        "blog": "없음",
+        "instagram": "없음",
+        "place_review": 158
+      },
+      {
+        "name": "더샵동물메디컬센터",
+        "homepage": "없음",
+        "blog": "운영",
+        "instagram": "없음",
+        "place_review": 213,
+        "blog_url": "http://blog.naver.com/thesharpah",
+        "specialty": [
+          "신경",
+          "심장·순환기",
+          "안과",
+          "영상(CT·MRI)",
+          "정형·재활",
+          "종양",
+          "초음파",
+          "치과",
+          "혈액검사"
+        ]
+      }
+    ]
+  },
+  "_discover": {
+    "homepage": "https://oh-pet.com/shop/c23bae53-51b3-44bb-b822-f6cbf8ec9bb1",
+    "instagram": "https://www.instagram.com/shineamc.official",
+    "blog": "https://blog.naver.com/shineamc",
+    "naverplace": null,
+    "homepage_candidates": [
+      "https://shineamc.com/",
+      "https://www.shineamc.com/shine_contact",
+      "https://www.shineamc.com/",
+      "https://www.hotdoginc.kr/bz/hotdog1383",
+      "https://www.placeview.co.kr/id/MTk0MTM2NDAyOCAg",
+      "https://oh-pet.com/shop/c23bae53-51b3-44bb-b822-f6cbf8ec9bb1",
+      "https://www.navercorp.com/"
+    ],
+    "_query": "24시샤인동물메디컬센터 서울 송파구",
+    "_link_count": 383
+  },
+  "marketing": {
+    "channels": [
+      {
+        "score": 82,
+        "note": "방문자 1,019 + 블로그 1,390 = 총 2,409로 리뷰량이 매우 풍부하고, 영업시간·전화·주소·가격·진료과목·공식채널까지 정보가 촘촘히 채워진 상위권 채널이다. 소식·사진·클립도 활발히 운영되어 전반적 완성도가 높다.",
+        "one_liner": "리뷰·정보·사진 모두 촘촘한 상위권 채널로, 24시 운영시간 표기 명확성만 다듬으면 흠잡을 곳이 적다",
+        "review_count": 2409,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "리뷰량·활성도",
+            "level": "우수",
+            "note": "방문자 1,019 + 블로그 1,390, 총 2,409건으로 매우 풍부"
+          },
+          {
+            "label": "정보 정확성",
+            "level": "우수",
+            "note": "전화·주소·홈페이지·가격·진료과목·부가시설까지 상세 기재"
+          },
+          {
+            "label": "소식·콘텐츠",
+            "level": "우수",
+            "note": "블로그 소식, 클립, 방문자 사진/영상 모두 활발"
+          },
+          {
+            "label": "편의·연결",
+            "level": "양호",
+            "note": "네이버 예약 유도, 공식채널(인스타·블로그·유튜브·홈페이지) 연결"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "리뷰 수",
+            "question": "방문자·블로그 리뷰가 충분히 쌓였는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "영업시간",
+            "question": "운영시간이 명확히 표기되는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "연락처",
+            "question": "전화번호가 노출되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "가격 정보",
+            "question": "진료비/가격 정보가 제공되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "진료과목",
+            "question": "주요 진료 과목·대상이 안내되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "소식·사진",
+            "question": "소식·사진·클립이 꾸준히 게시되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "예약·편의",
+            "question": "예약/공식채널 연결이 되어 있는가",
+            "result": "양호"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "압도적 리뷰량",
+            "body": "방문자 1,019건과 블로그 1,390건을 합쳐 총 2,409건의 리뷰가 쌓여 있어 신뢰 기반이 두텁다. '의료진이 친절해요' 등 키워드 리뷰 태그도 다수 노출된다."
+          },
+          {
+            "title": "정보 밀도가 높은 프로필",
+            "body": "전화(0507·02 번호), 주소, 홈페이지, 초진/재진 진료비(35,000/10,000원), 진료 과목(외과·내과·안과 등)과 부가시설까지 화면에서 확인되어 정보 정확성이 우수하다."
+          },
+          {
+            "title": "활발한 소식·사진·클립 운영",
+            "body": "블로그 소식, 클립, 방문자 사진/영상이 풍부하게 게시되어 채널이 지속적으로 관리되고 있음이 확인된다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "24시 운영시간 표기 확인 필요",
+            "body": "'24시간 진료·연중무휴'로 안내되나 화면 상단의 영업시간 표기 세부가 명확히 읽히지 않아 이용자가 실제 야간 운영 여부를 혼동할 여지가 있다.",
+            "severity": "low"
+          },
+          {
+            "title": "공식채널 연결 확인 필요",
+            "body": "인스타·블로그·유튜브·홈페이지가 등록되어 있으나 각 채널의 최신 갱신 상태는 화면만으로 확인되지 않는다.",
+            "severity": "low"
+          }
+        ],
+        "actions": [
+          {
+            "title": "24시간 진료 여부를 영업시간 영역에 '24시간 영업'으로 명시적 표기",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "가격표(초진·재진 외 주요 진료비) 항목 추가 노출로 문의 전환 강화",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "네이버 예약 연결 버튼을 프로필 상단에 고정 노출",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "naverplace",
+        "_capture": "/Users/parkjungma/병원마케팅V2/captures/demo_b15822d9d3/naverplace.png",
+        "_source_url": "https://pcmap.place.naver.com/pet/1791532637/home",
+        "_dom_facts": {
+          "visitor_reviews": 1019,
+          "blog_reviews": 1390,
+          "total_reviews": 2409
+        }
+      },
+      {
+        "score": 72,
+        "note": "프로필 완성도와 브랜딩이 탄탄하고 릴스도 꾸준히 발행 중이며 일부 릴스는 19.1만 조회를 기록해 도달 잠재력이 확인된다. 다만 팔로워 807명 규모와 조회수 편차, 게시물 19개로 축적량이 아직 적은 점이 성장의 관건이다.",
+        "one_liner": "브랜딩·릴스 기획력은 2차 병원답게 뛰어난데 팔로워 규모와 콘텐츠 축적이 아직 초기 단계다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "프로필 완성도",
+            "level": "우수",
+            "note": "소개·위치·링크트리·하이라이트 5종이 모두 정비돼 있어 정보 접근성이 높다"
+          },
+          {
+            "label": "콘텐츠·브랜딩",
+            "level": "우수",
+            "note": "SHINE 통일 템플릿과 중증질환 2차 병원 콘셉트가 그리드·릴스 전반에 일관되게 적용됨"
+          },
+          {
+            "label": "성장·도달",
+            "level": "보통",
+            "note": "팔로워 807명, 릴스 조회 최고 19.1만·다수 300~500대로 편차가 크고 규모가 아직 작음"
+          },
+          {
+            "label": "발행·운영",
+            "level": "보통",
+            "note": "게시물 19개로 축적량이 적으나 릴스 탭이 꾸준히 채워져 운영 지속성은 확인됨"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "프로필 완성도",
+            "question": "소개·위치·연락 링크·하이라이트가 갖춰져 있는가?",
+            "result": "우수"
+          },
+          {
+            "perspective": "브랜딩 일관성",
+            "question": "로고·색상·템플릿이 통일돼 있는가?",
+            "result": "우수"
+          },
+          {
+            "perspective": "릴스/숏폼 활용",
+            "question": "릴스가 존재하고 꾸준히 발행되는가?",
+            "result": "양호"
+          },
+          {
+            "perspective": "릴스 도달 성과",
+            "question": "릴스 조회수가 안정적으로 나오는가?",
+            "result": "보통"
+          },
+          {
+            "perspective": "팔로워 규모",
+            "question": "팔로워 수가 병원 채널로서 충분한가?",
+            "result": "보통"
+          },
+          {
+            "perspective": "콘텐츠 전문성",
+            "question": "2차 병원의 전문성이 콘텐츠에 드러나는가?",
+            "result": "우수"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "하이라이트로 정비된 프로필",
+            "body": "병원 소식·오시는 길·진료시간·진료안내·면회 안내 등 하이라이트 5종과 링크트리, 주소, 소개문이 모두 채워져 방문자가 필요한 정보에 바로 접근할 수 있다."
+          },
+          {
+            "title": "일관된 브랜드 템플릿과 전문 콘셉트",
+            "body": "SHINE 로고와 네이비 계열 템플릿이 그리드·릴스에 통일 적용되고, 프리미엄 초음파·국내 최초 냉동절제술 등 중증질환 2차 병원의 전문성이 콘텐츠로 드러난다."
+          },
+          {
+            "title": "릴스 발행과 대박 콘텐츠 확인",
+            "body": "릴스 탭에 다수 영상이 발행돼 있고 상단 고정 릴스가 19.1만 조회를 기록해, 숏폼 도달 잠재력이 실제로 확인된다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "작은 팔로워 규모",
+            "body": "팔로워 807명으로 2차 병원 브랜드 채널 대비 규모가 작아, 대박 릴스의 도달이 팔로워 순증으로 충분히 전환되지 않고 있을 가능성이 있다.",
+            "severity": "mid"
+          },
+          {
+            "title": "릴스 조회수 편차",
+            "body": "최고 19.1만 대비 다수 릴스가 304·318·371·482 등 수백 대에 머물러 조회 성과의 편차가 크다.",
+            "severity": "mid"
+          },
+          {
+            "title": "적은 게시물 축적량",
+            "body": "게시물 19개로 콘텐츠 축적이 아직 초기 단계라 신규 방문자에게 보여줄 아카이브가 부족하다.",
+            "severity": "low"
+          }
+        ],
+        "actions": [
+          {
+            "title": "고성과 릴스(19.1만) 포맷 분석 후 유사 기획 반복 제작",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "릴스·게시물 발행 주기를 정례화해 콘텐츠 축적 가속",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "릴스 마지막 화면에 팔로우·프로필 유도 CTA 삽입해 팔로워 전환 강화",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "조회 저조 릴스의 제목·첫 화면 후킹 요소 개선 테스트",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "instagram",
+        "_capture": "/Users/parkjungma/병원마케팅V2/captures/demo_b15822d9d3/instagram.png",
+        "_source_url": "https://www.instagram.com/shineamc.official"
+      },
+      {
+        "score": 85,
+        "note": "발행 주기·전문성·이웃 규모가 모두 탄탄한 2차 병원 블로그. 진료케이스와 최신 장비·의료진 소식이 체계적으로 쌓여 신뢰도가 높다. 다만 화면상 전환 유도 장치(상담·예약 CTA)는 명확히 드러나지 않아 보완 여지가 있다.",
+        "one_liner": "전문 콘텐츠 발행력과 이웃 규모는 상위권인데, 글에서 상담·예약으로 잇는 전환 동선이 아쉽다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "발행·운영",
+            "level": "우수",
+            "note": "주 5.4회·평균 1.3일 간격 발행에 최신 글 2026-09-17로 꾸준함이 확실"
+          },
+          {
+            "label": "콘텐츠 전문성",
+            "level": "우수",
+            "note": "부신종양·신부전·척추 내시경 등 2차 진료 수준의 케이스와 장비 도입 소식이 풍부"
+          },
+          {
+            "label": "제목·키워드",
+            "level": "양호",
+            "note": "강아지 질환명·증상 중심 키워드 구성, 해시태그·전문키워드 반영 확인"
+          },
+          {
+            "label": "전환·참여",
+            "level": "보통",
+            "note": "이웃 3,319명 규모는 좋으나 글 내 상담·예약 유도 장치는 화면상 확인 필요"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "발행 주기",
+            "question": "글이 규칙적이고 꾸준히 발행되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "정보성",
+            "question": "본문이 충실하고 실제 정보를 담는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "전문성",
+            "question": "2차 진료에 맞는 전문 콘텐츠가 있는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "검색 노출",
+            "question": "제목·키워드가 검색 의도에 맞게 설계됐는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "이웃 수",
+            "question": "구독 기반이 충분한가",
+            "result": "우수"
+          },
+          {
+            "perspective": "전환 설계",
+            "question": "글에서 상담·예약·전화로 잇는 동선이 있는가",
+            "result": "확인 필요"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "2차 진료 전문 콘텐츠가 체계적",
+            "body": "부신종양 수술, 급성신부전, 양방향 척추 내시경(BESS), 담낭문합술 등 난이도 높은 진료케이스와 냉동절제·마취 시스템 등 장비 도입 소식이 카테고리별로 정리돼 전문성을 뒷받침한다."
+          },
+          {
+            "title": "발행이 꾸준하고 이웃 기반이 넓다",
+            "body": "이웃 3,319명, 누적 방문 42만을 확보했고 반려동물 정보·고양이 정보·진료케이스 등 여러 축이 병렬로 발행돼 콘텐츠 자산이 지속적으로 쌓이고 있다."
+          },
+          {
+            "title": "본원·안과·고양이 채널 연결 구조",
+            "body": "화면 상단에 Shine 본원·Shine-eye·Shine-cat 홈페이지, 유튜브, 오시는 길이 버튼으로 배치돼 방문자를 여러 채널로 유도하는 구조가 마련돼 있다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "글 내 전환 유도 장치가 화면상 불명확",
+            "body": "본원 홈페이지·오시는 길 버튼은 상단에 있으나, 개별 진료케이스 글 하단에 상담·전화·예약을 직접 유도하는 CTA가 있는지는 화면상 확인 필요하다.",
+            "severity": "mid"
+          },
+          {
+            "title": "별점·리뷰 신뢰 지표가 블로그에 노출되지 않음",
+            "body": "블로그 특성상 후기·평점이 표시되지 않아 방문자가 신뢰를 판단할 사회적 증거가 이 화면에서는 드러나지 않는다.",
+            "severity": "low"
+          }
+        ],
+        "actions": [
+          {
+            "title": "진료케이스 글 하단에 전화·오시는 길·상담 CTA 고정 배치",
+            "effort": 1,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "질환별 대표 글을 검색 키워드 중심으로 재정비해 상단 노출 강화",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "치료 전후 보호자 후기·경과를 글로 엮어 신뢰 콘텐츠 축 추가",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "blog",
+        "_capture": "/Users/parkjungma/병원마케팅V2/captures/demo_b15822d9d3/blog.png",
+        "_source_url": "https://blog.naver.com/shineamc",
+        "_dom_facts": {
+          "buddies": 3319,
+          "visits_today": 68,
+          "visits_total": 421904,
+          "posts_rss": 50,
+          "span_days": 65,
+          "per_week": 5.4,
+          "latest": "2026-09-17",
+          "by_category": [
+            "반려동물 정보 주1.3회",
+            "고양이 정보 주1.3회",
+            "고양이 진료케이스 주0.7회",
+            "내과진료 주0.6회",
+            "외과수술 주0.5회",
+            "고양이 소식 주0.4회"
+          ],
+          "latest_title": "강아지코감기, 콧물과 코막힘이 지속될 때 확인할 점",
+          "post_chars": 3269,
+          "post_images": 39,
+          "post_tags": [
+            "#강아지코감기",
+            "#강아지콧물",
+            "#강아지코막힘",
+            "#24시동물병원"
+          ],
+          "post_cta": false
+        }
+      },
+      {
+        "score": 72,
+        "note": "브랜드 완성도와 콘텐츠 신뢰 요소가 강한 대학병원급 홈페이지다. 전화·카카오·예약 플로팅 동선과 기본 메타·OG가 갖춰져 있으나 구조화데이터(JSON-LD) 부재로 검색·AEO 노출 잠재력이 일부 손실되고 있다.",
+        "one_liner": "보여주는 힘과 전문성 서사는 강한데 구조화데이터 한 칸이 비어 검색·AEO 확장이 아쉽다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "디자인·브랜드",
+            "level": "우수",
+            "note": "통일된 네이비 톤과 정제된 타이포로 대학병원급 무게감을 잘 전달한다"
+          },
+          {
+            "label": "콘텐츠·신뢰",
+            "level": "우수",
+            "note": "진료건수 162,084건·영상진단 53,992건·협력병원 259곳 등 구체 수치와 의료진 학력이 근거로 제시됨"
+          },
+          {
+            "label": "UX·전환",
+            "level": "양호",
+            "note": "전화(tel)·카카오톡·예약 버튼이 우측 상단 고정 플로팅으로 상시 노출됨"
+          },
+          {
+            "label": "기술·SEO",
+            "level": "보통",
+            "note": "메타 description·OG·모바일 뷰포트는 있으나 JSON-LD 구조화데이터가 없음"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "디자인·브랜드 일관성",
+            "question": "색·타이포·레이아웃이 통일되어 신뢰감을 주는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "콘텐츠·신뢰 요소",
+            "question": "의료진·장비·실적을 구체 근거로 제시하는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "전환 동선",
+            "question": "전화·예약·상담 진입이 상시 노출되는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "정보구조·네비게이션",
+            "question": "상단 메뉴가 진료·센터별로 체계적으로 정리되었는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "SEO 기본",
+            "question": "메타 description·OG·뷰포트가 갖춰졌는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "구조화데이터·AEO",
+            "question": "JSON-LD로 병원 정보가 검색엔진에 구조화 제공되는가",
+            "result": "미흡"
+          },
+          {
+            "perspective": "연결 채널 확장",
+            "question": "외부 SNS로 콘텐츠가 확장 연결되는가",
+            "result": "보통"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "수치 기반의 신뢰 서사",
+            "body": "진료건수 162,084건, 영상진단 53,992건, 협력병원 259곳(2026년 5월 기준) 등 구체 실적과 서울대·건대 석박사 의료진 학력을 화면에서 명확히 제시해 전문성 근거가 탄탄하다."
+          },
+          {
+            "title": "대학병원급 브랜드 완성도",
+            "body": "일관된 네이비 컬러와 정돈된 섹션 구성, 심장혈관센터·영상센터 등 질환별 전문센터 소개가 시각적으로 정제되어 있어 브랜드 무게감을 잘 전달한다."
+          },
+          {
+            "title": "상시 노출되는 전환 동선",
+            "body": "전화(02-2088-7775 tel 링크)·카카오톡 채널 상담·예약 메뉴가 우측 상단 고정 플로팅 버튼으로 상시 노출되어 문의 진입이 끊기지 않는다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "구조화데이터(JSON-LD) 부재",
+            "body": "메타 description과 OG는 있으나 병원명·주소·진료과목 등을 담는 JSON-LD가 없어 검색결과 리치스니펫과 AEO(질의응답형 노출) 기회를 놓치고 있다.",
+            "severity": "mid"
+          },
+          {
+            "title": "연결 채널이 블로그에 한정",
+            "body": "코드상 연결 SNS가 블로그뿐이라 인스타·유튜브 등 시각형 채널과의 상호 유입 구조가 약하다.",
+            "severity": "low"
+          },
+          {
+            "title": "메인 히어로 영역의 텍스트 정보 밀도",
+            "body": "상단 대형 배경 영역이 이미지·미션 문구 중심이라 방문 즉시 위치·진료시간·핵심 강점 같은 실용 정보를 빠르게 파악하기 어렵다.",
+            "severity": "low"
+          }
+        ],
+        "actions": [
+          {
+            "title": "병원용 JSON-LD 구조화데이터(VeterinaryCare/LocalBusiness) 추가",
+            "effort": 1,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "메인 상단에 진료시간·주소·핵심 강점 요약 정보 블록 배치",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "블로그 외 시각형 SNS 연결 및 홈페이지 상호 링크 확장",
+            "effort": 2,
+            "impact": 2,
+            "cost": 2
+          }
+        ],
+        "type": "homepage",
+        "_capture": "/Users/parkjungma/병원마케팅V2/captures/demo_b15822d9d3/homepage/seg0.png",
+        "_source_url": "https://shineamc.com",
+        "_dom_facts": {
+          "phone": "02-2088-7775",
+          "kakao_channel": true,
+          "naver_talk": false,
+          "booking": true,
+          "instagram": false,
+          "blog": true,
+          "youtube": false,
+          "meta_description": "서울대, 건대 석박사 의료진 및 MRI , CT를 보유한 수도권 최대 규모 대학병원급 24시 동물병원입니다.",
+          "og": true,
+          "json_ld": false,
+          "viewport": true,
+          "cta_floating": true,
+          "cta_position": "우측 상단"
+        }
+      },
+      {
+        "score": 68,
+        "note": "기본 정보(NAP)·사진·블로그 리뷰 노출은 탄탄하나, 매장주 요청으로 후기가 비공개 처리되어 있어 소비자 신뢰 판단 근거가 부족하다. 소식·혜택 탭의 실제 콘텐츠 여부는 화면상 확인이 필요하다.",
+        "one_liner": "기본 정보와 사진·블로그는 잘 갖췄는데 후기 비공개로 신뢰의 마지막 고리가 끊겨 있다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "정보 정확성(NAP)",
+            "level": "우수",
+            "note": "병원명·주소·전화·홈페이지·24시간 영업·지하철 도보 안내까지 화면에 명확히 노출"
+          },
+          {
+            "label": "후기 공개",
+            "level": "개선 필요",
+            "note": "'매장주 요청으로 후기가 제공되지 않는 장소'로 표기되어 방문자 후기 확인 불가"
+          },
+          {
+            "label": "사진",
+            "level": "우수",
+            "note": "외관·내부·대기실 등 다수 사진과 198+ 추가 이미지 노출로 시각 정보 풍부"
+          },
+          {
+            "label": "블로그·소식",
+            "level": "양호",
+            "note": "블로그 리뷰 609건 노출은 강점이나 소식·혜택 탭 실제 콘텐츠는 확인 필요"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "정보 정확성(NAP)",
+            "question": "병원명·주소·전화번호가 일관되고 정확히 노출되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "정보 정확성",
+            "question": "영업시간·오시는 길 등 운영 정보가 명확한가",
+            "result": "우수"
+          },
+          {
+            "perspective": "후기 공개여부",
+            "question": "방문자 후기가 공개되어 신뢰 판단이 가능한가",
+            "result": "미흡"
+          },
+          {
+            "perspective": "사진",
+            "question": "외관·내부 등 사진이 충분히 제공되는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "소식·혜택",
+            "question": "소식/혜택 탭에 최신 콘텐츠가 운영되는가",
+            "result": "확인 필요"
+          },
+          {
+            "perspective": "콘텐츠 연계",
+            "question": "블로그 리뷰 등 외부 콘텐츠가 채널과 연결되는가",
+            "result": "양호"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "NAP 정보 완결성",
+            "body": "병원명, 서울 송파구 주소, 전화(02-2088-7775), 홈페이지, 24시간 영업, 송파나루역 도보 2분 안내까지 화면에 정확히 노출되어 방문 전 필요한 기본 정보가 빠짐없이 제공된다."
+          },
+          {
+            "title": "풍부한 사진 자산",
+            "body": "외관·내부 인테리어·대기실 등 다수 사진과 함께 198+ 추가 이미지가 노출되어 병원 규모와 시설을 시각적으로 충분히 전달한다."
+          },
+          {
+            "title": "블로그 리뷰 다량 노출",
+            "body": "블로그 리뷰 609건이 연결되어 있고 고양이 유선종양·강아지 림프종 등 진료 사례 콘텐츠가 최신 날짜로 노출되어 전문성 근거로 작동한다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "소식·혜택 탭 콘텐츠 확인 불가",
+            "body": "홈·혜택·소식 탭이 존재하나 화면상 실제 게시 콘텐츠 유무와 최신성이 확인되지 않아 운영 활성도 판단이 어렵다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "후기 공개 전환 검토 및 리뷰 응대 체계 마련",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "소식·혜택 탭에 진료 안내·이벤트 등 최신 콘텐츠 정기 게시",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "블로그 리뷰 사례를 채널 대표 콘텐츠로 정리·연계 강화",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "map",
+        "_capture": "/Users/parkjungma/병원마케팅V2/captures/demo_b15822d9d3/map.png",
+        "_source_url": "http://place.map.kakao.com/1941364028"
+      },
+      {
+        "score": 52,
+        "note": "NAP(상호·주소·전화) 일관성은 실측 100점으로 강력한 기반이지만, JSON-LD 구조화데이터와 FAQPage가 전혀 없어 생성형 AI 검색이 병원을 '신뢰 가능한 엔티티'로 인식하고 답변에 인용하기 어려운 상태다. 기본 메타(description·OG·뷰포트·tel 링크)는 갖췄으나 AEO/GEO 관점의 핵심 신호가 비어 있다.",
+        "one_liner": "NAP 일관성 기반은 탄탄한데 AI가 읽어갈 구조화데이터·FAQ가 통째로 비어 있다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "엔티티·NAP 일관성",
+            "level": "우수",
+            "note": "상호·주소·전화가 네이버·카카오·홈페이지에서 실측 일치, 안심번호도 정상 처리"
+          },
+          {
+            "label": "구조화데이터(JSON-LD)",
+            "level": "개선 필요",
+            "note": "조직·병원 스키마가 전혀 없어 AI가 엔티티 속성을 구조적으로 읽지 못함"
+          },
+          {
+            "label": "FAQ·질의응답 구조",
+            "level": "개선 필요",
+            "note": "FAQPage 마크업 없음 — 생성엔진의 질문형 답변 인용 기회 상실"
+          },
+          {
+            "label": "기본 메타·모바일 신호",
+            "level": "양호",
+            "note": "description·Open Graph·모바일 뷰포트·tel 링크는 모두 구비"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "엔티티·NAP 일관성",
+            "question": "상호·주소·전화가 주요 소스에서 일치하는가?",
+            "result": "우수"
+          },
+          {
+            "perspective": "구조화데이터",
+            "question": "JSON-LD로 병원/조직 정보를 기계가 읽게 제공하는가?",
+            "result": "미흡"
+          },
+          {
+            "perspective": "FAQ 구조화",
+            "question": "자주 묻는 질문을 FAQPage로 마크업했는가?",
+            "result": "미흡"
+          },
+          {
+            "perspective": "공유·미리보기 신호",
+            "question": "Open Graph·메타 설명이 갖춰져 있는가?",
+            "result": "양호"
+          },
+          {
+            "perspective": "모바일·연결성",
+            "question": "모바일 뷰포트와 tel 링크가 작동하는가?",
+            "result": "양호"
+          },
+          {
+            "perspective": "생성엔진 인용 준비도",
+            "question": "AI가 답변에 인용할 구조적 근거가 충분한가?",
+            "result": "미흡"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "NAP 실측 일치로 엔티티 신뢰 기반 확보",
+            "body": "상호·주소·전화가 네이버 플레이스·카카오맵·홈페이지에서 실측 일치하며, 0507 안심번호도 정상 표기다. AI/검색엔진이 '같은 병원'으로 확신할 수 있는 기반이 마련돼 있다."
+          },
+          {
+            "title": "기본 메타·모바일 신호 구비",
+            "body": "메타 설명, Open Graph 공유 카드, 모바일 뷰포트, tel 링크가 모두 갖춰져 공유 미리보기와 모바일 접근성의 최소 요건은 충족한다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "구조화데이터(JSON-LD) 전무",
+            "body": "조직·병원 정보를 기계가 읽는 JSON-LD가 없어, NAP가 실제로는 일치함에도 그 사실을 구조적으로 전달하지 못한다. 생성엔진이 엔티티 속성을 확신 있게 인용하기 어렵다.",
+            "severity": "high"
+          },
+          {
+            "title": "FAQPage 구조화 부재",
+            "body": "자주 묻는 질문을 FAQ 구조로 마크업하지 않아, 진료·예약 관련 질문형 검색에서 AI 답변에 인용될 핵심 통로가 비어 있다.",
+            "severity": "high"
+          }
+        ],
+        "actions": [
+          {
+            "title": "병원 정보(상호·주소·전화·진료시간) LocalBusiness/MedicalOrganization JSON-LD 삽입",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "진료·예약·응급 관련 자주 묻는 질문을 FAQPage 구조화데이터로 마크업",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "JSON-LD의 NAP 값을 네이버·카카오와 완전 일치시켜 엔티티 확신도 강화",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "aeo_geo",
+        "_source_url": "https://shineamc.com",
+        "_nap": {
+          "sources": {
+            "네이버 플레이스": {
+              "name": "24시샤인동물메디컬센터",
+              "address": "서울 송파구 오금로 147 샤인동물메디컬센터",
+              "phone": "0507-1495-7775"
+            },
+            "카카오맵": {
+              "name": "24시샤인동물메디컬센터",
+              "address": "서울 송파구 오금로 147",
+              "phone": "02-2088-7775"
+            },
+            "홈페이지": {
+              "name": null,
+              "address": null,
+              "phone": "02-2088-7775"
+            }
+          },
+          "fields": {
+            "name": {
+              "label": "상호",
+              "values": {
+                "네이버 플레이스": "24시샤인동물메디컬센터",
+                "카카오맵": "24시샤인동물메디컬센터"
+              },
+              "consistent": true,
+              "note": null
+            },
+            "address": {
+              "label": "주소",
+              "values": {
+                "네이버 플레이스": "서울 송파구 오금로 147 샤인동물메디컬센터",
+                "카카오맵": "서울 송파구 오금로 147"
+              },
+              "consistent": true,
+              "note": null
+            },
+            "phone": {
+              "label": "전화",
+              "values": {
+                "네이버 플레이스": "0507-1495-7775",
+                "카카오맵": "02-2088-7775",
+                "홈페이지": "02-2088-7775"
+              },
+              "consistent": true,
+              "note": "안심번호(0507 등) 사용 — 실번호와 표기가 달라 보일 뿐 정상"
+            }
+          },
+          "score": 100,
+          "checked": 3,
+          "matched": 3,
+          "summary": "NAP 일관됨 — 상호·주소·전화가 3개 소스에서 일치"
+        }
+      }
+    ],
+    "synthesis": {
+      "strengths": [
+        {
+          "title": "2차 진료 전문성을 증명하는 신뢰 근거가 전 채널에 두텁다",
+          "body": "홈페이지에는 진료건수 162,084건, 영상진단 53,992건, 협력병원 259곳(2026년 5월 기준)이라는 구체 실적과 서울대·건대 석박사 의료진 학력이 명확히 제시되고, 블로그에는 부신종양 수술·급성신부전·양방향 척추 내시경(BESS)·담낭문합술 같은 난이도 높은 케이스와 프리미엄 초음파·국내 최초 냉동절제술 등 장비 도입 소식이 카테고리별로 정리돼 있습니다. 인스타그램의 중증질환 콘셉트, 카카오맵의 고양이 유선종양·강아지 림프종 진료 사례까지 더해져, 어느 채널에 도착해도 2차 병원의 전문성을 뒷받침하는 근거가 풍부하게 확인됩니다."
+        },
+        {
+          "title": "방문 전 필요한 기본 정보와 상호·주소·전화 표기가 정확하고 일치한다",
+          "body": "네이버 플레이스에는 전화(0507·02 번호)·주소·홈페이지·초진 35,000원/재진 10,000원·진료과목·부가시설까지 상세히 기재돼 있고, 카카오맵에는 병원명·서울 송파구 주소·전화(02-2088-7775)·24시간 영업·송파나루역 도보 2분 안내가 빠짐없이 노출됩니다. 상호·주소·전화가 네이버·카카오·홈페이지에서 실측 일치하고 0507 안심번호도 정상 표기돼, 이용자와 검색엔진 모두 '같은 병원'으로 확신할 수 있는 기반이 마련돼 있습니다."
+        },
+        {
+          "title": "리뷰·사진·발행량이 상위권으로 콘텐츠 자산이 두텁다",
+          "body": "네이버 플레이스에 방문자 1,019건과 블로그 1,390건을 합친 총 2,409건의 리뷰가 쌓여 있고, 블로그는 이웃 3,319명·누적 방문 42만에 주 5.4회·평균 1.3일 간격으로 꾸준히 발행됩니다. 카카오맵에는 외관·내부·대기실 등 198건이 넘는 사진과 블로그 리뷰 609건이 연결돼 있으며, 인스타그램은 상단 고정 릴스가 19.1만 조회를 기록해 숏폼 도달 잠재력까지 실제로 확인됩니다. 전 채널에 걸쳐 신뢰 기반과 콘텐츠 활성도가 탄탄합니다."
+        },
+        {
+          "title": "브랜드 완성도와 프로필 정비 수준이 2차 병원에 걸맞게 높다",
+          "body": "홈페이지는 통일된 네이비 톤과 정제된 타이포, 심장혈관센터·영상센터 등 질환별 전문센터 소개로 대학병원의 무게감을 전달하고, 인스타그램은 SHINE 로고와 네이비 계열 템플릿이 그리드·릴스에 일관 적용되며 하이라이트 5종·링크트리·소개문이 모두 채워져 있습니다. 블로그도 Shine 본원·안과(Shine-eye)·고양이(Shine-cat) 채널 연결 버튼을 상단에 배치하는 등, 브랜드 일관성과 정보 접근성이 채널마다 잘 정비돼 있습니다."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "AI 검색과 검색결과 확장을 위한 구조화데이터·FAQ가 통째로 비어 있다",
+          "body": "홈페이지에 공유 미리보기 이미지와 메타 설명은 있으나, 병원명·주소·진료과목을 기계가 읽도록 정리한 구조화데이터가 전혀 없어 상호·주소·전화가 실제로는 일치함에도 그 사실을 구조적으로 전달하지 못합니다. 또한 자주 묻는 질문을 정리한 FAQ 구조가 없어, 진료·예약 관련 질문형 검색에서 AI 답변에 인용될 핵심 통로가 막혀 있습니다. 실적·전문성 근거가 풍부한 만큼, 이 한 칸을 채우면 검색·AI 노출 확장 효과가 큽니다.",
+          "severity": "high"
+        },
+        {
+          "title": "카카오맵 후기 비공개로 신뢰의 마지막 고리가 끊겨 있다",
+          "body": "네이버 플레이스에는 2,409건의 리뷰가 쌓여 있는데, 카카오맵은 '매장주 요청으로 후기가 제공되지 않는 장소'로 표기돼 방문자 후기를 전혀 확인할 수 없습니다. 카카오맵은 블로그 리뷰 609건·풍부한 사진·정확한 기본 정보를 잘 갖췄음에도, 후기라는 결정적 사회적 증거가 비공개라 방문 결정 직전에 신뢰 판단이 끊깁니다. 후기 공개 설정을 검토해 다른 채널 수준의 신뢰 근거를 이어줄 필요가 있습니다.",
+          "severity": "high"
+        },
+        {
+          "title": "콘텐츠에서 상담·예약·전화로 잇는 전환 동선이 채널마다 약하다",
+          "body": "홈페이지는 전화 바로걸기·카카오톡 상담·예약 버튼이 우측 상단에 상시 노출돼 모범적이지만, 블로그는 개별 진료케이스 글 하단에 상담·전화·예약을 직접 유도하는 버튼이 있는지 확인이 필요합니다. 전문성 높은 케이스 글로 유입된 방문자가 바로 문의로 이어질 장치가 부족하면 전환이 새어 나갑니다. 상위권 발행력과 이웃 3,319명 규모를 실제 예약으로 전환하려면, 모든 콘텐츠 하단에 일관된 예약·전화 유도 버튼을 배치해야 합니다.",
+          "severity": "mid"
+        },
+        {
+          "title": "24시간 운영 여부가 채널별 표기에서 명확히 읽히지 않는다",
+          "body": "카카오맵은 24시간 영업이 명확히 노출되지만, 네이버 플레이스는 '24시간 진료·연중무휴'로 안내되면서도 화면 상단 영업시간 표기 세부가 명확히 읽히지 않아 이용자가 실제 야간 운영 여부를 혼동할 여지가 있습니다. 24시 운영은 응급 상황에서 방문을 결정짓는 핵심 정보이므로, 모든 채널에서 야간·연중무휴 운영이 한눈에 확인되도록 영업시간 표기를 통일해 다듬어야 합니다.",
+          "severity": "mid"
+        },
+        {
+          "title": "인스타그램 도달을 팔로워·아카이브로 전환하는 힘이 아직 초기 단계다",
+          "body": "릴스 하나가 19.1만 조회를 기록할 만큼 도달 잠재력은 확인됐지만, 팔로워는 807명에 그치고 다수 릴스는 304·318·371·482 등 수백 대에 머물러 조회 편차가 큽니다. 게시물도 19개로 신규 방문자에게 보여줄 아카이브가 부족합니다. 대박 콘텐츠의 도달이 팔로워 순증과 콘텐츠 축적으로 이어지도록, 성과 좋은 포맷을 반복 발행하고 팔로우를 유도하는 장치를 강화할 필요가 있습니다.",
+          "severity": "mid"
+        },
+        {
+          "title": "시각형 채널 간 상호 유입 구조가 홈페이지에서 약하다",
+          "body": "홈페이지 코드상 연결된 SNS가 블로그뿐이라, 19.1만 조회 릴스를 만든 인스타그램이나 유튜브 같은 시각형 채널과의 상호 유입 구조가 약합니다. 네이버 플레이스에도 인스타·블로그·유튜브·홈페이지가 등록돼 있으나 각 채널의 최신 갱신 상태는 화면만으로 확인되지 않습니다. 전 채널이 서로를 안내하며 방문자를 순환시키도록, 홈페이지에 인스타·유튜브 연결을 추가하고 채널 간 링크를 정비하는 것이 좋습니다.",
+          "severity": "mid"
+        }
+      ]
+    },
+    "specialty_analysis": {
+      "specialties": [
+        {
+          "name": "영상진단(CT·MRI·초음파)",
+          "evidence": "홈페이지에서 영상진단 53,992건 실적과 영상센터를 명시하고, 인스타에 '프리미엄 초음파' 콘텐츠가 노출되며, 플레이스·홈페이지 모두 영상 관련 전문성을 전면에 내세웁니다.",
+          "emphasis": "강함"
+        },
+        {
+          "name": "종양(암) 진료·냉동절제술",
+          "evidence": "인스타에서 '국내 최초 냉동절제술'을 내세우고, 블로그에 부신종양 수술, 카카오맵에 고양이 유선종양·강아지 림프종 진료 사례가 최신 콘텐츠로 노출됩니다.",
+          "emphasis": "강함"
+        },
+        {
+          "name": "외과 수술(연부·복강)",
+          "evidence": "블로그에 부신종양 수술·담낭문합술 등 난이도 높은 외과 케이스가 카테고리별로 정리되어 있고, 플레이스 진료과목에도 외과가 표기됩니다.",
+          "emphasis": "강함"
+        },
+        {
+          "name": "신경외과·척추(양방향 척추 내시경 BESS)",
+          "evidence": "블로그에서 양방향 척추 내시경(BESS) 케이스를 전문 콘텐츠로 발행해 신경·척추 수술 역량을 드러냅니다.",
+          "emphasis": "보통"
+        },
+        {
+          "name": "심장·심장혈관",
+          "evidence": "홈페이지에서 '심장혈관센터'를 질환별 전문센터로 소개해 심장 진료 특화를 제시합니다.",
+          "emphasis": "보통"
+        },
+        {
+          "name": "내과·중환자(신장 등)",
+          "evidence": "블로그에 급성신부전·신부전 등 내과 중증 케이스와 마취 시스템 도입 소식이 발행되고, 플레이스 진료과목에 내과가 표기됩니다.",
+          "emphasis": "보통"
+        },
+        {
+          "name": "안과",
+          "evidence": "블로그 상단에 Shine-eye(안과 전용 채널) 버튼이 배치되어 안과를 독립 채널로 운영하며, 플레이스 진료과목에도 안과가 명시됩니다.",
+          "emphasis": "보통"
+        },
+        {
+          "name": "24시 응급·중환자",
+          "evidence": "병원명 자체가 '24시샤인동물메디컬센터'이며 카카오맵에 24시간 영업이 표기되나, 채널 콘텐츠에서 응급·중환자 진료를 구체적으로 서사화한 근거는 약합니다.",
+          "emphasis": "약함"
+        },
+        {
+          "name": "고양이 특화 진료",
+          "evidence": "블로그에 고양이 정보 축과 고양이 유선종양 케이스가 발행되고, Shine-cat 전용 채널 버튼이 배치되어 고양이 진료를 별도 채널로 운영합니다.",
+          "emphasis": "보통"
+        }
+      ],
+      "groups": [
+        {
+          "category": "영상진단·정밀검사",
+          "items": [
+            "영상진단(CT·MRI·초음파)"
+          ],
+          "summary": "홈페이지가 영상진단 53,992건 실적과 영상센터를 수치로 제시하고 인스타의 프리미엄 초음파 콘텐츠가 이를 뒷받침해, 2차 병원의 정밀검사 역량이 가장 강하게 노출되는 계열입니다.",
+          "emphasis": "강함"
+        },
+        {
+          "category": "외과·정형·신경(수술)",
+          "items": [
+            "외과 수술(연부·복강)",
+            "신경외과·척추(양방향 척추 내시경 BESS)",
+            "종양(암) 진료·냉동절제술"
+          ],
+          "summary": "블로그가 부신종양 수술·담낭문합술·양방향 척추 내시경(BESS) 등 난이도 높은 케이스를 카테고리별로 축적하고, 인스타가 '국내 최초 냉동절제술'을 브랜딩해 2차 수술·종양 계열의 전문성이 콘텐츠 자산으로 탄탄하게 뒷받침됩니다.",
+          "emphasis": "강함"
+        },
+        {
+          "category": "내과·심장·중환자",
+          "items": [
+            "내과·중환자(신장 등)",
+            "심장·심장혈관",
+            "24시 응급·중환자"
+          ],
+          "summary": "홈페이지의 심장혈관센터 소개와 블로그의 급성신부전·마취 시스템 케이스가 내과·심장 중증 진료를 뒷받침하나, 24시 응급·중환자 자체는 병원명과 24시간 표기 외에 구체 콘텐츠 근거가 약해 계열 종합 강조도는 보통 수준입니다.",
+          "emphasis": "보통"
+        },
+        {
+          "category": "기타 전문 진료(안과·고양이)",
+          "items": [
+            "안과",
+            "고양이 특화 진료"
+          ],
+          "summary": "블로그 상단에 Shine-eye(안과)·Shine-cat(고양이) 전용 채널 버튼을 배치하고 고양이 유선종양 케이스를 발행해 안과와 고양이 진료를 독립 채널로 운영하고 있어, 세부 특화가 채널 구조로 드러납니다.",
+          "emphasis": "보통"
+        }
+      ],
+      "suggestions": [
+        {
+          "name": "24시 응급·중환자 진료 서사화",
+          "note": "병원명과 24시간 표기로 역량은 암시되지만 응급·중환자 케이스 콘텐츠가 없어, 야간 응급 대응·중환자실 사례를 블로그·인스타 릴스로 내세우면 2차 병원 차별점이 강해집니다."
+        },
+        {
+          "name": "안과(Shine-eye) 전문성 전면화",
+          "note": "안과 전용 채널이 있음에도 진료 사례·장비 노출이 약합니다. 안과 수술·검사 케이스를 별도 카테고리로 발행하면 링크된 채널의 전환 효율이 올라갑니다."
+        },
+        {
+          "name": "재활·통증관리",
+          "note": "척추 내시경·정형 수술 이후 회복 수요가 큰 2차 병원 특성상, 재활 프로그램이 있다면 수술-재활 연계 콘텐츠로 내세워 진료 여정을 완결하는 메시지가 유효합니다."
+        },
+        {
+          "name": "구조화데이터·FAQ로 특화 노출 강화",
+          "note": "홈페이지에 병원·의료 스키마(JSON-LD)와 FAQPage가 없어 AI 검색이 전문 진료를 구조적으로 읽지 못합니다. 특화 진료를 질의응답 형태로 마크업하면 AEO 인용 기회가 확대됩니다."
+        }
+      ]
+    }
+  },
+  "review": {
+    "channels": [
+      {
+        "name": "네이버 방문자 리뷰",
+        "review_count": 2409,
+        "rating": null,
+        "recency": "2024.08~2024.08",
+        "sentiment": {
+          "pos": 90,
+          "neu": 8,
+          "neg": 2
+        },
+        "_visitor": 1019,
+        "_blog": 1390
+      },
+      {
+        "source": "구글",
+        "name": "구글 리뷰",
+        "type": "google",
+        "review_count": 64,
+        "rating": 4.4,
+        "sentiment": {
+          "pos": 80,
+          "neg": 20,
+          "neu": 0
+        },
+        "quotes": [
+          {
+            "text": "아들,딸 두냥이 믿고 유일하게 맡기는 곳이에요. 작년여름 딸아인 말기신부전을 너무 늦게 제가 발견해서 투병하다 별고양이가 되어 떠났지만 .. 아들고양이 심장병으로 이젠 여동생없이 혼자 다니는데 워낙 겁많고 스트레스에 민감한데 샤인에서만큼은 안정되게 아가가 진료받아요. 저도 다른곳에선 아가들 생명이 위험했던 고비도 넘겨본적 있어서 병원은 신중히 선택해서 여기",
+            "sentiment": "pos"
+          },
+          {
+            "text": "우리집 막내 갑자기 밥도 안 먹고 처져 있어서 어디가 아픈지도 모르고 급하게 찾아간 고양이센터..\n친절하게 하나하나 설명해 주시고 매일 상태도 자세히 알려주셔서 정말 걱정 가득했는데 덕분에 마음 놓였어요\n3일 정도 입원했는데도 병원이 5층이라 강아지랑 완전히 분리돼 있어서 아이가 스트레스 덜 받는거 같더라구요\n덕분에 금방 회복해서 퇴원했어요!\n아프지 않는게",
+            "sentiment": "pos"
+          },
+          {
+            "text": "다른 병원 다니다가 가까워서 이 병원에 갔는데...\n오히려 악화되는데\n괜찮다고만하고 싸우고 겨우 빼냈습니다.\n\n여기서 저희 강아지 죽을뻔했어요.\n\n상태 숨기는 느낌이었고 정말 병원 잘못가면 죽겠구나를 처음 느꼈습니다.",
+            "sentiment": "neg"
+          },
+          {
+            "text": "완전 정착한 병원이예요 ㅎㅎ 발렛도 해주셔서 매우 편하고 수의사 선생님이 전문적이고 친절해요~!! 간호사 선생님들도 저희 아이 예뻐해주시는게 보여요 ㅜ\n대형병원이 집 근처에 있어서 마음도 놓이고 좋습니다",
+            "sentiment": "pos"
+          }
+        ]
+      }
+    ],
+    "praise_keywords": [
+      {
+        "keyword": "의료진이 친절해요"
+      },
+      {
+        "keyword": "충분히 설명하고 치료해요"
+      },
+      {
+        "keyword": "시설이 깔끔해요"
+      },
+      {
+        "keyword": "반려동물을 잘 다뤄줘요"
+      },
+      {
+        "keyword": "분위기가 편안해요"
+      },
+      {
+        "keyword": "믿고 맡길 수 있어요"
+      },
+      {
+        "keyword": "주차하기 편해요"
+      },
+      {
+        "keyword": "특화 진료가 있어요"
+      }
+    ],
+    "complaint_keywords": [
+      {
+        "keyword": "가격 부담"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "특히 보호자가 궁금한 부분도 하나하나 설명해주셔서 정말 감사했습니다! 요즘은 아이가 전체적으로 컨디션도 좋아지고 밥먹인 모습이라 마음이 한결 놓여요! 원장님과 선생님들께 항상 감사합니다",
+        "channel": "네이버 방문자 리뷰",
+        "author": "wes****",
+        "sentiment": "pos"
+      },
+      {
+        "text": "고양이 건강검진 하러 왔어요 주차도 편하고 자세하고 친절하게 설명해주셔서 좋았습니다",
+        "channel": "네이버 방문자 리뷰",
+        "author": "슈리랑",
+        "sentiment": "pos"
+      },
+      {
+        "text": "지난번에도 잘 봐주셔서 이번에도 방문하게 되었습니다~ 병원 쉬일 없이면 가장 출게느믄 갸야한다면 샤인이 제일 먼저 생각나네요! 원장님도 진료 너무 잘 봐주시고 직원분들도 다들 친절해요~",
+        "channel": "네이버 방문자 리뷰",
+        "author": "hea****",
+        "sentiment": "pos"
+      },
+      {
+        "text": "12살 노령견을 키우다 보니 병원 선택이 어려웠는데, 샤인 다니기 시작한 후로는 마음 푹 놓고 있습니다.",
+        "channel": "네이버 방문자 리뷰",
+        "author": "ruc****",
+        "sentiment": "pos"
+      },
+      {
+        "text": "문치 담낭점액종 수술 이후 회복도 잘됐고 윤원장님 덕분에 지금 너무 건강하게 잘지내고 있어요",
+        "channel": "네이버 방문자 리뷰",
+        "author": "꾸미재미니미",
+        "sentiment": "pos"
+      },
+      {
+        "text": "가격이 조금 나오는 거 빼고는 다 좋아요.",
+        "channel": "네이버 방문자 리뷰",
+        "author": "이샤58",
+        "sentiment": "neu"
+      }
+    ],
+    "findings": [
+      {
+        "title": "의료진 친절과 설명이 최대 강점",
+        "body": "'의료진이 친절해요'(31회 언급 중 30), '충분히 설명하고 치료해요'(20) 등 상위 키워드가 모두 의료진 커뮤니케이션에 집중되어 있다. 보호자가 궁금한 점을 하나하나 설명해준다는 구체적 후기가 반복 등장해 신뢰도가 높다.",
+        "severity": "low"
+      },
+      {
+        "title": "노령견·수술 등 난이도 높은 진료에서 신뢰 확보",
+        "body": "12살 노령견 관리, 담낭점액종 수술 후 회복 등 만성·중증 케이스에서 안심하고 맡긴다는 후기가 다수 있어 재방문 충성도가 형성되어 있다.",
+        "severity": "low"
+      },
+      {
+        "title": "가격 부담이 유일한 불만 요소",
+        "body": "'가격이 조금 나오는 거 빼고는 다 좋다'는 후기처럼 진료비 부담을 언급하는 리뷰가 있다. 만족도는 높으나 비용 안내·투명성 강화 여지가 있다.",
+        "severity": "mid"
+      },
+      {
+        "title": "시설·주차 편의성 긍정 평가",
+        "body": "'시설이 깔끔해요'(19), '주차하기 편해요' 등 물리적 환경에 대한 만족도가 높아 방문 경험을 뒷받침한다.",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      {
+        "title": "진료비 항목·예상 비용 사전 안내 프로세스 강화",
+        "effort": 2,
+        "impact": 2,
+        "cost": 1
+      },
+      {
+        "title": "노령견·중증 케이스 관리 후기를 소식/사진 탭에 정리해 노출",
+        "effort": 1,
+        "impact": 2,
+        "cost": 1
+      },
+      {
+        "title": "긍정 리뷰에 원장·담당자 명의로 감사 답글 운영",
+        "effort": 1,
+        "impact": 2,
+        "cost": 1
+      },
+      {
+        "title": "블로그 리뷰 채널 활성화로 상세 후기 확보",
+        "effort": 2,
+        "impact": 2,
+        "cost": 2
+      }
+    ],
+    "_place": {
+      "id": "1791532637",
+      "name": "24시샤인동물메디컬센터",
+      "category": "동물병원",
+      "address": "서울 송파구 오금로 147 샤인동물메디컬센터",
+      "blog_reviews": 1390,
+      "visitor_reviews": 1019,
+      "phone": "0507-1495-7775",
+      "channels": [
+        "https://www.instagram.com/shineamc.official",
+        "https://blog.naver.com/shineamc",
+        "https://www.youtube.com/@shineamc",
+        "https://shineamc.com"
+      ],
+      "total_reviews": 2409,
+      "place_url": "https://pcmap.place.naver.com/pet/1791532637/home",
+      "review_url": "https://pcmap.place.naver.com/pet/1791532637/review/visitor"
+    },
+    "synthesis": {
+      "summary": "같은 병원인데 네이버는 최근·압도적 긍정(2,409개·긍정 90%), 구글은 별점 4.4에 긍정 80%/부정 20%로 상대적으로 양극적입니다. 공통적으로 의료진의 친절·자세한 설명, 노령견·수술 등 난이도 높은 진료에 대한 신뢰가 확실한 강점이며, 유일한 반복 리스크는 '가격 부담'입니다.",
+      "channel_note": "네이버는 2024년 8월까지 최근 방문 후기가 두텁게 쌓여 긍정 인상이 뚜렷한 반면, 구글은 리뷰 수가 64개로 적고 부정 비중(20%)이 상대적으로 높아 별점이 눌리는 구조입니다. 구글 최신성은 확인되지 않아 과거 리뷰의 영향 가능성을 함께 볼 필요가 있습니다.",
+      "strengths": [
+        {
+          "title": "의료진의 친절과 꼼꼼한 설명",
+          "body": "'의료진이 친절해요', '충분히 설명하고 치료해요'가 상위 키워드로 반복되며, '보호자가 궁금한 부분도 하나하나 설명해주셔서 감사했다'는 구체적 후기가 자주 등장합니다. 커뮤니케이션에 대한 신뢰가 재방문으로 이어지는 핵심 강점입니다."
+        },
+        {
+          "title": "노령견·수술 등 난이도 높은 진료에 대한 신뢰",
+          "body": "'12살 노령견을 키우다 병원 선택이 어려웠는데 샤인 다닌 후로 마음 놓고 있다', '담낭점액종 수술 이후 회복도 잘됐고 건강하게 잘 지낸다' 같은 만성·중증 케이스 후기가 다수여서 충성도 높은 보호자층이 형성돼 있습니다."
+        },
+        {
+          "title": "깔끔한 시설과 편리한 주차",
+          "body": "'시설이 깔끔해요', '주차하기 편해요'가 반복 언급되고 '주차도 편하고 자세하고 친절하게 설명해줘서 좋았다'는 후기처럼 물리적 방문 경험 만족도가 높아 진료 경험 전반을 뒷받침합니다."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "진료비 부담이 유일하지만 반복되는 불만",
+          "body": "'가격이 조금 나오는 거 빼고는 다 좋아요'처럼 만족도는 높으나 비용을 아쉬움으로 남기는 후기가 반복됩니다. 비용 사전 안내와 항목 투명성을 강화할 여지가 있습니다.",
+          "severity": "mid"
+        },
+        {
+          "title": "구글 채널의 상대적 낮은 평가",
+          "body": "구글은 별점 4.4에 부정 비중이 20%로 네이버(부정 2%)보다 뚜렷하게 높습니다. 채널 간 인상 격차가 검색 시 병원 이미지에 영향을 줄 수 있습니다.",
+          "severity": "mid"
+        }
+      ],
+      "ops_findings": [
+        {
+          "title": "구글 프로필 관리로 채널 인상 격차 축소 필요",
+          "body": "네이버는 최근 긍정 후기가 두텁지만 구글은 리뷰 64개·부정 20%로 상대적으로 취약합니다. 구글 리뷰 답글·응대를 통해 별점을 방어하면 검색 첫인상을 개선할 수 있습니다.",
+          "severity": "mid"
+        },
+        {
+          "title": "수술·노령견 미담을 자산으로 활용 미흡",
+          "body": "담낭점액종 수술 회복, 노령견 관리 등 신뢰도 높은 성공 사례가 리뷰에 쌓여 있으나 이를 병원 대표 콘텐츠로 정리·노출하는 활용은 드러나지 않습니다. 특화 진료 강점을 알리는 자산으로 쓸 수 있습니다.",
+          "severity": "low"
+        }
+      ],
+      "conclusion": "친절·자세한 설명·중증 진료 신뢰 등 핵심 만족요인은 이미 강합니다. 발목을 잡는 건 ①진료비 부담 인식 ②구글 채널의 낮은 평가와 관리 부재 ③미담 후기의 활용 부족이며, 이것만 손보면 채널 전반의 평판을 한 단계 더 끌어올릴 수 있습니다."
+    }
+  }
+}

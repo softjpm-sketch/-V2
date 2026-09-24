@@ -1,0 +1,679 @@
+{
+  "clinic": {
+    "name": "인천24시스카이동물병원",
+    "slug": "인천24시스카이동물병원",
+    "tier": 2,
+    "address": "인천광역시 남동구 남동대로 799번길 34",
+    "phone": "032-715-7959"
+  },
+  "trade_area": {
+    "households": 209484,
+    "clinics_in_region": 48,
+    "registered_pets": 35830,
+    "nearest_station_m": 600,
+    "monthly_sales_manwon": 5332,
+    "daily_footfall": 287184,
+    "nearest_station": "센트럴파크역",
+    "area_type": "주거·상업 혼합",
+    "parking": true,
+    "apartment_dense": true
+  },
+  "competition": {
+    "clinics": [
+      {
+        "name": "인천24시스카이동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 68,
+        "road": "인천 남동구 남동대로799번길 8",
+        "url": "http://place.map.kakao.com/24839092"
+      },
+      {
+        "name": "9월의소원동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 245,
+        "road": "인천 남동구 구월남로 174",
+        "url": "http://place.map.kakao.com/690350951"
+      },
+      {
+        "name": "파스텔LC동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 319,
+        "road": "인천 남동구 구월로 159",
+        "url": "http://place.map.kakao.com/24481767"
+      },
+      {
+        "name": "멍멍냐옹동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 341,
+        "road": "인천 남동구 구월남로 130",
+        "url": "http://place.map.kakao.com/196485872"
+      },
+      {
+        "name": "찬샘동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 389,
+        "road": "인천 남동구 인주대로591번길 64",
+        "url": "http://place.map.kakao.com/411133534"
+      },
+      {
+        "name": "웰동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 459,
+        "road": "인천 남동구 남동대로 757",
+        "url": "http://place.map.kakao.com/1259827877"
+      },
+      {
+        "name": "백슬동물병원 인천점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 558,
+        "road": "인천 남동구 예술로 198",
+        "url": "http://place.map.kakao.com/1378430277"
+      },
+      {
+        "name": "다래 동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 685,
+        "road": "인천 남동구 석산로 156",
+        "url": "http://place.map.kakao.com/254051081"
+      },
+      {
+        "name": "소망동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 691,
+        "road": "인천 남동구 남동대로 737",
+        "url": "http://place.map.kakao.com/10567369"
+      },
+      {
+        "name": "덕수동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 860,
+        "road": "인천 남동구 구월로 65",
+        "url": "http://place.map.kakao.com/16389289"
+      },
+      {
+        "name": "인천24시유앤미동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1024,
+        "road": "인천 남동구 남동대로 910",
+        "url": "http://place.map.kakao.com/734881528"
+      },
+      {
+        "name": "24시독스동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1045,
+        "road": "인천 남동구 남동대로 912",
+        "url": "http://place.map.kakao.com/16673784"
+      },
+      {
+        "name": "바나나동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1105,
+        "road": "인천 남동구 호구포로 818",
+        "url": "http://place.map.kakao.com/527837548"
+      },
+      {
+        "name": "구월숲동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1266,
+        "road": "인천 남동구 인하로 559",
+        "url": "http://place.map.kakao.com/1656624059"
+      },
+      {
+        "name": "동물의왕국",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1289,
+        "road": "인천 남동구 문화로 65",
+        "url": "http://place.map.kakao.com/16155949"
+      },
+      {
+        "name": "정서동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1372,
+        "road": "인천 남동구 주안로 234",
+        "url": "http://place.map.kakao.com/17819739"
+      },
+      {
+        "name": "세우리 동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1401,
+        "road": "인천 남동구 백범로 260",
+        "url": "http://place.map.kakao.com/16449480"
+      },
+      {
+        "name": "보람동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1435,
+        "road": "인천 남동구 문화서로3번길 7",
+        "url": "http://place.map.kakao.com/16707395"
+      },
+      {
+        "name": "애니힐동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1440,
+        "road": "인천 남동구 인하로 608",
+        "url": "http://place.map.kakao.com/26898916"
+      },
+      {
+        "name": "마이펫동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1456,
+        "road": "인천 남동구 백범로 400",
+        "url": "http://place.map.kakao.com/16155434"
+      },
+      {
+        "name": "루이스 동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1616,
+        "road": "인천 남동구 백범로 232",
+        "url": "http://place.map.kakao.com/2133585101"
+      },
+      {
+        "name": "행복한동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1624,
+        "road": "인천 남동구 구월로 314",
+        "url": "http://place.map.kakao.com/16150607"
+      },
+      {
+        "name": "길동물병원 1호점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1666,
+        "road": "인천 남동구 구월로 317",
+        "url": "http://place.map.kakao.com/21941610"
+      },
+      {
+        "name": "24시퍼스트동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1729,
+        "road": "인천 미추홀구 경원대로 890",
+        "url": "http://place.map.kakao.com/1989682209"
+      },
+      {
+        "name": "사랑애동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1770,
+        "road": "인천 미추홀구 경인로 428",
+        "url": "http://place.map.kakao.com/1468171684"
+      },
+      {
+        "name": "동암동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1774,
+        "road": "인천 남동구 백범로 477",
+        "url": "http://place.map.kakao.com/16513424"
+      },
+      {
+        "name": "신세계동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1774,
+        "road": "인천 남동구 백범로 203",
+        "url": "http://place.map.kakao.com/16484431"
+      },
+      {
+        "name": "중앙동물병원약품",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 1874,
+        "road": "인천 미추홀구 경인로 417-1",
+        "url": "http://place.map.kakao.com/209239095"
+      },
+      {
+        "name": "하태흥반려동물의료센터 만수본점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2110,
+        "road": "인천 남동구 만수로 10",
+        "url": "http://place.map.kakao.com/367465421"
+      },
+      {
+        "name": "젬마동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2114,
+        "road": "인천 남동구 구월로 364",
+        "url": "http://place.map.kakao.com/9408839"
+      },
+      {
+        "name": "좋은친구들동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2208,
+        "road": "인천 남동구 만수로 25",
+        "url": "http://place.map.kakao.com/16688398"
+      },
+      {
+        "name": "도그플러스동물병원 간석점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2324,
+        "road": "인천 남동구 경원대로 971",
+        "url": "http://place.map.kakao.com/11342100"
+      },
+      {
+        "name": "온리동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2342,
+        "road": "인천 부평구 열우물로 90",
+        "url": "http://place.map.kakao.com/2146229773"
+      },
+      {
+        "name": "메이동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2388,
+        "road": "인천 남동구 만수서로 60",
+        "url": "http://place.map.kakao.com/27291028"
+      },
+      {
+        "name": "으뜸동물의료센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2395,
+        "road": "인천 미추홀구 미추홀대로 662",
+        "url": "http://place.map.kakao.com/1736565362"
+      },
+      {
+        "name": "펫홈종합동물병원 주안점",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2407,
+        "road": "인천 미추홀구 미추홀대로 620",
+        "url": "http://place.map.kakao.com/421529872"
+      },
+      {
+        "name": "주안동물메디컬센터",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2439,
+        "road": "인천 미추홀구 미추홀대로 594",
+        "url": "http://place.map.kakao.com/1465572813"
+      },
+      {
+        "name": "24시 건국본동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2501,
+        "road": "인천 미추홀구 인하로 287",
+        "url": "http://place.map.kakao.com/11390003"
+      },
+      {
+        "name": "아나파동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2514,
+        "road": "인천 미추홀구 경인로 354",
+        "url": "http://place.map.kakao.com/16773828"
+      },
+      {
+        "name": "필종합동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2646,
+        "road": "인천 남동구 남촌동로25번길 11",
+        "url": "http://place.map.kakao.com/8136061"
+      },
+      {
+        "name": "해맑은동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2676,
+        "road": "인천 남동구 장승로 24",
+        "url": "http://place.map.kakao.com/16628271"
+      },
+      {
+        "name": "신기동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2737,
+        "road": "인천 미추홀구 미추홀대로 533",
+        "url": "http://place.map.kakao.com/16768741"
+      },
+      {
+        "name": "주안동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2783,
+        "road": "인천 미추홀구 석정로 400",
+        "url": "http://place.map.kakao.com/16338781"
+      },
+      {
+        "name": "아라종합동물병원",
+        "category": "가정,생활 > 반려동물 > 동물병원",
+        "distance_m": 2821,
+        "road": "인천 미추홀구 주안로 73",
+        "url": "http://place.map.kakao.com/17676825"
+      }
+    ],
+    "rival_marketing": [
+      {
+        "name": "웰동물메디컬센터",
+        "homepage": "없음",
+        "blog": "운영",
+        "instagram": "운영",
+        "place_review": 59,
+        "specialty": [
+          "흉부",
+          "복부 방사선",
+          "초음파",
+          "혈액검사"
+        ]
+      },
+      {
+        "name": "인천24시유앤미동물병원",
+        "homepage": "운영",
+        "blog": "운영",
+        "instagram": "운영",
+        "place_review": 2168,
+        "specialty": [
+          "슬개골탈구",
+          "외과수술전문"
+        ]
+      },
+      {
+        "name": "24시독스동물병원",
+        "homepage": "운영",
+        "blog": "없음",
+        "instagram": "운영",
+        "place_review": 2751,
+        "specialty": [
+          "영상(CT",
+          "MRI)",
+          "정형",
+          "재활",
+          "치과"
+        ]
+      }
+    ],
+    "_collect": {
+      "total": 44,
+      "radius_m": 3000,
+      "capped": false
+    }
+  },
+  "marketing": {
+    "channels": [
+      {
+        "score": 68,
+        "note": "콘텐츠 퀄리티와 브랜딩 일관성이 우수한 병원 인스타. 다만 팔로워 규모(440명)와 팔로잉(354) 대비 성장이 정체된 편이고, 프로필 하이라이트·CTA 동선은 잘 갖췄으나 도달·전환 지표는 캡처만으로 확인 불가.",
+        "one_liner": "콘텐츠 완성도와 브랜드 톤은 병원급 상위권인데, 팔로워 규모가 아직 작아 도달을 키울 성장 레버가 필요하다",
+        "review_count": null,
+        "rating": null,
+        "subscores": [
+          {
+            "label": "프로필 완성도",
+            "level": "우수",
+            "note": "소개·주소·전화·진료과목·링크·하이라이트 4종(병원소식/의료진/오시는길/카톡) 모두 구비"
+          },
+          {
+            "label": "콘텐츠·브랜딩",
+            "level": "우수",
+            "note": "통일된 템플릿·로고·컬러로 SKY 브랜드 톤 일관, Q&A·정보성 카드뉴스 축적"
+          },
+          {
+            "label": "릴스·숏폼",
+            "level": "양호",
+            "note": "동물병원탐방·챌린지 등 릴스 다수 확인되나 조회수 지표는 확인 불가"
+          },
+          {
+            "label": "성장·도달",
+            "level": "개선 필요",
+            "note": "팔로워 440명으로 규모가 작고, 팔로잉 354 대비 성장 여력·도달 확인 필요"
+          },
+          {
+            "label": "전환 동선",
+            "level": "양호",
+            "note": "예약전화·카톡채널·세미나 신청 링크(simkung.pet)로 전환 경로 존재"
+          }
+        ],
+        "criteria": [
+          {
+            "perspective": "프로필 완성도",
+            "question": "소개·위치·연락처·진료과목·링크가 채워져 있는가",
+            "result": "우수"
+          },
+          {
+            "perspective": "팔로워 규모",
+            "question": "팔로워 수가 병원 채널로서 충분한가",
+            "result": "미흡"
+          },
+          {
+            "perspective": "게시 빈도·지속성",
+            "question": "게시물이 꾸준히 축적되고 있는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "릴스/숏폼 활용",
+            "question": "릴스 등 숏폼 포맷을 활용하는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "브랜딩 일관성",
+            "question": "피드의 톤·템플릿·로고가 일관적인가",
+            "result": "우수"
+          },
+          {
+            "perspective": "전환 동선",
+            "question": "예약·문의로 이어지는 CTA가 있는가",
+            "result": "양호"
+          },
+          {
+            "perspective": "참여·도달",
+            "question": "좋아요·댓글·조회 등 반응 지표가 확인되는가",
+            "result": "확인 필요"
+          }
+        ],
+        "strengths": [
+          {
+            "title": "일관된 브랜드 템플릿",
+            "body": "모든 게시물에 SKY 로고·통일된 폰트·컬러 카드뉴스 형식을 적용해 피드 전체가 전문 병원 브랜드로 정돈되어 보인다."
+          },
+          {
+            "title": "정보성 콘텐츠 축적",
+            "body": "강아지 디스크 Q&A, 신장질환 IRIS 가이드, 이물 섭취 영상검사 등 보호자 교육형 콘텐츠가 다양해 전문성·신뢰를 전달한다."
+          },
+          {
+            "title": "프로필·하이라이트 완비",
+            "body": "소개·주소·전화·진료과목이 명확하고 병원소식/의료진/오시는길/카톡채널 하이라이트와 세미나 신청 링크까지 전환 동선이 갖춰졌다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "작은 팔로워 규모",
+            "body": "팔로워 440명으로 콘텐츠 퀄리티 대비 도달 기반이 작아, 우수한 콘텐츠가 노출로 이어지기 어렵다.",
+            "severity": "high"
+          },
+          {
+            "title": "참여·도달 지표 확인 불가",
+            "body": "캡처상 좋아요·댓글·조회수가 보이지 않아 콘텐츠가 실제 반응을 얼마나 얻는지 확인 필요.",
+            "severity": "mid"
+          },
+          {
+            "title": "팔로잉이 팔로워에 근접",
+            "body": "팔로우 354로 팔로워 440에 가까워, 상호팔로우 의존 성장 신호일 수 있어 순수 도달 검증 필요.",
+            "severity": "low"
+          }
+        ],
+        "actions": [
+          {
+            "title": "릴스 중심 발행 비중 확대 및 저장·공유 유도형 정보 콘텐츠 강화로 도달 확대",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "지역 해시태그·위치태그·인천 반려인 타깃 협업(나비야 등)으로 팔로워 유입 늘리기",
+            "effort": 2,
+            "impact": 3,
+            "cost": 2
+          },
+          {
+            "title": "게시물별 CTA(프로필 링크·전화)와 DM 예약 안내를 캡션에 표준화",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          },
+          {
+            "title": "인사이트 지표(도달·저장·프로필방문) 주기 점검으로 콘텐츠 성과 관리 체계화",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          }
+        ],
+        "type": "instagram",
+        "url": "https://www.instagram.com/skyamg_ic/"
+      }
+    ]
+  },
+  "review": {
+    "channels": [
+      {
+        "name": "네이버 방문자 리뷰",
+        "review_count": 993,
+        "rating": null,
+        "recency": "2026.08.13까지 최근 리뷰 활발",
+        "sentiment": {
+          "pos": 82,
+          "neu": 8,
+          "neg": 10
+        }
+      },
+      {
+        "name": "구글",
+        "review_count": 70,
+        "rating": 3.8,
+        "recency": "3개월~7년 전, 다수 2~5년 전",
+        "sentiment": {
+          "pos": 50,
+          "neu": 10,
+          "neg": 40
+        }
+      }
+    ],
+    "praise_keywords": [
+      {
+        "keyword": "의료진 친절"
+      },
+      {
+        "keyword": "자세한 설명"
+      },
+      {
+        "keyword": "24시간 진료"
+      },
+      {
+        "keyword": "넓고 깨끗한 시설"
+      },
+      {
+        "keyword": "규모/여러 과 진료"
+      },
+      {
+        "keyword": "응급 대응"
+      },
+      {
+        "keyword": "믿고 맡길 수 있음"
+      }
+    ],
+    "complaint_keywords": [
+      {
+        "keyword": "비싼 비용"
+      },
+      {
+        "keyword": "과잉진료"
+      },
+      {
+        "keyword": "주치의 잦은 교체"
+      },
+      {
+        "keyword": "긴 대기시간"
+      },
+      {
+        "keyword": "데스크 응대 아쉬움"
+      },
+      {
+        "keyword": "주치의 소통 부족"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "원인을 잘 파악해주시고 설명도 알아듣기 쉽게 잘 해주시고 치료도 잘 해주셔서 믿고 맡길 수 있었습니다!!",
+        "channel": "네이버 방문자 리뷰",
+        "author": "우기5826",
+        "sentiment": "pos"
+      },
+      {
+        "text": "24시라서 노묘치료받기 좋습니다!",
+        "channel": "네이버 방문자 리뷰",
+        "author": "맘보만보",
+        "sentiment": "pos"
+      },
+      {
+        "text": "병원이 엄청엄청 넓고 쾌적하고 데스크 선생님들이 너무 친절하셔요ㅠㅠ 2차병원이여서 가격이 좀 있지만 그래도 좋은게 좋은거죠!",
+        "channel": "네이버 방문자 리뷰",
+        "author": "hwkeod",
+        "sentiment": "pos"
+      },
+      {
+        "text": "오후2시가 넘도록 아무런 고지가 없어 데스크에 문의해보니... 결국 병원예약을 오전 10시에 해서 왔는데 6시간을 기다려 오후4시에 담당의사선생님하고 검사결과확인했습니다",
+        "channel": "네이버 방문자 리뷰",
+        "author": "연지55",
+        "sentiment": "neg"
+      },
+      {
+        "text": "회진 후 주치의 연락은 단 한 번도 먼저 주신 적 없고... 주치의가 입원장 모래 종류조차 파악 못 하고 계셔 신뢰하기 어려웠습니다",
+        "channel": "네이버 방문자 리뷰",
+        "author": "좋으면 춤추는 쥐",
+        "sentiment": "neg"
+      },
+      {
+        "text": "12일 입원하고 퇴원까지 5백만원 정도 들었습니다. 응급상황이나 큰 병이 아니라면 동네 병원을 먼저 가보는것이 좋다고 생각",
+        "channel": "구글",
+        "author": "Nakahara Meiko forever",
+        "sentiment": "neu"
+      },
+      {
+        "text": "과잉진료,말도 안되는 가격 첨부합니다 동네 동물병원에서 진료보는게 훨씬 싸고 나아요",
+        "channel": "구글",
+        "author": "woo seong kim",
+        "sentiment": "neg"
+      },
+      {
+        "text": "의사선생님들 친절하시고 시간 들여 자세히 설명해 주십니다. 퇴근 후에도 갈 수 있는 24시간 진료라는 점이 큰 장점입니다. 비용은 다른 곳보다 비싼편이지만요",
+        "channel": "구글",
+        "author": "should have",
+        "sentiment": "pos"
+      }
+    ],
+    "findings": [
+      {
+        "title": "비용·과잉진료 관련 불만이 반복적으로 제기됨",
+        "body": "구글 리뷰에서 심장초음파 22만원, 12일 입원 500만원, 혈액검사 고가 등 구체적 비용 불만과 과잉진료 지적이 다수 나타난다. 네이버에서도 '2차병원이라 가격이 있다'는 언급이 있어, 비용 투명성 및 사전 설명 강화가 필요하다.",
+        "severity": "high"
+      },
+      {
+        "title": "주치의/담당의 잦은 교체와 소통 부족",
+        "body": "네이버·구글 모두에서 '갈 때마다 다른 선생님', '주치의 연락이 먼저 온 적 없음', '담당 아니라며 처치 지연' 등 담당의 연속성과 소통에 대한 아쉬움이 반복된다.",
+        "severity": "mid"
+      },
+      {
+        "title": "대기시간 및 데스크 안내 미흡",
+        "body": "CT 예약 후 6시간 대기, 대기 진행 상황 미고지 등 데스크 응대와 대기 관리에 대한 불만이 확인된다. 반려견 배변 처리 미흡 등 응대 관련 지적도 있다.",
+        "severity": "mid"
+      },
+      {
+        "title": "친절·시설·24시간 진료는 강력한 강점",
+        "body": "네이버 최근 리뷰는 대부분 긍정으로 의료진 친절, 자세한 설명, 넓고 깨끗한 시설, 24시간 응급 대응을 반복적으로 칭찬한다. 재방문·추천 언급도 많다.",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      {
+        "title": "주요 검사·입원 항목의 예상 비용 사전 안내 및 견적 설명 프로세스 도입",
+        "effort": 2,
+        "impact": 3,
+        "cost": 2
+      },
+      {
+        "title": "입원 환자 주치의 정기 연락·경과 공유 체계 마련(담당 연속성 확보)",
+        "effort": 2,
+        "impact": 3,
+        "cost": 2
+      },
+      {
+        "title": "대기 상황 실시간 안내(예약 지연 시 사전 고지) 및 데스크 응대 매뉴얼 강화",
+        "effort": 1,
+        "impact": 2,
+        "cost": 1
+      },
+      {
+        "title": "긍정 리뷰(친절·설명·24시간) 요소를 채널별로 부각하고 최근 후기 노출 강화",
+        "effort": 1,
+        "impact": 2,
+        "cost": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가상EMR테스트동물병원 진료데이터분석</title>
+<style>
+:root{
+  --navy:#152B54;--navy2:#20406f;--blue:#2C6FB5;--sky:#e8f0f9;
+  --ink:#1c2430;--muted:#5b6675;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;
+  --good:#2E8B6B;--warn:#C58A22;--bad:#C0453B;
+  --goodbg:#e7f4ee;--warnbg:#fbf1de;--badbg:#fbe9e7;
+  --shadow:0 1px 3px rgba(20,40,80,.06),0 8px 24px rgba(20,40,80,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header.hero{color:#fff;padding:54px 0 46px}
+.kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0e8;font-weight:700}
+header.hero h1{font-size:29px;margin:.35em 0 .2em;font-weight:800}
+header.hero .sub{font-size:15px;color:#d8e5f5;margin:0 0 14px;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:4px 11px;border-radius:999px;font-size:12.5px;color:#eaf2fc}
+main.wrap{padding-top:8px;padding-bottom:10px}
+section{margin:30px 0}
+.sechead{display:flex;align-items:center;gap:11px;margin:0 0 14px}
+.sechead .num{background:var(--navy);color:#fff;font-weight:800;font-size:13px;
+  width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.sechead h2{font-size:19px;margin:0;font-weight:800}
+.sechead h2 .subt{font-weight:600;font-size:13px;color:var(--muted);margin-left:9px}
+.secdiv{margin:40px 0 8px;padding:14px 18px;border-radius:12px;background:repeating-linear-gradient(135deg,#f2f6fb,#f2f6fb 12px,#eaf1f9 12px,#eaf1f9 24px);border:1px dashed var(--blue)}
+.secdiv .lab{font-weight:800;font-size:15px;color:var(--blue)}
+.secdiv p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.card+.card{margin-top:14px}
+p.lead{font-size:14.5px;color:#374050;margin:0 0 6px}
+/* 스냅샷 4칸 */
+.snap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.snap .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;box-shadow:var(--shadow)}
+.snap .k b{display:block;font-size:22px;color:var(--navy);font-weight:800;line-height:1.2}
+.snap .k span{font-size:12px;color:var(--muted)}
+/* 점수 막대 */
+.scoregrid{display:grid;gap:11px}
+.score{display:grid;grid-template-columns:150px 1fr 46px;align-items:center;gap:10px;font-size:13.5px}
+.score .lab{color:#39424f;font-weight:600}
+.score .track{background:#eef2f7;border-radius:7px;height:11px;overflow:hidden}
+.score .bar{height:100%;border-radius:7px}
+.bar.s-hi{background:var(--good)}.bar.s-mid{background:var(--warn)}.bar.s-lo{background:var(--bad)}
+.score .val{text-align:right;font-weight:700;color:var(--navy);font-size:13px}
+.score .note{grid-column:1/-1;font-size:12px;color:var(--muted);margin:-4px 0 2px}
+/* 채널 섹션 소제목 */
+.sub-h{font-size:15px;font-weight:800;margin:20px 0 9px;color:var(--navy);display:flex;align-items:center;gap:8px}
+/* 채널 이동 목차(클릭 카드) */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:4px 0 18px}
+.toc a{display:block;background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  font-weight:700;font-size:14px;transition:.15s}
+.toc a:hover{border-color:var(--blue);transform:translateY(-1px)}
+.toc a span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}
+/* 채널 헤더(번호 배지 + 제목 + URL) */
+.chan-head{display:flex;align-items:center;gap:14px;margin:28px 0 8px}
+.chan-idx{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:11px;background:var(--navy);color:#fff;font-weight:800;font-size:16px;flex:none}
+.chan-head h2{margin:0;font-size:22px}
+.chan-url{font-size:12.5px;margin-top:2px}
+.chan-url a{color:var(--blue);text-decoration:none;word-break:break-all}
+.chan-url a:hover{text-decoration:underline}
+/* 세부 진단 카드(진행바형) */
+.mcgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 4px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+.mc .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.mc .lab b{font-size:15px}.mc .lab .v{font-size:15px;font-weight:800}
+.mc-bar{height:9px;border-radius:6px;background:#eef1f6;overflow:hidden}
+.mc-bar>i{display:block;height:100%;border-radius:6px}
+.mc-bar.s-hi>i{background:var(--good)}.mc-bar.s-mid>i{background:var(--warn)}.mc-bar.s-lo>i{background:var(--bad)}
+.mc small{color:var(--muted);font-size:12.5px;display:block;margin-top:8px}
+@media(max-width:640px){.mcgrid{grid-template-columns:1fr}}
+/* 발견 블록 */
+.finding{border-left:4px solid var(--good);padding:2px 0 2px 16px;margin:16px 0}
+.finding.w{border-color:var(--warn)}.finding.b{border-color:var(--bad)}
+.finding h4{margin:0 0 5px;font-size:15px;font-weight:800}
+.finding p{margin:0;font-size:14px;color:#374050}
+.finding .src{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--blue);
+  background:#eef4fb;border:1px solid #d6e6f7;border-radius:6px;padding:1px 8px}
+/* 콜아웃 */
+.callout{background:var(--sky);border:1px solid #cfe0f2;border-radius:12px;padding:15px 18px;font-size:14px;color:var(--navy)}
+.callout.g{background:var(--goodbg);border-color:#bfe3d1;color:#1f5f47}
+.callout b{font-weight:800}
+/* 태그 */
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:6px}
+.t-good{background:var(--goodbg);color:var(--good)}.t-warn{background:var(--warnbg);color:var(--warn)}.t-bad{background:var(--badbg);color:var(--bad)}
+.t-blue{background:#e6f0fa;color:var(--blue)}
+.win{background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px}
+/* 표 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--navy);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+/* 로드맵 바로/중기/장기 */
+.road{display:grid;gap:11px}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 16px;box-shadow:var(--shadow)}
+.badge{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;margin-top:1px}
+.b-now{background:var(--goodbg);color:var(--good)}.b-mid{background:#eaf1fb;color:var(--blue)}.b-long{background:#f0edf9;color:#5b3aa6}
+.step h4{margin:0 0 3px;font-size:14px;font-weight:800}.step p{margin:0;font-size:13px;color:#4a5462}
+.step .rdul{margin:5px 0 0;padding-left:17px}.step .rdul li{font-size:13px;color:#4a5462;margin:3px 0;line-height:1.5}
+.step .fx{font-size:11.5px;color:var(--muted);margin-top:3px}
+/* 강점 축 카드 */
+.pillar{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pillar.cols3{grid-template-columns:repeat(3,1fr)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow);border-top:3px solid var(--good)}
+.pcard .n{font-size:11.5px;color:var(--good);font-weight:800;letter-spacing:.04em}
+.pcard h4{margin:4px 0 5px;font-size:15px;font-weight:800}
+.pcard p{margin:0;font-size:13px;color:#4a5462}
+/* 인용 */
+.quote{border-left:3px solid var(--blue);background:#f7fafd;padding:10px 15px;border-radius:0 10px 10px 0;margin:10px 0;font-size:13.5px;color:#33404f}
+.quote .s{display:block;margin-top:5px;font-size:11.5px;color:var(--muted)}
+/* 감성 막대(리뷰) */
+.senti{display:flex;height:16px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.senti .pos{background:var(--good)}.senti .neu{background:#c9d2de}.senti .neg{background:var(--bad)}
+.kwrow{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
+.kw{font-size:12.5px;padding:4px 11px;border-radius:999px;background:#eef4fb;border:1px solid #d6e6f7;color:#2b445f}
+.kw.neg{background:var(--badbg);border-color:#f0cfca;color:var(--bad)}
+/* 연간 타임라인 */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tl{border-radius:12px;padding:13px 14px;color:#fff}
+.tl.q1{background:#2C6FB5}.tl.q2{background:#5b3aa6}.tl.q3{background:#2E8B6B}.tl.q4{background:#C58A22}
+.tl .qn{font-size:11.5px;font-weight:800;opacity:.9}.tl h4{margin:3px 0 4px;font-size:14.5px}
+.tl p{margin:0;font-size:12px;opacity:.95}
+/* 분기 상세 */
+.quarter{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow);background:var(--card)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qhead .dot{width:12px;height:12px;border-radius:3px}
+.qhead.q1 .dot{background:#2C6FB5}.qhead.q2 .dot{background:#5b3aa6}.qhead.q3 .dot{background:#2E8B6B}.qhead.q4 .dot{background:#C58A22}
+.qhead h3{margin:0;font-size:16px;font-weight:800}.qhead .theme{font-size:12.5px;color:var(--muted)}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mbox{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fbfcfe}
+.mbox .mh{font-weight:800;font-size:13px;color:var(--navy);margin-bottom:5px}
+.season{display:inline-block;font-size:10.5px;font-weight:700;background:#fff3d9;color:#8a6414;border-radius:5px;padding:1px 7px;margin-left:6px}
+.mbox ul{margin:6px 0 0;padding-left:16px}.mbox li{font-size:12.5px;color:#414b58;margin:2px 0}
+.focusrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.focusrow .f{font-size:12px;background:var(--sky);border:1px solid #cfe0f2;color:var(--navy);border-radius:8px;padding:5px 11px;font-weight:600}
+/* 채널×분기 강도 매트릭스 */
+.d{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle}
+.d-hi{background:var(--good)}.d-mid{background:var(--warn)}.d-lo{background:#d3dbe4}
+/* 예산 배분 */
+.budget{display:grid;gap:10px}
+.bcard{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:10px;font-size:13.5px}
+.bcard .blab{font-weight:700;color:#39424f}
+.btrack{background:#eef2f7;border-radius:7px;height:13px;overflow:hidden}
+.bbar{height:100%;background:linear-gradient(90deg,var(--blue),var(--navy2));border-radius:7px}
+.bcard .bval{text-align:right;font-weight:800;color:var(--navy)}
+/* 안내/주석 박스 */
+.note{background:#fff8ec;border:1px solid #f2e2c0;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#6b5320;margin:14px 0}
+.info{background:#eef4fb;border:1px solid #d6e6f7;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#274a6d;margin:12px 0}
+.info b{color:var(--navy)}
+/* 2열 리스트 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.two ul{margin:0;padding-left:17px}.two li{font-size:13px;margin:3px 0;color:#414b58}
+/* 푸터 */
+footer.wrap{padding:24px 20px 60px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px}
+footer .fn{margin:4px 0}
+/* 리포트 간 이동 네비 */
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0}
+.nav a{font-size:12px;text-decoration:none;color:var(--blue);border:1px solid #d6e6f7;background:#fff;
+  border-radius:999px;padding:4px 11px}
+.nav a.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* ── 참조 리포트 수준 컴포넌트 ───────────────────────── */
+/* 방법 카드(어떻게 분석했나) */
+.method{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.method .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.method .m b{font-size:13.5px;color:var(--navy)}.method .m p{font-size:13px;color:var(--muted);margin:4px 0 0}
+/* 개념 흐름도(1·2차) */
+.flow2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 2px}
+.flow2 .b{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:700;color:var(--navy)}
+.flow2 .b.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flow2 .a{color:var(--blue);font-weight:800;font-size:13px}
+/* 2열 그리드(채널 비교 등) */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+/* 리뷰 채널 비교 박스 */
+.chanbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.chanbox .ctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.chanbox .cbadge{font-size:12.5px;font-weight:800;color:#fff;border-radius:7px;padding:4px 10px}
+.cb-naver{background:#03C75A}.cb-google{background:#4285F4}.cb-etc{background:var(--navy)}
+.chanbox .kpi{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.chanbox .kpi:last-of-type{border-bottom:0}.chanbox .kpi b{font-weight:800}
+.sbar{height:16px;border-radius:6px;overflow:hidden;display:flex;margin:10px 0 6px}
+.sbar i{display:block;height:100%}
+.sbar .p{background:var(--good)}.sbar .u{background:#c9ced6}.sbar .g{background:var(--bad)}
+.sleg{display:flex;gap:12px;font-size:11.5px;color:var(--muted)}
+.sleg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.sleg .lp::before{background:var(--good)}.sleg .lu::before{background:#c9ced6}.sleg .lg::before{background:var(--bad)}
+/* 그라디언트 분기 블록(12개월 계획) */
+.gquarter{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:0 0 18px;background:var(--card)}
+.gqhead{padding:15px 22px;color:#fff;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.gqhead.q1{background:linear-gradient(135deg,#2C6FB5,#3f83c9)}.gqhead.q2{background:linear-gradient(135deg,#5b3aa6,#7b52c9)}
+.gqhead.q3{background:linear-gradient(135deg,#2E8B6B,#3fa682)}.gqhead.q4{background:linear-gradient(135deg,#C58A22,#d9a13f)}
+.gqhead .qlab{font-size:11.5px;font-weight:800;letter-spacing:.05em;opacity:.9}
+.gqhead h3{margin:0;font-size:18px;color:#fff;font-weight:800}.gqhead .qmon{font-size:12.5px;opacity:.9;margin-left:auto}
+.gqbody{padding:16px 22px}
+.frow{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:9px 0;border-top:1px dashed var(--line)}
+.frow .fl{font-size:11.5px;font-weight:800;color:#fff;background:var(--navy);border-radius:7px;padding:4px 10px;white-space:nowrap}
+.frow p{margin:0;font-size:13px}
+/* 체크리스트 */
+.checklist{width:100%;border-collapse:collapse;font-size:13.5px}
+.checklist th{background:var(--sky);color:var(--navy);text-align:left;padding:9px 11px;font-weight:700}
+.checklist td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}
+.checklist .box{width:16px;height:16px;border:2px solid var(--muted);border-radius:4px;display:inline-block}
+.checklist .owner{color:var(--muted);font-size:12.5px}
+/* 인쇄(PDF) 버튼 + 인쇄 스타일 */
+.printbar{position:fixed;top:14px;right:16px;z-index:50}
+.printbar button{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:9px 15px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+@media print{
+  .printbar,.nav{display:none!important}
+  header.hero{padding:24px 0 20px}
+  body{background:#fff}
+  .card,.snap .k,.step,.pcard,.chanbox,.gquarter,.method .m,.bcard{box-shadow:none}
+  section{break-inside:avoid}
+}
+@media(max-width:640px){
+  .snap{grid-template-columns:1fr 1fr}
+  .pillar,.pillar.cols3{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .months{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  .score{grid-template-columns:110px 1fr 40px}
+  .bcard{grid-template-columns:96px 1fr 40px}
+}
+
+header.hero{background:linear-gradient(135deg,#0f5c52,#128577)}
+</style></head>
+<body>
+<div class="printbar"><button onclick="window.print()">🖨 PDF로 저장</button></div>
+<header class="hero"><div class="wrap">
+  <div class="kicker">MEDICAL DATA ANALYSIS · 내부 데이터축</div>
+  <h1>가상EMR테스트동물병원 진료데이터분석</h1>
+  <p class="sub">재진율·휴면·객단가·주력질환 기반 내부 진단 + 12개월 로드맵</p>
+  <div class="meta"><span>Petamos 병원 마케팅 진단</span><span>개인정보 보호 처리 완료</span></div>
+  <div class="nav"><a class="" href="01_가상EMR테스트동물병원_상권분석.html">01 상권</a><a class="" href="02_가상EMR테스트동물병원_경쟁분석.html">02 경쟁</a><a class="" href="03_가상EMR테스트동물병원_마케팅.html">03 마케팅</a><a class="" href="04_가상EMR테스트동물병원_리뷰분석.html">04 리뷰</a><a class="" href="05_가상EMR테스트동물병원_강점.html">05 강점</a><a class="" href="06_가상EMR테스트동물병원_12개월마케팅계획.html">06 12개월</a><a class="cur" href="07_가상EMR테스트동물병원_진료데이터분석.html">07 진료데이터</a></div>
+</div></header>
+<main class="wrap">
+<section><div class="sechead"><div class="num">1</div><h2>진료 데이터 스냅샷</h2></div><div class="snap"><div class="k"><b>1,171</b><span>총 방문 건수</span></div><div class="k"><b>620</b><span>고유 환자수(가명)</span></div><div class="k"><b>275,613,400원</b><span>기간 총매출</span></div><div class="k"><b>2025-02-27~2026-08-19</b><span>분석 기간</span></div></div></section><section><div class="sechead"><div class="num">2</div><h2>개인정보 보호 처리</h2></div><div class="info"><b>🔒 개인정보 보호 처리 완료</b> — 이 리포트에는 실제 보호자 정보가 전혀 담겨 있지 않습니다.<ul style='margin:8px 0 0;padding-left:18px;font-size:13.5px;line-height:1.7'><li><b>가명 처리</b>: 환자 구분은 세션 랜덤 솔트 + SHA-256 해시(<code>P…</code>)로만. '같은 환자인지'만 판별되고 <b>원본 재식별은 불가</b>합니다.</li><li><b>원본 삭제</b>: 보호자명· 연락처 컬럼(보호자명·전화·주소 등)은 분석 전에 <b>즉시 폐기</b>했습니다.</li><li><b>솔트 폐기</b>: 세션 종료와 함께 솔트를 버려 재연결 경로를 남기지 않습니다.</li></ul></div><div class="note">※ 기술적 안전장치입니다. 실제 위탁 처리 시 개인정보 처리위탁 계약·정보주체 동의 등 법적 절차가 선행돼야 합니다.</div></section><section><div class="sechead"><div class="num">3</div><h2>핵심 지표 진단</h2></div><div class="scoregrid"><div class="score"><div class="lab">재진율(리텐션)</div><div class="track"><div class="bar s-hi" style="width:89%"></div></div><div class="val">89</div><div class="note">53% · 재방문 환자 331명 / 평균 1.89회</div></div><div class="score"><div class="lab">활성도(휴면 반비례)</div><div class="track"><div class="bar s-lo" style="width:21%"></div></div><div class="val">21</div><div class="note">휴면 245명(40%) · 최근 6개월 미방문</div></div><div class="score"><div class="lab">객단가</div><div class="track"></div><div class="val">–</div><div class="note">방문당 평균 235,366원 · 중앙값 87,800원 · 환자당 444,538원 · 미측정</div></div></div><div class="callout g"><b>재진율 53%</b> — 보통 수준. 알림톡 재진 리마인드·정기검진 리콜로 리텐션을 강화하면 매출 안정성이 커집니다.</div></section><section><div class="sechead"><div class="num">4</div><h2>고관여 진료 후보 — 객단가 상향 대상</h2></div><p class="lead">진단명별 평균 객단가 상위입니다. 콘텐츠·패키지·전문성 마케팅의 <b>수익 레버</b>가 되는 진료입니다.</p><table><thead><tr><th>진단명</th><th class="num">평균 객단가</th></tr></thead><tbody><tr><td>종양 절제술</td><td class="num">1,398,188원</td></tr><tr><td>슬개골탈구 수술</td><td class="num">1,189,791원</td></tr><tr><td>MRI·CT 영상검사</td><td class="num">599,767원</td></tr><tr><td>응급·입원</td><td class="num">576,376원</td></tr><tr><td>스케일링(치석제거)</td><td class="num">313,900원</td></tr></tbody></table><div class="note">고관여 임계(상위 20% 분위) = 312,400원 이상</div></section><section><div class="sechead"><div class="num">5</div><h2>질환 유입 믹스 — 주력 진료</h2></div><p class="lead">가장 많이 유입되는 진료 = 이 병원의 <b>대외 강점</b>. 특화 콘텐츠·광고의 1순위 소재입니다.</p><table><thead><tr><th>진단명</th><th class="num">방문수</th><th>유입 비율</th></tr></thead><tbody><tr><td>예방접종</td><td class="num">208</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:18%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">18%</span></div></td></tr><tr><td>피부염</td><td class="num">128</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:11%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">11%</span></div></td></tr><tr><td>건강검진</td><td class="num">114</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:10%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">10%</span></div></td></tr><tr><td>외이염</td><td class="num">101</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:9%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">9%</span></div></td></tr><tr><td>심장사상충 예방</td><td class="num">88</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:8%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">8%</span></div></td></tr><tr><td>혈액검사</td><td class="num">82</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:7%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">7%</span></div></td></tr><tr><td>중성화수술</td><td class="num">75</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:6%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">6%</span></div></td></tr><tr><td>응급·입원</td><td class="num">72</td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:#e8f0f9;border-radius:5px;overflow:hidden"><div style="width:6%;height:100%;background:var(--blue)"></div></div><span style="font-weight:700;color:var(--navy);min-width:38px;text-align:right">6%</span></div></td></tr></tbody></table></section><section><div class="sechead"><div class="num">6</div><h2>어떻게 분석했나 — 방법</h2></div><div class="method"><div class="m"><b>① 익명화(가명 처리)</b><p>보호자명·전화·주소를 삭제하고 환자는 솔티드 SHA-256 가명 ID로만 구분(재식별 불가).</p></div><div class="m"><b>② 재진율·활성도</b><p>환자별 방문 횟수로 재방문(2회+) 비율과 최근 6개월 미방문(휴면) 규모를 계산.</p></div><div class="m"><b>③ 객단가</b><p>방문당 평균·중앙값, 환자당 합계 평균으로 매출 구조를 파악.</p></div><div class="m"><b>④ 고관여·질환믹스</b><p>진단명별 평균 객단가 상위 5(임계=80분위)와 유입 비율 Top 8로 수익 레버·강점을 도출.</p></div><div class="m"><b>⑤ 규칙 기반 로드맵</b><p>지표 약점→우선 과제를 가중치로 매칭해 12개월에 라운드로빈 배분(키·네트워크 불필요).</p></div></div></section><section><div class="sechead"><div class="num">7</div><h2>우선순위 개선 과제</h2></div><p class="lead">지표 약점에서 자동 도출된 실행 과제입니다(가중치순).</p><table class="checklist"><thead><tr><th style="width:5%">✓</th><th style="width:12%">시기</th><th>실행 항목</th><th style="width:16%">담당</th><th style="width:14%">기한</th></tr></thead><tbody><tr><td><span class="box"></span></td><td><span class="tag t-good">바로</span></td><td>[휴면 리콜] 휴면 환자 245명 (최근 6개월 미방문) → 휴면 대상 타겟 알림톡/문자 리콜 · 예방접종·검진 시즌 캠페인</td><td class="owner"></td><td class="owner"></td></tr><tr><td><span class="box"></span></td><td><span class="tag t-warn">중기</span></td><td>[객단가 상향] 고객단가 진료 후보: 종양 절제술, 슬개골탈구 수술, MRI·CT 영상검사 → 종양 절제술 등 고관여 진료 콘텐츠/패키지화 · 네이버 블로그 전문성 콘텐츠</td><td class="owner"></td><td class="owner"></td></tr><tr><td><span class="box"></span></td><td><span class="tag t-warn">중기</span></td><td>[강점 극대화] 주력 유입 질환: 예방접종 (18%) → 예방접종 특화 콘텐츠·광고 집중 · 인스타/블로그 사례 콘텐츠</td><td class="owner"></td><td class="owner"></td></tr></tbody></table></section><section><div class="sechead"><div class="num">8</div><h2>12개월 마케팅 로드맵 (진료데이터 기반)</h2></div><p class="lead">이 로드맵은 <b>두 층</b>입니다 — 매월 유지하는 <b>상시(기본기)</b> 위에, 진료데이터 약점을 겨냥한 <b>집중(분기 승부수)</b>을 얹습니다.</p><div class="two" style="margin:2px 0 16px"><ul style="list-style:none;padding-left:0"><li><span class="tag t-blue">🔁 상시</span> <b>매월 반복하는 기본기.</b> 검색·지도·소셜미디어가 "살아있고 관리되는 병원"으로 인식하게 하는 최소 운영입니다. 손을 놓으면 노출·순위가 서서히 식습니다.</li></ul><ul style="list-style:none;padding-left:0"><li><span class="tag t-good">🎯 집중</span> <b>이번 분기의 승부수.</b> 진료데이터 약점(재진율·휴면 등)을 겨냥한 캠페인으로, 아래 분기 블록의 <span class="tag t-good" style="font-size:11px">집중</span> 항목이 그것입니다.</li></ul></div><div class="gquarter"><div class="gqhead q1"><span class="qlab">1Q</span><h3>기반 정비 (플레이스·지도·AI 검색 세팅)</h3></div><div class="gqbody"><div class="focusrow" style="margin-bottom:8px"><span class="f">1월</span><span class="f">2월</span><span class="f">3월</span></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 휴면 대상 타겟 알림톡/문자 리콜</p></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 예방접종·검진 시즌 캠페인</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 종양 절제술 등 고관여 진료 콘텐츠/패키지화</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 네이버 블로그 전문성 콘텐츠</p></div></div></div><div class="gquarter"><div class="gqhead q2"><span class="qlab">2Q</span><h3>리텐션 구축 (알림톡·리콜 자동화)</h3></div><div class="gqbody"><div class="focusrow" style="margin-bottom:8px"><span class="f">4월</span><span class="f">5월</span><span class="f">6월</span></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 휴면 대상 타겟 알림톡/문자 리콜</p></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 예방접종·검진 시즌 캠페인</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 종양 절제술 등 고관여 진료 콘텐츠/패키지화</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 네이버 블로그 전문성 콘텐츠</p></div></div></div><div class="gquarter"><div class="gqhead q3"><span class="qlab">3Q</span><h3>신규 유입 확대 (소셜미디어·타겟 광고)</h3></div><div class="gqbody"><div class="focusrow" style="margin-bottom:8px"><span class="f">7월</span><span class="f">8월</span><span class="f">9월</span></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 휴면 대상 타겟 알림톡/문자 리콜</p></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 예방접종·검진 시즌 캠페인</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 종양 절제술 등 고관여 진료 콘텐츠/패키지화</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 네이버 블로그 전문성 콘텐츠</p></div></div></div><div class="gquarter"><div class="gqhead q4"><span class="qlab">4Q</span><h3>객단가·평판 강화 (고관여 콘텐츠·리뷰)</h3></div><div class="gqbody"><div class="focusrow" style="margin-bottom:8px"><span class="f">10월</span><span class="f">11월</span><span class="f">12월</span></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 휴면 대상 타겟 알림톡/문자 리콜</p></div><div class="frow"><span class="fl">집중</span><p>[휴면 리콜] 예방접종·검진 시즌 캠페인</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 종양 절제술 등 고관여 진료 콘텐츠/패키지화</p></div><div class="frow"><span class="fl">집중</span><p>[객단가 상향] 네이버 블로그 전문성 콘텐츠</p></div></div></div><h4 style="margin:18px 0 6px;font-size:14px;color:var(--navy)">🔁 상시 채널 — 매월 유지할 기본기</h4><table><thead><tr><th>채널</th><th>매월 상시 활동</th><th>유형</th></tr></thead><tbody><tr><td><b>네이버</b></td><td>스마트플레이스 정보 최신화 · 블로그 주 1~2회 발행</td><td><span class="tag t-good">발행·관리</span></td></tr><tr><td><b>카카오</b></td><td>카카오톡 채널 관리 · 예약/재진 알림톡 운영</td><td><span class="tag t-blue">운영·관리</span></td></tr><tr><td><b>소셜미디어·타겟</b></td><td>인스타그램 콘텐츠 주 2~3회 · 스토리 운영</td><td><span class="tag t-good">콘텐츠 발행</span></td></tr><tr><td><b>지도·내비</b></td><td>네이버/카카오/T맵 지도 정보 점검</td><td><span class="tag t-blue">정보 점검</span></td></tr><tr><td><b>AI 검색 노출</b></td><td>검색엔진이 읽는 정보 코드 유지 · 전문 콘텐츠 축적</td><td><span class="tag t-blue">세팅 유지</span></td></tr></tbody></table><div class="note">‘발행’은 블로그·인스타에 <b>글/콘텐츠가 매월 올라가야</b> 하는 것, ‘관리’는 알림톡 발송·지도 정보 점검·구조화 데이터 유지처럼 <b>글이 아닌 운영</b> 작업입니다.</div></section><div class="callout g"><b>정리</b> — 내부 진료 데이터가 가리키는 방향: 재진율 안정 → 신규 유입 확대, 휴면 245명 리콜, 주력 &#x27;예방접종&#x27; 특화 마케팅. 외부 5축(01~06)과 함께 보면 '내부에서 무엇을 잘하나 + 외부에서 어디서 이기나'가 맞물립니다.</div>
+</main>
+<footer class="wrap">
+<p class="fn">· 진료 데이터는 업로드 즉시 익명화(가명 처리)되며 원본 개인정보(이름·전화·주소)는 저장하지 않습니다.</p><p class="fn">· 반려가구=양육률 28% 추정치, 등록 반려동물수는 개 위주 하한값, 1·2차 병원 분류는 명칭 기반 추정, 점수는 v1 휴리스틱 상대평가입니다.</p><p class="fn">· 참고용 진단 리포트입니다. 사실관계는 실제 정보로 확정하세요.</p>
+</footer>
+</body></html>

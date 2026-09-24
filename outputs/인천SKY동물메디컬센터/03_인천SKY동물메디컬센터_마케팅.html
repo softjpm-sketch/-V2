@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인천SKY동물메디컬센터 마케팅(온라인 채널 진단)</title>
+<style>
+:root{
+  --navy:#152B54;--navy2:#20406f;--blue:#2C6FB5;--sky:#e8f0f9;
+  --ink:#1c2430;--muted:#5b6675;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;
+  --good:#2E8B6B;--warn:#C58A22;--bad:#C0453B;
+  --goodbg:#e7f4ee;--warnbg:#fbf1de;--badbg:#fbe9e7;
+  --shadow:0 1px 3px rgba(20,40,80,.06),0 8px 24px rgba(20,40,80,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header.hero{color:#fff;padding:54px 0 46px}
+.kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#9fc0e8;font-weight:700}
+header.hero h1{font-size:29px;margin:.35em 0 .2em;font-weight:800}
+header.hero .sub{font-size:15px;color:#d8e5f5;margin:0 0 14px;max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:4px 11px;border-radius:999px;font-size:12.5px;color:#eaf2fc}
+main.wrap{padding-top:8px;padding-bottom:10px}
+section{margin:30px 0}
+.sechead{display:flex;align-items:center;gap:11px;margin:0 0 14px}
+.sechead .num{background:var(--navy);color:#fff;font-weight:800;font-size:13px;
+  width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.sechead h2{font-size:19px;margin:0;font-weight:800}
+.sechead h2 .subt{font-weight:600;font-size:13px;color:var(--muted);margin-left:9px}
+.secdiv{margin:40px 0 8px;padding:14px 18px;border-radius:12px;background:repeating-linear-gradient(135deg,#f2f6fb,#f2f6fb 12px,#eaf1f9 12px,#eaf1f9 24px);border:1px dashed var(--blue)}
+.secdiv .lab{font-weight:800;font-size:15px;color:var(--blue)}
+.secdiv p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.card+.card{margin-top:14px}
+p.lead{font-size:14.5px;color:#374050;margin:0 0 6px}
+/* 스냅샷 4칸 */
+.snap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.snap .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;box-shadow:var(--shadow)}
+.snap .k b{display:block;font-size:22px;color:var(--navy);font-weight:800;line-height:1.2}
+.snap .k span{font-size:12px;color:var(--muted)}
+/* 점수 막대 */
+.scoregrid{display:grid;gap:11px}
+.score{display:grid;grid-template-columns:150px 1fr 46px;align-items:center;gap:10px;font-size:13.5px}
+.score .lab{color:#39424f;font-weight:600}
+.score .track{background:#eef2f7;border-radius:7px;height:11px;overflow:hidden}
+.score .bar{height:100%;border-radius:7px}
+.bar.s-hi{background:var(--good)}.bar.s-mid{background:var(--warn)}.bar.s-lo{background:var(--bad)}
+.score .val{text-align:right;font-weight:700;color:var(--navy);font-size:13px}
+.score .note{grid-column:1/-1;font-size:12px;color:var(--muted);margin:-4px 0 2px}
+/* 채널 섹션 소제목 */
+.sub-h{font-size:15px;font-weight:800;margin:20px 0 9px;color:var(--navy);display:flex;align-items:center;gap:8px}
+/* 채널 이동 목차(클릭 카드) */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:4px 0 18px}
+.toc a{display:block;background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  font-weight:700;font-size:14px;transition:.15s}
+.toc a:hover{border-color:var(--blue);transform:translateY(-1px)}
+.toc a span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}
+/* 채널 헤더(번호 배지 + 제목 + URL) */
+.chan-head{display:flex;align-items:center;gap:14px;margin:28px 0 8px}
+.chan-idx{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:11px;background:var(--navy);color:#fff;font-weight:800;font-size:16px;flex:none}
+.chan-head h2{margin:0;font-size:22px}
+.chan-url{font-size:12.5px;margin-top:2px}
+.chan-url a{color:var(--blue);text-decoration:none;word-break:break-all}
+.chan-url a:hover{text-decoration:underline}
+/* 세부 진단 카드(진행바형) */
+.mcgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 4px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+.mc .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.mc .lab b{font-size:15px}.mc .lab .v{font-size:15px;font-weight:800}
+.mc-bar{height:9px;border-radius:6px;background:#eef1f6;overflow:hidden}
+.mc-bar>i{display:block;height:100%;border-radius:6px}
+.mc-bar.s-hi>i{background:var(--good)}.mc-bar.s-mid>i{background:var(--warn)}.mc-bar.s-lo>i{background:var(--bad)}
+.mc small{color:var(--muted);font-size:12.5px;display:block;margin-top:8px}
+@media(max-width:640px){.mcgrid{grid-template-columns:1fr}}
+/* 발견 블록 */
+.finding{border-left:4px solid var(--good);padding:2px 0 2px 16px;margin:16px 0}
+.finding.w{border-color:var(--warn)}.finding.b{border-color:var(--bad)}
+.finding h4{margin:0 0 5px;font-size:15px;font-weight:800}
+.finding p{margin:0;font-size:14px;color:#374050}
+.finding .src{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:var(--blue);
+  background:#eef4fb;border:1px solid #d6e6f7;border-radius:6px;padding:1px 8px}
+/* 콜아웃 */
+.callout{background:var(--sky);border:1px solid #cfe0f2;border-radius:12px;padding:15px 18px;font-size:14px;color:var(--navy)}
+.callout.g{background:var(--goodbg);border-color:#bfe3d1;color:#1f5f47}
+.callout b{font-weight:800}
+/* 태그 */
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:6px}
+.t-good{background:var(--goodbg);color:var(--good)}.t-warn{background:var(--warnbg);color:var(--warn)}.t-bad{background:var(--badbg);color:var(--bad)}
+.t-blue{background:#e6f0fa;color:var(--blue)}
+.win{background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px}
+/* 표 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--navy);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+/* 로드맵 바로/중기/장기 */
+.road{display:grid;gap:11px}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 16px;box-shadow:var(--shadow)}
+.badge{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;margin-top:1px}
+.b-now{background:var(--goodbg);color:var(--good)}.b-mid{background:#eaf1fb;color:var(--blue)}.b-long{background:#f0edf9;color:#5b3aa6}
+.step h4{margin:0 0 3px;font-size:14px;font-weight:800}.step p{margin:0;font-size:13px;color:#4a5462}
+.step .rdul{margin:5px 0 0;padding-left:17px}.step .rdul li{font-size:13px;color:#4a5462;margin:3px 0;line-height:1.5}
+.step .fx{font-size:11.5px;color:var(--muted);margin-top:3px}
+/* 강점 축 카드 */
+.pillar{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pillar.cols3{grid-template-columns:repeat(3,1fr)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow);border-top:3px solid var(--good)}
+.pcard .n{font-size:11.5px;color:var(--good);font-weight:800;letter-spacing:.04em}
+.pcard h4{margin:4px 0 5px;font-size:15px;font-weight:800}
+.pcard p{margin:0;font-size:13px;color:#4a5462}
+/* 인용 */
+.quote{border-left:3px solid var(--blue);background:#f7fafd;padding:10px 15px;border-radius:0 10px 10px 0;margin:10px 0;font-size:13.5px;color:#33404f}
+.quote .s{display:block;margin-top:5px;font-size:11.5px;color:var(--muted)}
+/* 감성 막대(리뷰) */
+.senti{display:flex;height:16px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.senti .pos{background:var(--good)}.senti .neu{background:#c9d2de}.senti .neg{background:var(--bad)}
+.kwrow{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
+.kw{font-size:12.5px;padding:4px 11px;border-radius:999px;background:#eef4fb;border:1px solid #d6e6f7;color:#2b445f}
+.kw.neg{background:var(--badbg);border-color:#f0cfca;color:var(--bad)}
+/* 연간 타임라인 */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tl{border-radius:12px;padding:13px 14px;color:#fff}
+.tl.q1{background:#2C6FB5}.tl.q2{background:#5b3aa6}.tl.q3{background:#2E8B6B}.tl.q4{background:#C58A22}
+.tl .qn{font-size:11.5px;font-weight:800;opacity:.9}.tl h4{margin:3px 0 4px;font-size:14.5px}
+.tl p{margin:0;font-size:12px;opacity:.95}
+/* 분기 상세 */
+.quarter{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow);background:var(--card)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qhead .dot{width:12px;height:12px;border-radius:3px}
+.qhead.q1 .dot{background:#2C6FB5}.qhead.q2 .dot{background:#5b3aa6}.qhead.q3 .dot{background:#2E8B6B}.qhead.q4 .dot{background:#C58A22}
+.qhead h3{margin:0;font-size:16px;font-weight:800}.qhead .theme{font-size:12.5px;color:var(--muted)}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mbox{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fbfcfe}
+.mbox .mh{font-weight:800;font-size:13px;color:var(--navy);margin-bottom:5px}
+.season{display:inline-block;font-size:10.5px;font-weight:700;background:#fff3d9;color:#8a6414;border-radius:5px;padding:1px 7px;margin-left:6px}
+.mbox ul{margin:6px 0 0;padding-left:16px}.mbox li{font-size:12.5px;color:#414b58;margin:2px 0}
+.focusrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.focusrow .f{font-size:12px;background:var(--sky);border:1px solid #cfe0f2;color:var(--navy);border-radius:8px;padding:5px 11px;font-weight:600}
+/* 채널×분기 강도 매트릭스 */
+.d{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle}
+.d-hi{background:var(--good)}.d-mid{background:var(--warn)}.d-lo{background:#d3dbe4}
+/* 예산 배분 */
+.budget{display:grid;gap:10px}
+.bcard{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:10px;font-size:13.5px}
+.bcard .blab{font-weight:700;color:#39424f}
+.btrack{background:#eef2f7;border-radius:7px;height:13px;overflow:hidden}
+.bbar{height:100%;background:linear-gradient(90deg,var(--blue),var(--navy2));border-radius:7px}
+.bcard .bval{text-align:right;font-weight:800;color:var(--navy)}
+/* 안내/주석 박스 */
+.note{background:#fff8ec;border:1px solid #f2e2c0;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#6b5320;margin:14px 0}
+.info{background:#eef4fb;border:1px solid #d6e6f7;border-radius:12px;padding:14px 17px;font-size:13.5px;color:#274a6d;margin:12px 0}
+.info b{color:var(--navy)}
+/* 2열 리스트 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
+.two ul{margin:0;padding-left:17px}.two li{font-size:13px;margin:3px 0;color:#414b58}
+/* 푸터 */
+footer.wrap{padding:24px 20px 60px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:26px}
+footer .fn{margin:4px 0}
+/* 리포트 간 이동 네비 */
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0}
+.nav a{font-size:12px;text-decoration:none;color:var(--blue);border:1px solid #d6e6f7;background:#fff;
+  border-radius:999px;padding:4px 11px}
+.nav a.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* ── 참조 리포트 수준 컴포넌트 ───────────────────────── */
+/* 방법 카드(어떻게 분석했나) */
+.method{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.method .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.method .m b{font-size:13.5px;color:var(--navy)}.method .m p{font-size:13px;color:var(--muted);margin:4px 0 0}
+/* 개념 흐름도(1·2차) */
+.flow2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 2px}
+.flow2 .b{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:700;color:var(--navy)}
+.flow2 .b.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flow2 .a{color:var(--blue);font-weight:800;font-size:13px}
+/* 2열 그리드(채널 비교 등) */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+/* 리뷰 채널 비교 박스 */
+.chanbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.chanbox .ctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.chanbox .cbadge{font-size:12.5px;font-weight:800;color:#fff;border-radius:7px;padding:4px 10px}
+.cb-naver{background:#03C75A}.cb-google{background:#4285F4}.cb-etc{background:var(--navy)}
+.chanbox .kpi{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.chanbox .kpi:last-of-type{border-bottom:0}.chanbox .kpi b{font-weight:800}
+.sbar{height:16px;border-radius:6px;overflow:hidden;display:flex;margin:10px 0 6px}
+.sbar i{display:block;height:100%}
+.sbar .p{background:var(--good)}.sbar .u{background:#c9ced6}.sbar .g{background:var(--bad)}
+.sleg{display:flex;gap:12px;font-size:11.5px;color:var(--muted)}
+.sleg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.sleg .lp::before{background:var(--good)}.sleg .lu::before{background:#c9ced6}.sleg .lg::before{background:var(--bad)}
+/* 그라디언트 분기 블록(12개월 계획) */
+.gquarter{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin:0 0 18px;background:var(--card)}
+.gqhead{padding:15px 22px;color:#fff;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.gqhead.q1{background:linear-gradient(135deg,#2C6FB5,#3f83c9)}.gqhead.q2{background:linear-gradient(135deg,#5b3aa6,#7b52c9)}
+.gqhead.q3{background:linear-gradient(135deg,#2E8B6B,#3fa682)}.gqhead.q4{background:linear-gradient(135deg,#C58A22,#d9a13f)}
+.gqhead .qlab{font-size:11.5px;font-weight:800;letter-spacing:.05em;opacity:.9}
+.gqhead h3{margin:0;font-size:18px;color:#fff;font-weight:800}.gqhead .qmon{font-size:12.5px;opacity:.9;margin-left:auto}
+.gqbody{padding:16px 22px}
+.frow{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:9px 0;border-top:1px dashed var(--line)}
+.frow .fl{font-size:11.5px;font-weight:800;color:#fff;background:var(--navy);border-radius:7px;padding:4px 10px;white-space:nowrap}
+.frow p{margin:0;font-size:13px}
+/* 체크리스트 */
+.checklist{width:100%;border-collapse:collapse;font-size:13.5px}
+.checklist th{background:var(--sky);color:var(--navy);text-align:left;padding:9px 11px;font-weight:700}
+.checklist td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}
+.checklist .box{width:16px;height:16px;border:2px solid var(--muted);border-radius:4px;display:inline-block}
+.checklist .owner{color:var(--muted);font-size:12.5px}
+/* 인쇄(PDF) 버튼 + 인쇄 스타일 */
+.printbar{position:fixed;top:14px;right:16px;z-index:50}
+.printbar button{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:9px 15px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+@media print{
+  .printbar,.nav{display:none!important}
+  header.hero{padding:24px 0 20px}
+  body{background:#fff}
+  .card,.snap .k,.step,.pcard,.chanbox,.gquarter,.method .m,.bcard{box-shadow:none}
+  section{break-inside:avoid}
+}
+@media(max-width:640px){
+  .snap{grid-template-columns:1fr 1fr}
+  .pillar,.pillar.cols3{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .months{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  .score{grid-template-columns:110px 1fr 40px}
+  .bcard{grid-template-columns:96px 1fr 40px}
+}
+
+header.hero{background:linear-gradient(135deg,#152B54,#20406f)}
+</style></head>
+<body>
+<div class="printbar"><button onclick="window.print()">🖨 PDF로 저장</button></div>
+<header class="hero"><div class="wrap">
+  <div class="kicker">ONLINE CHANNEL AUDIT</div>
+  <h1>인천SKY동물메디컬센터 마케팅 채널 종합 진단</h1>
+  <p class="sub">홈페이지·블로그·인스타·플레이스·카카오·지도·AEO/GEO 8축 진단</p>
+  <div class="meta"><span>Petamos 병원 마케팅 진단</span><span>2026-09-14</span><span>평균 66점</span></div>
+  <div class="nav"><a class="" href="01_인천SKY동물메디컬센터_상권분석.html">01 상권</a><a class="" href="02_인천SKY동물메디컬센터_경쟁분석.html">02 경쟁</a><a class="cur" href="03_인천SKY동물메디컬센터_마케팅.html">03 마케팅</a><a class="" href="04_인천SKY동물메디컬센터_리뷰분석.html">04 리뷰</a><a class="" href="05_인천SKY동물메디컬센터_강점.html">05 강점</a><a class="" href="06_인천SKY동물메디컬센터_12개월마케팅계획.html">06 12개월</a></div>
+</div></header>
+<main class="wrap">
+<p class="lead">아래는 각 채널을 같은 기준(관점 → 평가 → 점수 → 강점/약점 → 실행가능성)으로 진단한 결과입니다. 맨 아래 ‘실행 우선순위 매트릭스’는 모든 개선안을 효과·노력·비용으로 계산해 자동 정렬한 것입니다.</p><div class="toc"><a href="#combined">🔗 종합 진단<span>공통 강점·과제</span></a><a href="#ch1">홈페이지<span>채널 진단 1</span></a><a href="#ch2">네이버 블로그<span>채널 진단 2</span></a><a href="#ch3">인스타그램<span>채널 진단 3</span></a><a href="#matrix">✅ 실행 우선순위<span>전체 개선안</span></a></div><section id="combined"><div class="chan-head"><span class="chan-idx">종합</span><div><h2>온라인 채널 종합 진단</h2><div class="chan-url" style="color:var(--muted)">홈페이지, 네이버 블로그, 인스타그램</div></div></div><div class="callout g"><b>핵심 한 줄</b> — 온라인 채널 평균 <b>66점</b>으로 전반적으로 상위권입니다. <b>홈페이지</b>가 가장 강하고 <b>인스타그램</b>가 보완 1순위입니다. 공통 과제는 채널마다 제각각인 <b>전환 동선 통일</b>, 상호·주소·전화 표기 일치, 도달 확대입니다.</div><h3 class="sub-h">공통 강점</h3><div class="card"><div class="finding"><h4>2차 영상의학 전문성이 전 채널에 선명하게 드러납니다</h4><p>홈페이지는 MRI/CT/초음파 최첨단 장비와 &#x27;SKY 영상의학과&#x27; 적정 진료 대상, 입/개/선/두 비교 섹션까지 배치해 2차 영상의학 전문 병원임을 분명히 전달합니다. 블로그에서도 후복막강 부신절제술 수술 사례, 치과질환 신호, 요로질환 구분 등 2차 진료 전문 주제를 다루고, 인스타그램은 슬개골·치아·피부·비만·헤어볼 등 건강 정보를 주제별로 꾸준히 발행합니다. 세 채널 모두에서 2차 병원다운 전문 콘텐츠가 일관되게 뒷받침되고 있습니다.</p></div><div class="finding"><h4>신뢰 자산과 정보 밀도가 두텁습니다</h4><p>홈페이지에는 의료진 4인 프로필, 대표원장 인사말, 리얼후기, 병원·시설 실사, 위치 지도까지 방문 결정에 필요한 정보가 체계적으로 담겨 있습니다. 인스타그램 프로필은 24시간 진료 소개, 주소, 예약 전화, 외부 링크, 하이라이트 4종(병원소식/의료진/오시는길/카톡)을 모두 갖춰 신규 방문자가 필요한 정보를 즉시 찾을 수 있습니다. 채널마다 신뢰 근거가 풍부하게 배치되어 있습니다.</p></div><div class="finding"><h4>딥네이비·블루 톤의 일관된 브랜드 인상이 유지됩니다</h4><p>홈페이지는 딥네이비 계열 컬러와 정돈된 섹션 레이아웃으로 전문성과 신뢰감을 주는 시각적 완성도를 보이고, 인스타그램은 파란 계열 로고와 워터마크, 통일된 카드뉴스 레이아웃으로 피드 전체의 브랜드 인상을 정돈했습니다. 채널이 달라도 색과 톤이 이어져 브랜드 통일감이 살아 있습니다.</p></div><div class="finding"><h4>발행 활력과 연락 동선 노출이 살아 있습니다</h4><p>블로그는 2026년 8월 31일부터 9월 12일까지 다수 포스팅이 확인될 만큼 발행이 매우 활발하며, 제목에 &#x27;[인천 동물병원]&#x27; 지역 키워드를 반복 배치해 지역 검색을 노린 설계가 보입니다. 또한 블로그 상단에는 전화번호(032-715-7959)와 홈페이지·카톡·유튜브 바로가기 버튼이, 인스타그램 프로필에도 동일 예약 전화가 노출되어 있어 연락 동선의 기본기는 갖춰져 있습니다.</p></div></div><h3 class="sub-h">공통 과제(채널을 가로지르는 우선 개선점)</h3><div class="card"><div class="finding b"><h4>예약·전화 유도 동선이 채널마다 약합니다 <span class="tag t-bad">심각도 높음</span></h4><p>홈페이지는 상단에 카카오톡 상담·진료비 안내 배너는 있으나 화면 곳곳에 상시 노출되는 전화 바로걸기 링크와 예약 버튼이 화면상 확인되지 않아 유입이 전환으로 이어지기 어렵습니다. 인스타그램은 프로필에 &#x27;DB미운영&#x27;이 적혀 있어 다이렉트 메시지 문의 응대 체계가 갖춰지지 않아 전환 누수가 우려됩니다. 블로그는 전화·홈페이지·카톡 버튼이 노출되어 있는 만큼, 홈페이지에도 상시 전화 바로걸기와 예약 버튼을 고정 배치해 채널 간 전환 동선을 통일해야 합니다.</p></div><div class="finding b"><h4>성장·도달 기반이 초기 단계에 머물러 있습니다 <span class="tag t-bad">심각도 높음</span></h4><p>인스타그램은 팔로워 477명, 팔로잉 388명으로 2차 병원의 인지도 대비 도달 기반이 작고 비율 차이도 작아 성장 초기 단계로 보입니다. 블로그도 이웃·구독 규모가 화면에 표시되지 않아 채널 도달 규모를 판단할 수 없습니다. 전문 콘텐츠 자산은 충분한 만큼, 이를 실제 도달로 연결할 팔로워·이웃 확보 전략이 필요합니다.</p></div><div class="finding w"><h4>콘텐츠 형식이 정적 위주로 도달에 불리합니다 <span class="tag t-warn">심각도 중간</span></h4><p>인스타그램 피드는 대부분 정적 카드뉴스로 구성되어 있어 도달에 유리한 릴스·숏폼 활용 흔적이 약합니다(실제 릴스 성과는 화면상 확인 필요). 블로그도 이벤트 배너형 홍보성 포스팅과 정보성 글이 섞여 있어 정보 콘텐츠의 검색 신뢰도가 희석될 수 있습니다. 영상 진단 장비 등 시각적으로 강한 소재가 많은 만큼 숏폼과 정보 콘텐츠 비중을 재정비할 필요가 있습니다.</p></div><div class="finding w"><h4>모바일 대응 여부를 확인할 수 없습니다 <span class="tag t-warn">심각도 중간</span></h4><p>홈페이지는 PC 기준 화면만 제공되어 모바일에서의 가독성, 버튼 크기, 화면에 떠 있는 전화 버튼 여부를 판단할 수 없습니다. 대부분의 반려인이 모바일로 병원을 찾는 점을 고려하면, 모바일 화면에서 정보 가독성과 전화·예약 버튼 노출을 직접 점검해야 합니다.</p></div><div class="finding w"><h4>검색 노출 기반과 성과 지표가 검증되지 않았습니다 <span class="tag t-warn">심각도 중간</span></h4><p>홈페이지는 검색 결과에 뜨는 제목·설명 문구와 지역 병원 정보를 검색엔진에 알려주는 기술 설정 적용 여부가 화면상 확인되지 않아 검색 노출 기반이 약할 가능성이 있습니다. 블로그는 제목 키워드 설계는 되어 있으나 실제 상위 노출 여부, 이웃 수, 댓글·공감 등 반응 지표가 화면상 확인되지 않습니다. 노출과 반응을 데이터로 확인하고 개선하는 점검 체계가 필요합니다.</p></div></div></section><a id="ch1"></a><section class="channel"><div class="chan-head"><span class="chan-idx">1</span><div><h2>홈페이지</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 영상의학 전문성을 보여주는 힘은 강한데, 전화·예약으로 잇는 전환 동선이 화면상 약하다</div><div class="info"><b>내세우는 진료 특화</b> — 영상진단(MRI·CT·초음파) · 외과 수술 · 치과 (콘텐츠에서 반복 노출). 특화 강점의 상세 진단·제안은 <b>05 강점 리포트</b>에서 다룹니다.</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>디자인·브랜드</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>딥네이비 톤의 일관된 브랜딩과 장비·시설 실사로 신뢰감 있는 인상</small></div><div class="mc"><div class="lab"><b>콘텐츠·신뢰</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>의료진 4인 소개, 리얼후기, 최첨단 장비/시설 등 신뢰 요소가 풍부</small></div><div class="mc"><div class="lab"><b>UX·전환</b><span class="v" style="color:var(--warn)">보통</span></div><div class="mc-bar s-mid"><i style="width:62%"></i></div><small>상단 카카오톡 상담·진료비 안내 배너는 있으나 전화/예약 상시 동선은 확인 필요</small></div><div class="mc"><div class="lab"><b>기술·검색 노출</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>모바일 대응·메타·검색엔진이 읽는 정보 코드는 화면상 확인 불가, 보수적 평가</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">디자인</td><td>브랜드 톤과 시각적 완성도가 일관적인가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">정보구조</td><td>의료진·장비·진료영역이 논리적으로 배치됐는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전문성 전달</td><td>2차 병원(영상의학 특화) 포지셔닝이 명확한가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전화/예약 전환</td><td>전화 바로걸기 링크·예약 버튼이 상시 노출되어 클릭 유도되는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">모바일</td><td>모바일 화면에서 가독성·터치 동선이 최적화됐는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">검색 노출·검색엔진이 읽는 정보 코드</td><td>메타·스키마(LocalBusiness 등)가 적용됐는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>영상의학 특화 포지셔닝이 선명함</h4><p>MRI/CT/초음파 최첨단 장비와 &#x27;SKY 영상의학과&#x27; 적정 진료 대상, 입/개/선/두 비교 섹션까지 배치해 2차 영상의학 전문 병원임을 분명히 전달한다.</p></div><div class="finding"><h4>신뢰 요소의 밀도가 높음</h4><p>의료진 4인 프로필, 대표원장 인사말, 리얼후기, 병원/시설 실사, 위치 지도까지 갖춰 방문 결정에 필요한 정보가 체계적으로 담겨 있다.</p></div><div class="finding"><h4>일관된 브랜드 디자인</h4><p>딥네이비 계열 컬러와 정돈된 섹션 레이아웃으로 전문성과 신뢰감을 주는 시각적 완성도를 보인다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding b"><h4>전화·예약 전환 동선 약함 <span class="tag t-bad">심각도 높음</span></h4><p>상단에 카카오톡 상담·진료비 안내 배너는 보이나, 화면 곳곳에 상시 노출되는 전화 링크·예약 버튼은 화면상 확인되지 않아 유입이 전환으로 이어지기 어려울 수 있다.</p></div><div class="finding w"><h4>모바일 최적화 미확인 <span class="tag t-warn">심각도 중간</span></h4><p>PC 기준 화면만 제공되어 모바일에서의 가독성·버튼 크기·플로팅 전화 버튼 여부를 판단할 수 없다.</p></div><div class="finding w"><h4>검색 노출·검색엔진이 읽는 정보 코드 미확인 <span class="tag t-warn">심각도 중간</span></h4><p>타이틀·메타 설명, LocalBusiness/의료기관 스키마 적용 여부가 화면상 확인되지 않아 검색 노출 기반이 약할 가능성이 있다.</p></div></div></section><a id="ch2"></a><section class="channel"><div class="chan-head"><span class="chan-idx">2</span><div><h2>네이버 블로그</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 발행 활력과 진료 정보성 콘텐츠는 탄탄한데, 이웃·검색 노출 성과 지표가 화면상 확인되지 않는다</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>발행·운영</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>8월 말~9월 다수 포스팅으로 발행 주기가 촘촘하다</small></div><div class="mc"><div class="lab"><b>콘텐츠·전문성</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>치과·요로질환·후복막강 절제 수술 사례 등 2차 진료 전문 주제를 다룬다</small></div><div class="mc"><div class="lab"><b>제목·키워드</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>&#x27;[인천 동물병원]&#x27; 지역 키워드를 제목에 반복 배치했다</small></div><div class="mc"><div class="lab"><b>전환·참여</b><span class="v" style="color:var(--warn)">보통</span></div><div class="mc-bar s-mid"><i style="width:62%"></i></div><small>전화번호·홈페이지·카톡 버튼은 있으나 이웃 수·댓글 등 참여 지표는 확인 필요</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">발행 주기</td><td>최근 포스팅이 꾸준히 발행되는가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">정보성</td><td>보호자에게 유용한 질환·증상 정보를 제공하는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전문성 콘텐츠</td><td>2차 진료 병원다운 수술·진료 사례가 있는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">검색 노출</td><td>제목·키워드가 검색에 유리하게 설계됐는가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">이웃 수</td><td>이웃/구독 규모가 화면에서 확인되는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">참여</td><td>댓글·공감 등 반응 지표가 보이는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전환 동선</td><td>예약·상담으로 잇는 연락처·버튼이 노출되는가?</td><td><span class="tag t-good">우수</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>촘촘한 발행 주기</h4><p>2026년 8월 31일부터 9월 12일까지 다수 포스팅이 확인되어 발행이 매우 활발하다.</p></div><div class="finding"><h4>2차 진료 전문성 노출</h4><p>후복막강 부신절제술 수술 사례, 치과질환 신호, 요로질환 구분 등 2차 병원다운 심화 주제를 다룬다.</p></div><div class="finding"><h4>지역 키워드 반복</h4><p>제목에 &#x27;[인천 동물병원]&#x27;을 반복 배치해 지역 검색 노출을 노린 설계가 보인다.</p></div><div class="finding"><h4>명확한 연락 동선</h4><p>상단에 전화번호(032-715-7959), 홈페이지·카톡·유튜브 바로가기 버튼이 노출되어 있다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding w"><h4>이웃·구독 규모 미확인 <span class="tag t-warn">심각도 중간</span></h4><p>화면에 이웃 수가 표시되지 않아 채널 도달 규모를 판단할 수 없다. 실제 규모 확인이 필요하다.</p></div><div class="finding w"><h4>참여 지표 부재 <span class="tag t-warn">심각도 중간</span></h4><p>댓글·공감 등 반응 지표가 화면에서 보이지 않아 콘텐츠 반응도를 알 수 없다.</p></div><div class="finding w"><h4>검색 성과 미검증 <span class="tag t-warn">심각도 중간</span></h4><p>제목 키워드 설계는 되어 있으나 실제 상위 노출 여부는 화면상 확인되지 않는다.</p></div><div class="finding w"><h4>홍보성·정보성 혼재 <span class="tag t-warn">심각도 중간</span></h4><p>이벤트 배너형 포스팅과 정보성 글이 섞여 있어 정보 콘텐츠의 검색 신뢰도가 희석될 수 있다.</p></div></div></section><a id="ch3"></a><section class="channel"><div class="chan-head"><span class="chan-idx">3</span><div><h2>인스타그램</h2></div></div><div class="callout"><b>핵심 한 줄</b> — 브랜드 통일감과 프로필 기본기는 탄탄한데, 팔로워 성장·릴스·전환 동선이 약하다</div><h3 class="sub-h">종합 점수</h3><div class="mcgrid"><div class="mc"><div class="lab"><b>프로필 완성도</b><span class="v" style="color:var(--good)">우수</span></div><div class="mc-bar s-hi"><i style="width:88%"></i></div><small>소개·주소·전화·링크·하이라이트 4종(병원소식/의료진/오시는길/카톡) 모두 구비</small></div><div class="mc"><div class="lab"><b>콘텐츠·브랜딩</b><span class="v" style="color:var(--good)">양호</span></div><div class="mc-bar s-hi"><i style="width:76%"></i></div><small>파란톤 로고·워터마크·건강정보 카드뉴스로 일관된 디자인 유지</small></div><div class="mc"><div class="lab"><b>성장·도달(팔로워)</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>팔로워 477명, 팔로우 388명으로 규모·비율 모두 성장 초기 단계</small></div><div class="mc"><div class="lab"><b>릴스·숏폼</b><span class="v" style="color:var(--bad)">개선 필요</span></div><div class="mc-bar s-lo"><i style="width:45%"></i></div><small>피드는 대부분 정적 카드뉴스, 릴스 활용 여부·성과 화면상 확인 필요</small></div></div><h3 class="sub-h">평가 항목(기준)</h3><table><thead><tr><th style="width:24%">지표</th><th>확인한 질문(기준)</th><th style="width:16%">결과</th></tr></thead><tbody><tr><td style="font-weight:800;white-space:nowrap">프로필 완성도</td><td>소개·주소·전화·링크·예약·전화 유도 버튼가 갖춰졌는가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">브랜딩 일관성</td><td>로고·컬러·워터마크가 통일되어 있는가?</td><td><span class="tag t-good">우수</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">팔로워 규모·비율</td><td>팔로워 수와 팔로잉 대비 비율이 건강한가?</td><td><span class="tag t-bad">미흡</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">콘텐츠 다양성</td><td>릴스·숏폼 등 포맷이 다양한가?</td><td><span class="tag t-warn">확인 필요</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">전환 동선</td><td>예약·문의로 이어지는 링크·예약·전화 유도 버튼가 명확한가?</td><td><span class="tag t-good">양호</span></td></tr><tr><td style="font-weight:800;white-space:nowrap">게시 빈도</td><td>꾸준히 발행하고 있는가?</td><td><span class="tag t-warn">확인 필요</span></td></tr></tbody></table><h3 class="sub-h">잘하고 있는 점 <span class="tag t-good">강점</span></h3><div class="card"><div class="finding"><h4>프로필 기본기 완비</h4><p>24시간 진료 소개, 주소, 예약 전화(032-715-7959), 외부 링크(simkung.pet), 하이라이트 4종을 모두 갖춰 신규 방문자가 필요한 정보를 즉시 찾을 수 있다.</p></div><div class="finding"><h4>일관된 브랜드 디자인</h4><p>파란 계열 로고와 워터마크, 통일된 카드뉴스 레이아웃으로 피드 전체의 브랜드 인상이 정돈되어 있다.</p></div><div class="finding"><h4>정보성 콘텐츠 구성</h4><p>슬개골·치아·피부·비만·헤어볼 등 반려동물 건강 정보를 주제별로 꾸준히 다뤄 전문성을 보여준다.</p></div></div><h3 class="sub-h">부족한 점 · 개선 포인트 <span class="tag t-bad">약점</span></h3><div class="card"><div class="finding b"><h4>낮은 팔로워 규모 <span class="tag t-bad">심각도 높음</span></h4><p>팔로워 477명으로 2차 병원의 인지도 대비 도달 기반이 작고, 팔로잉 388명과 비율 차이도 작아 성장 초기 단계로 보인다.</p></div><div class="finding w"><h4>릴스·숏폼 부재로 보임 <span class="tag t-warn">심각도 중간</span></h4><p>피드가 대부분 정적 카드뉴스로 구성되어 있어 도달에 유리한 릴스 활용 흔적이 약하다. 실제 릴스 탭 성과는 화면상 확인 필요.</p></div><div class="finding w"><h4>DB 미운영 명시 <span class="tag t-warn">심각도 중간</span></h4><p>프로필에 &#x27;DB미운영&#x27;이 적혀 있어 다이렉트 메시지 문의 응대 체계가 갖춰지지 않았을 가능성이 있고, 전환 누수로 이어질 수 있다.</p></div></div></section><section><div class="sechead"><div class="num">5</div><h2>실행 우선순위 매트릭스</h2></div><a id="matrix"></a><div class="info">우선순위 점수 = <b>효과×3 − 노력 − 비용</b>. 바로(≥5 또는 노력1·효과2↑) / 중기(2~5) / 장기(&lt;2).</div><div class="road"><div class="step"><span class="badge b-now">바로</span><div><h4>[홈페이지] 모든 섹션·모바일에 상시 노출 전화·예약 플로팅 버튼 추가</h4><div class="fx">효과 3 · 노력 1 · 비용 1 → 우선순위 7 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[네이버 블로그] 글 하단에 예약·상담 예약·전화 유도 버튼 문구와 링크 표준화</h4><div class="fx">효과 3 · 노력 1 · 비용 1 → 우선순위 7 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[홈페이지] 모바일 반응형 점검 및 터치 동선·버튼 크기 최적화</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[네이버 블로그] 수술 사례 등 전문 콘텐츠를 상세 후기형 시리즈로 강화</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[네이버 블로그] 지역+증상 롱테일 키워드 제목 최적화로 검색 유입 확대</h4><div class="fx">효과 3 · 노력 2 · 비용 1 → 우선순위 6 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[인스타그램] 릴스 정기 제작(시술 전후·병원 일상·건강팁 15~30초)로 도달 확대</h4><div class="fx">효과 3 · 노력 2 · 비용 2 → 우선순위 5 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[인스타그램] 프로필 링크를 예약 랜딩으로 단일화하고 예약·전화 유도 버튼 문구 강화</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-now">바로</span><div><h4>[네이버 블로그] 이웃 수·조회수 등 채널 성과 지표 점검 및 목표 설정</h4><div class="fx">효과 2 · 노력 1 · 비용 1 → 우선순위 4 · 실행가능성 쉬움</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[홈페이지] LocalBusiness/의료기관 검색엔진이 읽는 정보 코드·메타태그 적용</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[인스타그램] 주 2~3회 발행 루틴 고정 및 콘텐츠 캘린더 운영</h4><div class="fx">효과 2 · 노력 2 · 비용 1 → 우선순위 3 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[홈페이지] 핵심 진료(영상의학) 페이지에 예약·전화 유도 버튼와 상담 예약 폼 배치</h4><div class="fx">효과 2 · 노력 2 · 비용 2 → 우선순위 2 · 실행가능성 보통</div></div></div><div class="step"><span class="badge b-mid">중기</span><div><h4>[인스타그램] 다이렉트 메시지·카톡 응대 체계 정비로 문의 전환 누수 차단</h4><div class="fx">효과 2 · 노력 2 · 비용 2 → 우선순위 2 · 실행가능성 보통</div></div></div></div></section>
+</main>
+<footer class="wrap">
+<p class="fn">· 네이버·카카오·인스타 채널은 약관·차단 이슈로 자동 수집하지 않으며, 리뷰·채널 정보는 담당자 제공 자료를 기준으로 합니다.</p><p class="fn">· 참고용 진단 리포트입니다. 사실관계는 실제 정보로 확정하세요.</p>
+</footer>
+</body></html>

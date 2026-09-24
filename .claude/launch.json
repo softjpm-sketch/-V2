@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "petamos-web",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "engine.webapp", "8600"],
+      "port": 8600
+    }
+  ]
+}

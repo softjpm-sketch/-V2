@@ -1,0 +1,526 @@
+{
+  "clinic": {
+    "name": "부평스카이동물의료센터",
+    "slug": "부평스카이동물의료센터",
+    "address": "인천 부평구 부평대로 000",
+    "phone": "032-000-0000",
+    "tier": 2,
+    "date": "2026-08-13",
+    "analyst": "Petamos 병원 마케팅 진단",
+    "sibling": {
+      "name": "인천SKY동물메디컬센터",
+      "co_density": 91,
+      "saturation": 1320
+    },
+    "specialties": [
+      {
+        "title": "CT·MRI 영상진단 장비 보유",
+        "body": "고난도 신경·정형 케이스의 정밀 진단이 가능해 1차 병원 의뢰를 받을 수 있습니다."
+      },
+      {
+        "title": "24시 응급·중환자 대응",
+        "body": "야간·응급 진료 체계로 응급 수요와 2차 의뢰를 흡수합니다."
+      }
+    ]
+  },
+  "trade_area": {
+    "households": 168000,
+    "population": 500000,
+    "clinics_in_region": 29,
+    "registered_pets": 41000,
+    "nearest_station": "부평시장역",
+    "nearest_station_m": 800,
+    "monthly_sales_manwon": 4500,
+    "daily_footfall": 80000,
+    "area_type": "주거 밀집형",
+    "parking": true,
+    "apartment_dense": true
+  },
+  "competition": {
+    "clinics": [
+      {
+        "name": "연수24시동물메디컬센터",
+        "category": "동물병원",
+        "distance_m": 1009
+      },
+      {
+        "name": "인천종합동물의료원",
+        "category": "동물병원",
+        "distance_m": 1420
+      },
+      {
+        "name": "부평응급동물병원",
+        "category": "24시 동물병원",
+        "distance_m": 1680
+      },
+      {
+        "name": "서인천동물메디컬",
+        "category": "동물병원",
+        "distance_m": 1950
+      },
+      {
+        "name": "계양전문동물병원",
+        "category": "동물병원",
+        "distance_m": 2210
+      },
+      {
+        "name": "남동레퍼럴동물의료센터",
+        "category": "동물병원",
+        "distance_m": 2480
+      },
+      {
+        "name": "인천대야간동물병원",
+        "category": "동물병원",
+        "distance_m": 2670
+      },
+      {
+        "name": "부천동물메디컬센터",
+        "category": "동물병원",
+        "distance_m": 2810
+      },
+      {
+        "name": "송도종합동물병원",
+        "category": "동물병원",
+        "distance_m": 2980
+      },
+      {
+        "name": "부평1동물병원",
+        "category": "동물병원",
+        "distance_m": 180
+      },
+      {
+        "name": "부평2동물병원",
+        "category": "동물병원",
+        "distance_m": 240
+      },
+      {
+        "name": "부평3동물병원",
+        "category": "동물병원",
+        "distance_m": 310
+      },
+      {
+        "name": "부평4동물병원",
+        "category": "동물병원",
+        "distance_m": 360
+      },
+      {
+        "name": "부평5동물병원",
+        "category": "동물병원",
+        "distance_m": 420
+      },
+      {
+        "name": "부평6동물병원",
+        "category": "동물병원",
+        "distance_m": 480
+      },
+      {
+        "name": "부평7동물병원",
+        "category": "동물병원",
+        "distance_m": 540
+      },
+      {
+        "name": "부평8동물병원",
+        "category": "동물병원",
+        "distance_m": 610
+      },
+      {
+        "name": "부평9동물병원",
+        "category": "동물병원",
+        "distance_m": 680
+      },
+      {
+        "name": "부평10동물병원",
+        "category": "동물병원",
+        "distance_m": 720
+      },
+      {
+        "name": "부평11동물병원",
+        "category": "동물병원",
+        "distance_m": 790
+      },
+      {
+        "name": "부평12동물병원",
+        "category": "동물병원",
+        "distance_m": 860
+      },
+      {
+        "name": "부평13동물병원",
+        "category": "동물병원",
+        "distance_m": 940
+      },
+      {
+        "name": "부평14동물병원",
+        "category": "동물병원",
+        "distance_m": 1010
+      },
+      {
+        "name": "부평15동물병원",
+        "category": "동물병원",
+        "distance_m": 1120
+      },
+      {
+        "name": "부평16동물병원",
+        "category": "동물병원",
+        "distance_m": 1230
+      },
+      {
+        "name": "부평17동물병원",
+        "category": "동물병원",
+        "distance_m": 1340
+      },
+      {
+        "name": "부평18동물병원",
+        "category": "동물병원",
+        "distance_m": 1460
+      },
+      {
+        "name": "부평19동물병원",
+        "category": "동물병원",
+        "distance_m": 1580
+      },
+      {
+        "name": "부평20동물병원",
+        "category": "동물병원",
+        "distance_m": 1690
+      },
+      {
+        "name": "부평21동물병원",
+        "category": "동물병원",
+        "distance_m": 1780
+      },
+      {
+        "name": "부평22동물병원",
+        "category": "동물병원",
+        "distance_m": 1880
+      },
+      {
+        "name": "부평23동물병원",
+        "category": "동물병원",
+        "distance_m": 1990
+      },
+      {
+        "name": "부평24동물병원",
+        "category": "동물병원",
+        "distance_m": 2100
+      },
+      {
+        "name": "부평25동물병원",
+        "category": "동물병원",
+        "distance_m": 2210
+      },
+      {
+        "name": "부평26동물병원",
+        "category": "동물병원",
+        "distance_m": 2320
+      },
+      {
+        "name": "부평27동물병원",
+        "category": "동물병원",
+        "distance_m": 2430
+      },
+      {
+        "name": "부평28동물병원",
+        "category": "동물병원",
+        "distance_m": 2540
+      },
+      {
+        "name": "부평29동물병원",
+        "category": "동물병원",
+        "distance_m": 2650
+      },
+      {
+        "name": "부평30동물병원",
+        "category": "동물병원",
+        "distance_m": 2740
+      },
+      {
+        "name": "부평31동물병원",
+        "category": "동물병원",
+        "distance_m": 2810
+      },
+      {
+        "name": "부평32동물병원",
+        "category": "동물병원",
+        "distance_m": 2870
+      },
+      {
+        "name": "부평33동물병원",
+        "category": "동물병원",
+        "distance_m": 2910
+      },
+      {
+        "name": "부평34동물병원",
+        "category": "동물병원",
+        "distance_m": 2950
+      },
+      {
+        "name": "부평35동물병원",
+        "category": "동물병원",
+        "distance_m": 2990
+      }
+    ]
+  },
+  "marketing": {
+    "channels": [
+      {
+        "type": "homepage",
+        "score": 74,
+        "note": "반응형·tel 있음, 예약 CTA 약함",
+        "strengths": [
+          {
+            "title": "전문 진료 소개 충실",
+            "body": "CT·MRI·응급 등 2차 역량이 상단에 명확히 노출됩니다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "예약 전환 동선 약함",
+            "body": "전화는 있으나 온라인 예약 버튼이 눈에 띄지 않습니다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "상단 고정 예약·전화 버튼",
+            "effort": 1,
+            "impact": 3,
+            "cost": 1
+          },
+          {
+            "title": "진료과목별 랜딩 페이지",
+            "effort": 2,
+            "impact": 2,
+            "cost": 2
+          }
+        ]
+      },
+      {
+        "type": "blog",
+        "score": 62,
+        "note": "이웃 1,200 · 발행 간헐적",
+        "strengths": [
+          {
+            "title": "수술 케이스 콘텐츠 우수",
+            "body": "실제 증례 기반 글의 체류·신뢰도가 높습니다."
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "발행 주기 불규칙",
+            "body": "월 1~2회로 검색 노출 성장세가 더딥니다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "주 1회 발행 캘린더",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "type": "instagram",
+        "score": 55,
+        "note": "팔로워 2,300 · 릴스 부족",
+        "strengths": [],
+        "weaknesses": [
+          {
+            "title": "릴스·숏폼 부재",
+            "body": "도달 확장에 유리한 숏폼 콘텐츠가 없습니다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "주 1회 릴스 제작",
+            "effort": 2,
+            "impact": 3,
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "type": "naverplace",
+        "score": 80,
+        "note": "리뷰 210 · ★4.9 · 정보 충실",
+        "strengths": [
+          {
+            "title": "높은 별점·풍부한 리뷰",
+            "body": "★4.9·리뷰 210개로 검색 상단 신뢰 신호가 강합니다."
+          }
+        ],
+        "weaknesses": [],
+        "actions": []
+      },
+      {
+        "type": "kakao",
+        "score": 40,
+        "note": "채널 개설 초기 · 상담 창구 부재",
+        "strengths": [],
+        "weaknesses": [
+          {
+            "title": "카카오 상담 창구 부재",
+            "body": "실시간 상담·예약 문의를 받을 채널이 없습니다.",
+            "severity": "high"
+          }
+        ],
+        "actions": [
+          {
+            "title": "카카오 상담 창구 개설",
+            "effort": 1,
+            "impact": 3,
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "type": "map",
+        "score": 66,
+        "note": "정보 정확 · 후기 OFF",
+        "strengths": [],
+        "weaknesses": [
+          {
+            "title": "카카오맵 후기 OFF",
+            "body": "후기 기능이 꺼져 있어 평판 노출 기회를 놓칩니다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "카카오맵 후기 ON",
+            "effort": 1,
+            "impact": 2,
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "type": "tmap",
+        "score": 70,
+        "note": "이름·주소·전화·핀 정상",
+        "strengths": [
+          {
+            "title": "NAP 정합성 양호",
+            "body": "T맵 기본 정보가 정확합니다."
+          }
+        ],
+        "weaknesses": [],
+        "actions": []
+      },
+      {
+        "type": "aeo_geo",
+        "score": 58,
+        "note": "구조화 데이터 일부·FAQ 없음",
+        "strengths": [],
+        "weaknesses": [
+          {
+            "title": "FAQ·구조화 데이터 미흡",
+            "body": "AI 검색(AEO/GEO) 인용 가능성을 높일 구조화가 부족합니다.",
+            "severity": "mid"
+          }
+        ],
+        "actions": [
+          {
+            "title": "FAQ·JSON-LD 구조화 삽입",
+            "effort": 2,
+            "impact": 2,
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  "review": {
+    "channels": [
+      {
+        "name": "네이버 플레이스",
+        "review_count": 210,
+        "rating": 4.9,
+        "recency": "최근 30일 12건",
+        "sentiment": {
+          "pos": 90,
+          "neu": 7,
+          "neg": 3
+        }
+      },
+      {
+        "name": "구글",
+        "review_count": 48,
+        "rating": 4.4,
+        "recency": "최근 30일 3건",
+        "sentiment": {
+          "pos": 74,
+          "neu": 12,
+          "neg": 14
+        }
+      }
+    ],
+    "praise_keywords": [
+      {
+        "keyword": "친절한 설명"
+      },
+      {
+        "keyword": "정확한 진단"
+      },
+      {
+        "keyword": "응급 대응"
+      },
+      {
+        "keyword": "깨끗한 시설"
+      }
+    ],
+    "complaint_keywords": [
+      {
+        "keyword": "대기시간"
+      },
+      {
+        "keyword": "주차"
+      },
+      {
+        "keyword": "진료비"
+      }
+    ],
+    "quotes": [
+      {
+        "text": "야간 응급으로 갔는데 CT까지 바로 찍고 수술 설명을 차분히 해주셨어요.",
+        "channel": "네이버",
+        "author": "보호자 김**",
+        "sentiment": "pos"
+      },
+      {
+        "text": "진료는 좋았지만 예약해도 대기가 길었습니다.",
+        "channel": "구글",
+        "author": "익명",
+        "sentiment": "neg"
+      }
+    ],
+    "findings": [
+      {
+        "title": "네이버 vs 구글 평판 격차",
+        "body": "네이버 긍정 90% vs 구글 74% — 구글 부정 응대·정보 정비가 필요합니다.",
+        "severity": "mid"
+      },
+      {
+        "title": "응급·정확 진단 미담 반복",
+        "body": "‘응급 대응·정확한 진단’ 칭찬이 반복되어 2차 전문성이 평판으로 입증됩니다.",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      {
+        "title": "구글 부정 리뷰 24시간 내 응대",
+        "effort": 1,
+        "impact": 3,
+        "cost": 1
+      },
+      {
+        "title": "대기시간 안내·예약 슬롯 개선",
+        "effort": 2,
+        "impact": 2,
+        "cost": 2
+      }
+    ]
+  }
+}
